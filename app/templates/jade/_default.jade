@@ -1,0 +1,64 @@
+//- [injector:jade]
+//- [endinjector]
+
+doctype html
+html
+  head
+    title <%= projectName %>
+    meta(charset='UTF-8')
+    meta(content='', name='description')
+    meta(content='nexumAG', name='author')
+    meta(content='3 days', name='revisit-after')
+    //-meta(name='date', content=timestamp)
+    meta(name='viewport', content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no")
+    meta(name='robots', content='index, follow')
+
+    if level == 0
+      // build:css styles/main.css
+    else if level == 1
+      // build:css ../styles/main.css
+    else
+      // build:css ../../styles/main.css
+
+    link(href='#{path}styles/main.css', rel='stylesheet')
+    // endbuild
+    link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic,600italic', rel='stylesheet')
+
+    noscript
+      link(href='#{path}styles/nojs.css', rel='stylesheet')
+    <!--[if lte IE 9]>
+    <link href="#{path}styles/ie9.css" rel="stylesheet">
+    <![endif]-->
+
+
+  body(class=page, data-spy="scroll", data-target="#sidebar__nav")
+    include 3_organisms/_header
+    block content
+    include 3_organisms/_footer
+
+    if level == 0
+      // build:js({.,app}) scripts/main.js
+    else if level == 1
+      // build:js({.,app}) ../scripts/main.js
+    else
+      // build:js({.,app}) ../../scripts/main.js
+
+
+    // bower:js
+    script(src='/bower_components/jquery/dist/jquery.js')
+    // endbower
+
+    script(src='#{path}scripts/main.js')
+
+    // [injector:js]
+    // [endinjector]
+
+    // endbuild
+
+
+
+
+
+
+
+
