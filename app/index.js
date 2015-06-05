@@ -83,11 +83,13 @@ Generator.prototype.gruntfile = function gruntfile() {
 
 
 Generator.prototype.sourceFiles = function sourceFiles() {
-  this.directory('content', 'app/content');
-  this.directory('jade', 'app/jade');
-  this.directory('scripts', 'app/scripts');
-  this.directory('styles', 'app/styles');
-  this.directory('tests', 'app/tests');
+  this.directory('0_basics', 'app/0_basics');
+  this.directory('1_atoms', 'app/1_atoms');
+  this.directory('2_molecules', 'app/2_molecules');
+  this.directory('3_organisms', 'app/3_organisms');
+  this.directory('4_templates', 'app/4_templates');
+  this.directory('5_pages', 'app/5_pages');
+  this.copy('index.jade', 'app/index.jade');
 
 };
 

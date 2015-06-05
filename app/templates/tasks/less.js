@@ -5,7 +5,7 @@
 
 module.exports = {
   options: {
-    paths: ['<%= folders.app %>/styles'],
+    paths: ['<%= folders.app %>/'],
   },
   dist: {
     options: {
@@ -13,14 +13,14 @@ module.exports = {
       cleancss: true,
       sourceMap: true,
       sourceMapURL: 'main.less.map',
-      sourceMapFilename: '<%= folders.dist %>/styles/main.less.map',
+      sourceMapFilename: '<%= folders.dist %>/0_basics/main.less.map',
       outputSourceFiles: true
     },
     files: [{
       expand: true,
-      cwd: '<%= folders.app %>/styles',
+      cwd: '<%= folders.app %>/0_basics',
       src: ['*.less', '!**/_*'],
-      dest: '<%= folders.tmp %>/styles',
+      dest: '<%= folders.tmp %>/0_basics',
       ext: '.css'
     }],
   },
@@ -30,9 +30,9 @@ module.exports = {
     },
     files: [{
       expand: true,
-      cwd: '<%= folders.app %>/styles',
+      cwd: '<%= folders.app %>/0_basics',
       src: ['*.less', '!**/_*'],
-      dest: '<%= folders.tmp %>/styles',
+      dest: '<%= folders.tmp %>/0_basics',
       ext: '.css'
     }],
   }

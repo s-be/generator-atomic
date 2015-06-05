@@ -10,8 +10,8 @@ module.exports = {
     },
     files: [
       '<%= folders.tmp %>/*.html',
-      '<%= folders.tmp %>/styles/{,*/}*.css',
-      '<%= folders.app %>/scripts/{,*/}*.js',
+      '<%= folders.tmp %>/{,*/}*.css',
+      '<%= folders.app %>/{,*/}*.js',
       '<%= folders.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
     ]
   },
@@ -20,7 +20,7 @@ module.exports = {
     options: {
       livereload: false
     },
-    files: ['<%= folders.app %>/styles/**/*.less'],
+    files: ['<%= folders.app %>/{,*/}.less'],
     tasks: ['less:server', 'autoprefixer']
   },
 
@@ -28,7 +28,7 @@ module.exports = {
     options: {
       livereload: false
     },
-    files: ['<%= folders.app %>/jade/**/*.jade', '!**/_*'],
+    files: ['<%= folders.app %>/{,*/}.jade', '!**/_*'],
     tasks: ['newer:jade:html']
   },
 
@@ -36,7 +36,7 @@ module.exports = {
     options: {
       livereload: false
     },
-    files: '<%= folders.app %>/jade/**/_*.jade',
+    files: '<%= folders.app %>/{,*/}_*.jade',
     tasks: ['jade:speed']
   },
 
@@ -44,7 +44,7 @@ module.exports = {
     options: {
       livereload: false
     },
-    files: '<%= folders.app %>/content/**/*.json',
+    files: '<%= folders.app %>/{,*/}.json',
     tasks: ['jade:speed']
   }
 };

@@ -1,0 +1,48 @@
+//- [injector:jademixins]
+//- [endinjector]
+doctype html
+html
+  head
+    title heloo
+    meta(charset='UTF-8')
+    meta(content='', name='description')
+    meta(content='nexumAG', name='author')
+    meta(content='3 days', name='revisit-after')
+    //-meta(name='date', content=timestamp)
+    meta(name='viewport', content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no")
+    meta(name='robots', content='index, follow')
+
+    if level == 0
+      // build:css 0_basics/main.css
+    else if level == 1
+      // build:css ../0_basics/main.css
+    else
+      // build:css ../../0_basics/main.css
+
+    link(href='#{path}0_basics/main.css', rel='stylesheet')
+    // endbuild
+    noscript
+      link(href='#{path}0_basics/nojs.css', rel='stylesheet')
+    <!--[if lte IE 9]>
+    <link href="#{path}0_basics/ie9.css" rel="stylesheet">
+    <![endif]-->
+  body(class=page)
+    +header
+    block content
+    +footer
+    if level == 0
+      // build:js({.,app}) 0_basics/main.js
+    else if level == 1
+      // build:js({.,app}) ../0_basics/main.js
+    else
+      // build:js({.,app}) ../../0_basics/main.js
+
+    // bower:js
+    script(src='/bower_components/jquery/dist/jquery.js')
+    // endbower
+
+    // [injector:js]
+    // [endinjector]
+
+    script(src='#{path}0_basics/main.js')
+    // endbuild

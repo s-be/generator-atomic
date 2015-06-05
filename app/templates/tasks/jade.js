@@ -7,9 +7,9 @@ module.exports = {
   options: {
     client: false,
     pretty: true,
-    basedir: 'app/jade',
+    basedir: 'app/',
     data: function (dest, src) {
-      var page = src[0].replace('app/jade/', ' ');
+      var page = src[0].replace('app/', ' ');
       page = page.replace('.jade','');
       page = page.replace(/\//g,'-');
       page = page.replace(' ','');
@@ -34,18 +34,18 @@ module.exports = {
     expand: true,
     //flatten: true,
     //cwd: '<%= folders.app %>/jade',
-    src: ['<%= folders.app %>/jade/**/*.jade', '!**/_*'],
+    src: ['<%= folders.app %>/{,*/,**/}*.jade', '!**/_*'],
     dest: '<%= folders.tmp %>',
     ext: '.html',
     rename: function(dest, src) {
-      return src.replace('app/jade/', '.tmp/');
+      return src.replace('app/', '.tmp/');
     }
   },
   html: {
     files: [{
       expand: true,
-      cwd: '<%= folders.app %>/jade',
-      src: ['{,*/}*.jade', '!**/_*'],
+      cwd: '<%= folders.app %>/',
+      src: ['{,*/,**/}*.jade', '!**/_*'],
       dest: '<%= folders.tmp %>/',
       ext: '.html'
     }],
