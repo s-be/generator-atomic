@@ -30,7 +30,7 @@ module.exports = {
       };
     }
   },
-  speed: {
+  html: {
     expand: true,
     //flatten: true,
     //cwd: '<%= folders.app %>/jade',
@@ -40,14 +40,5 @@ module.exports = {
     rename: function(dest, src) {
       return src.replace('app/', '.tmp/');
     }
-  },
-  html: {
-    files: [{
-      expand: true,
-      cwd: '<%= folders.app %>/',
-      src: ['{,*/,**/}*.jade', '!**/_*'],
-      dest: '<%= folders.tmp %>/',
-      ext: '.html'
-    }],
   }
 };

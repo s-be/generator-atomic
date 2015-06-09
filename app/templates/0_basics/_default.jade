@@ -3,14 +3,12 @@
 doctype html
 html
   head
-    title heloo
+    title <%= projectName %>
     meta(charset='UTF-8')
     meta(content='', name='description')
-    meta(content='nexumAG', name='author')
+    meta(content='<%= author %>', name='author')
     meta(content='3 days', name='revisit-after')
-    //-meta(name='date', content=timestamp)
     meta(name='viewport', content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no")
-    meta(name='robots', content='index, follow')
 
     if level == 0
       // build:css 0_basics/main.css
@@ -31,11 +29,11 @@ html
     block content
     +footer
     if level == 0
-      // build:js({.,app}) 0_basics/main.js
+      // build:js({.,app}) 0_basics/controller.js
     else if level == 1
-      // build:js({.,app}) ../0_basics/main.js
+      // build:js({.,app}) ../0_basics/controller.js
     else
-      // build:js({.,app}) ../../0_basics/main.js
+      // build:js({.,app}) ../../0_basics/controller.js
 
     // bower:js
     script(src='/bower_components/jquery/dist/jquery.js')
@@ -44,5 +42,5 @@ html
     // [injector:js]
     // [endinjector]
 
-    script(src='#{path}0_basics/main.js')
+    script(src='#{path}0_basics/controller.js')
     // endbuild

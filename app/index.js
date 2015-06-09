@@ -25,14 +25,31 @@ Generator.prototype.promptConfig = function promptConfig() {
 
   prompts = [
     {
-      name: 'projectName',
-      message: 'Name of the new Project'
+      name:     'projectName',
+      message:  'Name of the new Project'
+    },
+    {
+      name: 'namespace',
+      message: 'Choose a namespace (short, lowercase, no special-chars)'
+    },
+    {
+      name:    'author',
+      message: 'Whats your name? (the author)',
+      store:    true
     }
   ];
 
   this.prompt(prompts, function(props) {
     this.projectName = props.projectName;
     this.appname = s.slugify(this.projectName);
+    this.namespace = props.namespace;
+    this.author = props.author;
+
+    this.config.save();
+    this.config.set('appname', this.appname);
+    this.config.set('projectName', this.projectName);
+    this.config.set('namespace', this.namespace);
+    this.config.set('author', this.author);
     cb();
   }.bind(this));
 };
@@ -83,7 +100,13 @@ Generator.prototype.gruntfile = function gruntfile() {
 
 
 Generator.prototype.sourceFiles = function sourceFiles() {
-  this.directory('0_basics', 'app/0_basics');
+  this.directory('0_basics/bootstrap', 'app/0_basics/bootstrap');
+  this.template('0_basics/_default.jade', 'app/0_basics/_default.jade');
+  this.template('0_basics/controller.js', 'app/0_basics/controller.js');
+  this.template('0_basics/ie9.less', 'app/0_basics/ie9.less');
+  this.template('0_basics/main.less', 'app/0_basics/main.less');
+  this.template('0_basics/nojs.less', 'app/0_basics/nojs.less');
+
   this.directory('1_atoms', 'app/1_atoms');
   this.directory('2_molecules', 'app/2_molecules');
   this.directory('3_organisms', 'app/3_organisms');
@@ -92,6 +115,22 @@ Generator.prototype.sourceFiles = function sourceFiles() {
   this.copy('index.jade', 'app/index.jade');
 
 };
+
+Generator.prototype.installBaseModules = function() {
+  this.composeWith('atomic:molecule', { args: [
+    "mainmenu", "The mainmenu"
+  ]});
+  this.composeWith('atomic:molecule', { args: [
+    "breadcrumb", "The breadcrumb"
+  ]});
+  this.composeWith('atomic:organism', { args: [
+    "header", "The page header"
+  ]});
+  this.composeWith('atomic:organism', { args: [
+    "footer", "The page footer"
+  ]});
+
+}
 
 Generator.prototype.install = function() {
   /*if (this.options['skip-install']) {
