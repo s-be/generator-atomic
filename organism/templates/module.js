@@ -4,7 +4,7 @@
  * @author <%= author %>
  * @see {@link http://github.com/documentation|GitHub}
  */
-<%= namespace %> = <%= namespace %> || {}; // get the apps namespace
+var <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
 <%= namespace %>.<%= modulename %> = (function() {
 
   /**
