@@ -25,6 +25,40 @@ Finally, initiate the generator:
 yo atomic
 ```
 
+Other available generators:
+
+```bash
+yo atomic:atom
+```
+
+```bash
+yo atomic:molecule
+```
+
+```bash
+yo atomic:organism
+```
+
+```bash
+yo atomic:template
+```
+
+```bash
+yo atomic:page
+```
+
+
+## Installation without npm (as long as this repo is private)
+* Clone the Repo
+```bash
+npm install
+```
+
+```bash
+npm link
+```
+
+
 ## License
 
 MIT
