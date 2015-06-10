@@ -5,7 +5,7 @@ serve:
   - clean:server
   - injector
   - wiredep
-  - jade
+  - parallelize:jade
   - less:server
   - autoprefixer
   - connect:server
@@ -15,12 +15,13 @@ build:
   - clean:build
   - injector
   - wiredep
-  - jade
+  - parallelize:jade
   - less
   - autoprefixer
   - copy:dist
   - useminPrepare
   - concat
+  - combine_mq
   - cssmin
   - uglify
   - imagemin
@@ -28,15 +29,6 @@ build:
   - htmlmin
   - rev
   - usemin
-
-<% if (false) { %>
-test:
-  - clean:server
-  - jade
-  - less
-  - connect:test
-  - mocha
-<% } %>
 
 release:
   - bump-only

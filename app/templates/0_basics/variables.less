@@ -8,17 +8,39 @@
 //## Gray and brand colors for use across Bootstrap.
 
 @gray-base:              #000;
+
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
 @gray-dark:              lighten(@gray-base, 20%);   // #333
 @gray:                   lighten(@gray-base, 33.5%); // #555
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         darken(#428bca, 6.5%); // #337ab7
+@gray-100:              @gray-lighter;
+@gray-300:              @gray-light;
+@gray-500:              @gray;
+@gray-700:              @gray-dark;
+@gray-900:              @gray-darker;
+
+@brand-primary:         #337ab7;
+@brand-secondary:       #5cb85c;
+
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
+
+
+@brand-primary-100:     lighten(@brand-primary,22%);
+@brand-primary-300:     lighten(@brand-primary,10%);
+@brand-primary-500:     @brand-primary;
+@brand-primary-700:     darken(@brand-primary,10%);
+@brand-primary-900:     darken(@brand-primary,22%);
+
+@brand-secondary-100:     lighten(@brand-secondary,22%);
+@brand-secondary-300:     lighten(@brand-secondary,10%);
+@brand-secondary-500:     @brand-secondary;
+@brand-secondary-700:     darken(@brand-secondary,10%);
+@brand-secondary-900:     darken(@brand-secondary,22%);
 
 
 //== Scaffolding

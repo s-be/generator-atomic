@@ -5,7 +5,7 @@
  * @see {@link http://github.com/documentation|GitHub}
  */
 var <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
-<%= namespace %>.<%= modulename %> = (function() {
+<%= namespace %>.<%= modulename %> = (function () {
 
   /**
    * @function privateFunctionExample
@@ -27,7 +27,7 @@ var <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
    * functions that should run at app-start
    * @constructor
    */
-  privateFunctionExample("<%= author %>");
+  privateFunctionExample('<%= author %>');
 
   return {
     // use the return statement to make variables and functions public

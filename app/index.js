@@ -95,17 +95,23 @@ Generator.prototype.gruntfile = function gruntfile() {
   this.copy('tasks/wiredep.js', 'tasks/wiredep.js');
   this.copy('tasks/useminPrepare.js', 'tasks/useminPrepare.js');
   this.copy('tasks/autoprefixer.js', 'tasks/autoprefixer.js');
+  this.copy('tasks/parallelize.js', 'tasks/parallelize.js');
+  this.copy('tasks/jscs.js', 'tasks/jscs.js');
+  this.copy('tasks/combine_mq.js', 'tasks/combine_mq.js');
 
 };
 
 
 Generator.prototype.sourceFiles = function sourceFiles() {
   this.directory('0_basics/bootstrap', 'app/0_basics/bootstrap');
+  this.directory('0_basics/nx-helpers', 'app/0_basics/nx-helpers');
   this.template('0_basics/_default.jade', 'app/0_basics/_default.jade');
   this.template('0_basics/controller.js', 'app/0_basics/controller.js');
   this.template('0_basics/ie9.less', 'app/0_basics/ie9.less');
   this.template('0_basics/main.less', 'app/0_basics/main.less');
   this.template('0_basics/nojs.less', 'app/0_basics/nojs.less');
+  this.template('0_basics/variables.less', 'app/0_basics/variables.less');
+  this.template('0_basics/de.json', 'app/0_basics/de.json');
 
   this.directory('1_atoms', 'app/1_atoms');
   this.directory('2_molecules', 'app/2_molecules');

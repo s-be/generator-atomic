@@ -27,7 +27,7 @@ module.exports = {
   jadelinks: {
     options: {
       transform: function(filePath) {
-        filePath = filePath.replace('.jade', '.html').replace('/app/', '/');
+        filePath = filePath.replace('.jade', '.html').replace('/app/', '../');
         linkTitle = filePath.split('/').pop().replace('.html', '');
         linkTitle = linkTitle.charAt(0).toUpperCase() + linkTitle.substr(1);
         return 'p: a(href="' + filePath + '") ' + linkTitle ;

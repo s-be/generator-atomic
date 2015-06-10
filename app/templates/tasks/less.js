@@ -1,5 +1,5 @@
 /**
- * grunt-contrib-stylus options
+ * grunt-contrib-less options
  * @type {Object}
  */
 
@@ -19,7 +19,7 @@ module.exports = {
     files: [{
       expand: true,
       cwd: '<%= folders.app %>/0_basics',
-      src: ['*.less', '!**/_*'],
+      src: ['*.less', '!**/_*', '!variables.less'],
       dest: '<%= folders.tmp %>/0_basics',
       ext: '.css'
     }],
@@ -31,7 +31,7 @@ module.exports = {
     files: [{
       expand: true,
       cwd: '<%= folders.app %>/0_basics',
-      src: ['*.less', '!**/_*'],
+      src: ['*.less', '!**/_*', '!variables.less'],
       dest: '<%= folders.tmp %>/0_basics',
       ext: '.css'
     }],
