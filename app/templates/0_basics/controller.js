@@ -1,1 +1,1 @@
-<%= namespace %> = <%= namespace %> || {};
+var <%= namespace %> = <%= namespace %> || {};
