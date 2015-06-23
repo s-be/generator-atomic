@@ -78,6 +78,7 @@ Generator.prototype.gruntfile = function gruntfile() {
   this.template('_Gruntfile.js', 'Gruntfile.js');
 
   this.copy('tasks/aliases.yaml', 'tasks/aliases.yaml');
+  this.copy('tasks/babel.js', 'tasks/babel.js');
   this.copy('tasks/bump.js', 'tasks/bump.js');
   this.copy('tasks/changelog.js', 'tasks/changelog.js');
   this.copy('tasks/clean.js', 'tasks/clean.js');

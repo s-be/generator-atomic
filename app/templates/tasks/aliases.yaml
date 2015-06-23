@@ -7,6 +7,7 @@ serve:
   - wiredep
   - parallelize:jade
   - less:server
+  - babel
   - autoprefixer
   - connect:server
   - watch
@@ -16,7 +17,8 @@ build:
   - injector
   - wiredep
   - parallelize:jade
-  - less
+  - less:dist
+  - babel
   - autoprefixer
   - copy:dist
   - useminPrepare
