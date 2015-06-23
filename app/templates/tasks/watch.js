@@ -20,7 +20,7 @@ module.exports = {
       livereload: true
     },
     files: ['<%= folders.app %>/{,*/,**/}*.js'],
-    tasks: ['newer:jscs']
+    tasks: ['newer:eslint']
   },
 
   less: {

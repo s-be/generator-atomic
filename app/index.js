@@ -64,7 +64,7 @@ Generator.prototype.editor = function editor() {
   this.copy('csscomb.json', '.csscomb.json');
   this.copy('csslintrc', '.csslintrc');
 
-  this.copy('jscsrc', '.jscsrc');
+  this.copy('eslintrc', '.eslintrc');
   this.copy('jshintrc', '.jshintrc');
 
   this.copy('editorconfig', '.editorconfig');
@@ -96,7 +96,7 @@ Generator.prototype.gruntfile = function gruntfile() {
   this.copy('tasks/useminPrepare.js', 'tasks/useminPrepare.js');
   this.copy('tasks/autoprefixer.js', 'tasks/autoprefixer.js');
   this.copy('tasks/parallelize.js', 'tasks/parallelize.js');
-  this.copy('tasks/jscs.js', 'tasks/jscs.js');
+  this.copy('tasks/eslint.js', 'tasks/eslint.js');
   this.copy('tasks/combine_mq.js', 'tasks/combine_mq.js');
 
 };
