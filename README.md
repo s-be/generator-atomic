@@ -1,4 +1,4 @@
-# generator-atomic [![Build Status](https://secure.travis-ci.org/nexumAG/generator-atomic.png?branch=master)](https://travis-ci.org/nexumAG/generator-atomic)
+# generator-atomic
 
 > This [Yeoman](http://yeoman.io) generator scaffolds an atomic-design templating framework based on the markup language [Jade](http://http://jade-lang.com/).
 > It comes bundled with [BabelJS](http://babeljs.io/) for ES6 support, [Twitter Bootstrap](http://getbootstrap.com/), [LESS](http://lesscss.org/), ESLint and a build-in Livereload Server. 
