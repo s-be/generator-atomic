@@ -54,7 +54,7 @@ yo atomic:page
 ## License
 
 MIT Licence
-Copyright © 2015  Michael Seel, Nexum AG
+Copyright © 2015  Michael Seel, nexum AG
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
