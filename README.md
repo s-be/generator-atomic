@@ -1,6 +1,9 @@
 # generator-atomic [![Build Status](https://secure.travis-ci.org/nexumAG/generator-atomic.png?branch=master)](https://travis-ci.org/nexumAG/generator-atomic)
 
-> [Yeoman](http://yeoman.io) generator
+> This [Yeoman](http://yeoman.io) generator scaffolds an atomic-design based templating framework based on the templating language [Jade](http://http://jade-lang.com/).
+> It comes bundled with [BabelJS](http://babeljs.io/) for ES6 support, [Twitter Bootstrap](http://getbootstrap.com/), [LESS](http://lesscss.org/), ESLint and a build-in Livereload Server. 
+> Several Subgenerators (atom, molecule, organism...) help you during your project to quickly add new modules and link them properly.
+> [Grunt](http://gruntjs.com/) helps you to automate your workflow with several helpful tasks like "build", "release" and "serve" (default)
 
 
 ## Getting Started
@@ -45,17 +48,6 @@ yo atomic:template
 
 ```bash
 yo atomic:page
-```
-
-
-## Installation without npm (as long as this repo is private)
-* Clone the Repo
-```bash
-npm install
-```
-
-```bash
-npm link
 ```
 
 
