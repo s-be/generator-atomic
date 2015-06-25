@@ -15,7 +15,8 @@ module.exports = {
       livereload: true,
       base: [
         '<%= folders.tmp %>',
-        '<%= folders.app %>'
+        '<%= folders.app %>',
+        'bower_components'
       ]
     }
   },
