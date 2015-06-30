@@ -1,10 +1,10 @@
 {
   "name": "generator-atomic",
-  "version": "0.0.0",
-  "description": "Nexum Atomic Design generator",
+  "version": "0.0.4",
+  "description": "Atomic Design Patternlab generator with Jade, Less and BabelJS",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "nexumAG/generator-atomic",
+  "repository": "https://github.com/nexumAG/generator-atomic",
   "author": {
     "name": "Michael Seel",
     "email": "michael.seel@nexum.de",
