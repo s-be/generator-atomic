@@ -28,5 +28,15 @@ module.exports = {
       ],
       livereload: false
     }
+  },
+  test: {
+    options: {
+      port: 9001,
+      base: [
+        '<%= folders.dist %>'
+      ],
+      livereload: false,
+      open: false
+    }
   }
 };

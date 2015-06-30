@@ -32,6 +32,11 @@ build:
   - rev
   - usemin
 
+test:
+  - build
+  - connect:test
+  - galen:local
+
 release:
   - bump-only
   - changelog
