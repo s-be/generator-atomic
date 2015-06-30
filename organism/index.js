@@ -65,6 +65,7 @@ Generator.prototype.sourceFiles = function sourceFiles() {
   this.copy('_module.jade', 'app/3_organisms/'+ this.modulename +'/_'+ this.modulename +'.jade');
   this.copy('module.less', 'app/3_organisms/'+ this.modulename +'/'+ this.modulename +'.less');
   this.copy('module.js', 'app/3_organisms/'+ this.modulename +'/'+ this.modulename +'.js');
+  this.copy('module.spec', 'app/3_organisms/'+ this.modulename +'/'+ this.modulename +'.spec');
 
 };
 
