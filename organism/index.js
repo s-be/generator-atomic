@@ -1,6 +1,7 @@
 'use strict';
 var util = require('util');
 var path = require('path');
+var camelize = require('camelize');
 var s = require("underscore.string");
 var yeoman = require('yeoman-generator');
 
@@ -50,6 +51,7 @@ Generator.prototype.promptConfig = function promptConfig() {
     this.appname   = this.config.get('appname');
     this.projectName = this.config.get('projectName');
     this.namespace = this.config.get('namespace');
+    this.modulenameCamelized = camelize(this.modulename);
 
     this.config.set('author', this.author);
 
