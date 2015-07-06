@@ -1,6 +1,6 @@
 {
   "name": "generator-atomic",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Atomic Design Patternlab generator with Jade, Less and BabelJS",
   "license": "MIT",
   "main": "app/index.js",
