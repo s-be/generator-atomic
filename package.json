@@ -40,6 +40,9 @@
     "jshint": "^2.5.11",
     "mocha": "*"
   },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  },
   "engines": {
     "node": ">=0.10.0",
     "npm": ">=1.2.10"
