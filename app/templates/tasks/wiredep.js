@@ -26,7 +26,7 @@ module.exports = {
       }
     },
     src: [
-      '<%= folders.app %>/jade/_default.jade'
+      '<%= folders.app %>/0_basics/_default.jade'
     ]
   },
   styles: {
