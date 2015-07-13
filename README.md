@@ -6,7 +6,7 @@
 > [Grunt](http://gruntjs.com/) helps you to automate your workflow with several helpful tasks like "build", "release" and "serve" (default)
 
 
-## Getting Started
+## Installation
 
 ### Install Yeoman
 
@@ -14,7 +14,7 @@
 npm install -g yo
 ```
 
-### Yeoman Generator
+### Install generator-atomic
 
 To install generator-atomic from npm, run:
 
@@ -22,13 +22,15 @@ To install generator-atomic from npm, run:
 npm install -g generator-atomic
 ```
 
-Finally, initiate the generator:
+## Usage
+
+Initiate the generator in your project folder:
 
 ```bash
 yo atomic
 ```
 
-Other available generators:
+To generate modules use following commands in your project folder:
 
 ```bash
 yo atomic:atom
