@@ -50,6 +50,15 @@ yo atomic:template
 yo atomic:page
 ```
 
+## Contributing
+
+1. Fork it
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'feat(filename): add my-new-feature...'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
+
+Thank you for your time, we appreciate it.
 
 ## License
 
