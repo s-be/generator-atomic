@@ -5,6 +5,8 @@
 > Several Subgenerators (atom, molecule, organism...) help you during your project to quickly add new modules and link them properly.
 > [Grunt](http://gruntjs.com/) helps you to automate your workflow with several helpful tasks like "build", "release" and "serve" (default)
 
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/nexumAG/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/nexumAG/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Percentage of issues still open")
 
 ## Getting Started
 
