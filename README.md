@@ -8,7 +8,7 @@
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/nexumAG/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/nexumAG/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Percentage of issues still open")
 
-## Getting Started
+## Installation
 
 ### Install Yeoman
 
@@ -16,7 +16,7 @@
 npm install -g yo
 ```
 
-### Yeoman Generator
+### Install generator-atomic
 
 To install generator-atomic from npm, run:
 
@@ -24,13 +24,15 @@ To install generator-atomic from npm, run:
 npm install -g generator-atomic
 ```
 
-Finally, initiate the generator:
+## Usage
+
+Initiate the generator in your project folder:
 
 ```bash
 yo atomic
 ```
 
-Other available generators:
+To generate modules use following commands in your project folder:
 
 ```bash
 yo atomic:atom
