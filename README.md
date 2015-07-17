@@ -56,51 +56,49 @@ yo atomic:page
 
 ### Directory Layout
 ```
-├── □ tmp                                 # Folder for temporary development output
 ├── □ app                                   
 |   ├── □ 0_basics                        
-|   |   ├── _default.jade                 # Mastertemplate for HTML-Pages
-|   |   ├── □ bootstrap                   # Folder with bootstrap
-|   |   ├── controller.js                 # Meta-Function library 
+|   |   ├── _default.jade                 # Mastertemplate with HTML Header/Footer
+|   |   ├── □ bootstrap                   # Twitter bootstrap
+|   |   ├── controller.js                 # Javascript Main Controller 
 |   |   ├── de.json                       # Content json  
-|   |   ├── ie9.less                      # Fallback for IE9
-|   |   ├── main.less                     # Less-file for imports
-|   |   ├── nojs.less                     # Fallback for no Javascript 
-|   |   ├── □ nx helpers                  # Different Less Classes
-|   |   └── variables.less                # Variables for Bootstrap 
+|   |   ├── ie9.less                      # Fallback CSS for IE9
+|   |   ├── main.less                     # Less-file for Module imports
+|   |   ├── nojs.less                     # Fallback CSS for Browsers without JS
+|   |   ├── □ nx helpers                  # Less Helper Classes
+|   |   └── variables.less                # Less Variables
 |   ├── □ 1_atoms                         # Folder for Atoms
-|   |   ├── index.jade                    # Dashboard for atoms 
+|   |   ├── index.jade                    # Overviewpage for atoms 
 |   |   └── □ link                        # Example for Atom with basic file structure 
 |   |       ├── link.jade                  
 |   |       └── _link.less                  
 |   ├── □ 2_molecules                     # Folder for Molecules
-|   |   ├── index.jade                    # Dashboard for Molecules
+|   |   ├── index.jade                    # Overviewpage for Molecules
 |   |   └── □ breadcrumb                  # Example for Molecules with basic file structure
 |   |       ├── breadcrumb.jade              
 |   |       ├── _breadcrumb.jade          
-|   |       ├── _breadcrumb.js            
-|   |       ├── _breadcrumb.less          
-|   |       └── _breadcrumb.spec          
+|   |       ├── breadcrumb.js            
+|   |       ├── breadcrumb.less          
+|   |       └── breadcrumb.spec          
 |   ├── □ 3_organisms                     # Folder for Organisms
-|   |   ├── index.jade                    # Dashboard for Organisms
+|   |   ├── index.jade                    # Overviewpage for Organisms
 |   |   └── □ header                      # Example for Organisms with basic file structure
 |   |       ├── header.jade               
 |   |       ├── _header.jade              
-|   |       ├── _header.js                
-|   |       ├── _header.less              
-|   |       └── _header.spec               
+|   |       ├── header.js                
+|   |       ├── header.less              
+|   |       └── header.spec               
 |   ├── □ 4_templates                     # Folder for Templates
-|   |   ├── index.jade                    # Dashboard for Templates
+|   |   ├── index.jade                    # Overviewpage for Templates
 |   |   └── □ templatehomepage            # Example for Templates with basic file structure
 |   |       ├── templatehomepage.jade     
 |   |       └── templatehomepage.spec     
 |   └── □ 5_pages                         # Folder for Pages
-|       ├── index.jade                    # Dashboard for Pages 
+|       ├── index.jade                    # Overviewpage for Pages 
 |       └── □ homepage                    # Example for Pages with basic file structure
 |           ├── homepage.jade             
 |           └── homepage.spec             
 ├── □ dist                                # Folder for build output
-└── □ bower_components                    # Folder for bower components
 ```
 
 ## Contributing
