@@ -54,6 +54,53 @@ yo atomic:template
 yo atomic:page
 ```
 
+### Directory Layout
+```
+├── □ app                                   
+|   ├── □ 0_basics                        
+|   |   ├── _default.jade                 # Mastertemplate with HTML Header/Footer
+|   |   ├── □ bootstrap                   # Twitter bootstrap
+|   |   ├── controller.js                 # Javascript Main Controller 
+|   |   ├── de.json                       # Content json  
+|   |   ├── ie9.less                      # Fallback CSS for IE9
+|   |   ├── main.less                     # Less-file for Module imports
+|   |   ├── nojs.less                     # Fallback CSS for Browsers without JS
+|   |   ├── □ nx helpers                  # Less Helper Classes
+|   |   └── variables.less                # Less Variables
+|   ├── □ 1_atoms                         # Folder for Atoms
+|   |   ├── index.jade                    # Overviewpage for atoms 
+|   |   └── □ link                        # Example for Atom with basic file structure 
+|   |       ├── link.jade                  
+|   |       └── _link.less                  
+|   ├── □ 2_molecules                     # Folder for Molecules
+|   |   ├── index.jade                    # Overviewpage for Molecules
+|   |   └── □ breadcrumb                  # Example for Molecules with basic file structure
+|   |       ├── breadcrumb.jade              
+|   |       ├── _breadcrumb.jade          
+|   |       ├── breadcrumb.js            
+|   |       ├── breadcrumb.less          
+|   |       └── breadcrumb.spec          
+|   ├── □ 3_organisms                     # Folder for Organisms
+|   |   ├── index.jade                    # Overviewpage for Organisms
+|   |   └── □ header                      # Example for Organisms with basic file structure
+|   |       ├── header.jade               
+|   |       ├── _header.jade              
+|   |       ├── header.js                
+|   |       ├── header.less              
+|   |       └── header.spec               
+|   ├── □ 4_templates                     # Folder for Templates
+|   |   ├── index.jade                    # Overviewpage for Templates
+|   |   └── □ templatehomepage            # Example for Templates with basic file structure
+|   |       ├── templatehomepage.jade     
+|   |       └── templatehomepage.spec     
+|   └── □ 5_pages                         # Folder for Pages
+|       ├── index.jade                    # Overviewpage for Pages 
+|       └── □ homepage                    # Example for Pages with basic file structure
+|           ├── homepage.jade             
+|           └── homepage.spec             
+├── □ dist                                # Folder for build output
+```
+
 ## Contributing
 
 1. Fork it
