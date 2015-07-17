@@ -58,15 +58,15 @@ yo atomic:page
 ```
 ├── □ app                                   
 |   ├── □ 0_basics                        
-|   |   ├── _default.jade                 # Mastertemplate with HTML Header/Footer
-|   |   ├── □ bootstrap                   # Twitter bootstrap
+|   |   ├── _default.jade                 # HTML Mastertemplate (HTML Header/Footer)
 |   |   ├── controller.js                 # Javascript Main Controller 
-|   |   ├── de.json                       # Content json  
-|   |   ├── ie9.less                      # Fallback CSS for IE9
+|   |   ├── de.json                       # Content JSON  
 |   |   ├── main.less                     # Less-file for Module imports
+|   |   ├── variables.less                # Less Variables
 |   |   ├── nojs.less                     # Fallback CSS for Browsers without JS
-|   |   ├── □ nx helpers                  # Less Helper Classes
-|   |   └── variables.less                # Less Variables
+|   |   ├── ie9.less                      # Fallback CSS for IE9
+|   |   ├── □ bootstrap                   # Twitter bootstrap
+|   |   └── □ nx helpers                  # Less Helper Classes
 |   ├── □ 1_atoms                         # Folder for Atoms
 |   ├── □ 2_molecules                     # Folder for Molecules
 |   ├── □ 3_organisms                     # Folder for Organisms
