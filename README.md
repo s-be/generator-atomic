@@ -71,11 +71,13 @@ yo atomic:page
 |   ├── □ 2_molecules                     # Folder for Molecules
 |   ├── □ 3_organisms                     # Folder for Organisms
 |   ├── □ 4_templates                     # Folder for Templates
+|   └── □ 5_templates                     # Folder for Templates
 ```
 
 ### Module Directory Layout
 Each Module (atom, molecule, organism...) has this Directory Layout:
 ```
+|   |   ├── index.jade                  # Dashboard for Templates
 |   |   └── □ breadcrumb                  
 |   |       ├── breadcrumb.jade         # Demo: showcase the Module in all available versions
 |   |       ├── _breadcrumb.jade        # Markup: Jade Mixins (with _underscore)
