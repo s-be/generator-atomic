@@ -77,7 +77,7 @@ yo atomic:page
 ### Module Directory Layout
 Each Module (atom, molecule, organism...) has this Directory Layout:
 ```
-|   |   ├── index.jade                  # Dashboard for Templates
+|   |   ├── index.jade                  # Module Overview Page
 |   |   └── □ breadcrumb                  
 |   |       ├── breadcrumb.jade         # Demo: showcase the Module in all available versions
 |   |       ├── _breadcrumb.jade        # Markup: Jade Mixins (with _underscore)
