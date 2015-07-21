@@ -60,20 +60,17 @@ yo atomic:page
 Runs [`grunt serve`](#grunt-serve).
 
 ### `grunt serve`
-Start a development server that whatch files and automatically reloads when you change or add/delete a file.
-
-|Tasks| Description
-|---------|-------
-| `grunt serve:dist` | load the production version of the site.
+Start a development server that watches files and livereloads on changes.
+Subtarget: `grunt serve:dist`: Serve a production Build.
 
 ### `grunt build`
-Build the Production code in Folder dist.
+Build the (optimized for production) code into `/dist`.
 
 ### `grunt test`
-Start testing with Galen.
+Build, Serve and run Layout-Tests with Galen.
 
 ### `grunt release`
-Create a Release of the Project.
+Create a Release of the Project (bump and tag).
 
 |Tasks| Description
 |---------|-------
