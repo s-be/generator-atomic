@@ -1,9 +1,9 @@
 # generator-atomic
 
-> This [Yeoman](http://yeoman.io) generator scaffolds an atomic-design templating framework based on the markup language [Jade](http://http://jade-lang.com/).
-> It comes bundled with [BabelJS](http://babeljs.io/) for ES6 support, [Twitter Bootstrap](http://getbootstrap.com/), [LESS](http://lesscss.org/), ESLint and a build-in Livereload Server. 
-> Several Subgenerators (atom, molecule, organism...) help you during your project to quickly add new modules and link them properly.
-> [Grunt](http://gruntjs.com/) helps you to automate your workflow with several helpful tasks like "build", "release" and "serve" (default). For automated Layout-testing you can use the [Galen Framework](http://galenframework.com/).
+This [Yeoman](http://yeoman.io) generator scaffolds an atomic-design templating framework based on the markup language [Jade](http://http://jade-lang.com/).
+It comes bundled with [BabelJS](http://babeljs.io/) for ES6 support, [Twitter Bootstrap](http://getbootstrap.com/), [LESS](http://lesscss.org/), ESLint and a build-in Livereload Server. 
+Several Subgenerators (atom, molecule, organism...) help you during your project to quickly add new modules and link them properly.
+[Grunt](http://gruntjs.com/) helps you to automate your workflow with several helpful tasks like "build", "release" and "serve" (default). For automated Layout-testing you can use the [Galen Framework](http://galenframework.com/).
 
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/nexumAG/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/nexumAG/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Percentage of issues still open")
@@ -54,11 +54,33 @@ yo atomic:template
 yo atomic:page
 ```
 
-For test with Galen use following command:
+## Grunt Workflow
 
-```bash
-grunt test
-```
+### `grunt default`
+Runs [`grunt serve`](#grunt-serve).
+
+### `grunt serve`
+Start a development server that whatch files and automatically reloads when you change or add/delete a file.
+
+|Tasks| Description
+|---------|-------
+| `grunt serve:dist` | load the production version of the site.
+
+### `grunt build`
+Build the Production code in Folder dist.
+
+### `grunt test`
+Start testing with Galen.
+
+### `grunt release`
+Create a Release of the Project.
+
+|Tasks| Description
+|---------|-------
+| `grunt release:patch` | Create a patch release of the Project.
+| `grunt release:minor` | Create a minor release of the Project.
+| `grunt release:mayor` | Create a mayor release of the Project.
+
 ### Directory Layout
 ```
 ├── □ app                                   
