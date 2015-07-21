@@ -1,6 +1,6 @@
 {
   "name": "generator-atomic",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Atomic Design Patternlab generator with Jade, Less and BabelJS",
   "license": "MIT",
   "main": "app/index.js",
@@ -19,7 +19,7 @@
     "test": "mocha"
   },
   "files": [
-    "app", "atom", "molecule", "template", "page"
+    "app", "atom", "molecule", "organism", "template", "page"
   ],
   "keywords": [
     "yeoman-generator",
