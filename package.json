@@ -1,7 +1,7 @@
 {
   "name": "generator-atomic",
-  "version": "0.1.4",
-  "description": "Atomic-Design Staticsite generator with Jade, Less and BabelJS. Integrated Galen for easy Layout-Tests.",
+  "version": "0.1.5",
+  "description": "Yeoman Generator for Atomic-Design with Jade, Less and BabelJS. Integrated Galen for easy Layout-Tests.",
   "license": "MIT",
   "main": "app/index.js",
   "repository": {
