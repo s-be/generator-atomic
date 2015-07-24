@@ -29,7 +29,8 @@
         lang: grunt.file.readJSON('app/0_basics/'+ language +'.json'),
         language: language
       },
-      init: true
+      init: true,
+      jitGrunt: true
     });
   };
 })();
