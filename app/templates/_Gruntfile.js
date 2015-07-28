@@ -30,7 +30,13 @@
         language: language
       },
       init: true,
-      jitGrunt: true
+      jitGrunt: {
+        staticMappings: {
+          useminPrepare: 'grunt-usemin',
+          'bump-only':   'grunt-bump',
+          changelog:     'grunt-conventional-changelog'
+        }
+      }
     });
   };
 })();
