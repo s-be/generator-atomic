@@ -1,3 +1,14 @@
-/**
- * Created by michaels on 31.07.15.
- */
+module.exports = function(grunt) {
+
+  grunt.initConfig({
+
+    release: {
+      options: {
+        changelog: true, //default: false
+      }
+    }
+  });
+
+
+  grunt.loadNpmTasks('grunt-release');
+};
