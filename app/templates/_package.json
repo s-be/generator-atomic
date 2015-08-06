@@ -1,6 +1,12 @@
 {
   "name": "<%= appname %>",
+  "description": "Add your project Description here",
   "version": "0.0.0",
+  "license": "Add your License here",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",
