@@ -30,7 +30,7 @@ Generator.prototype.promptConfig = function promptConfig() {
     },
     {
       name: 'namespace',
-      message: 'Choose a namespace (short, lowercase, no special-chars)'
+      message: 'Choose the javascript namespace (should be short, lowercase, no special-chars)'
     },
     {
       name:    'author',
@@ -42,7 +42,7 @@ Generator.prototype.promptConfig = function promptConfig() {
   this.prompt(prompts, function(props) {
     this.projectName = props.projectName;
     this.appname = s.slugify(this.projectName);
-    this.namespace = props.namespace;
+    this.namespace = props.namespace.replace(/[^\w\s]/gi, '');
     this.author = props.author;
 
     this.config.save();
