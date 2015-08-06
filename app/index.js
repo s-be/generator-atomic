@@ -126,6 +126,9 @@ Generator.prototype.sourceFiles = function sourceFiles() {
   this.directory('5_pages', 'app/5_pages');
   this.copy('index.jade', 'app/index.jade');
 
+  this.directory('images', 'app/images');
+  this.directory('fonts', 'app/fonts');
+
 };
 
 Generator.prototype.installBaseModules = function() {
