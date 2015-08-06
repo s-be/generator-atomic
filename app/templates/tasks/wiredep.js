@@ -28,9 +28,5 @@ module.exports = {
     src: [
       '<%= folders.app %>/0_basics/_default.jade'
     ]
-  },
-  styles: {
-    src: ['<%= folders.app %>/styles/**/*.less'],
-    ignorePath: /client/g,
   }
 };
