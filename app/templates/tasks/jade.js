@@ -1,5 +1,5 @@
 /**
- * grunt-contirb-jade options
+ * grunt-contrib-jade options
  * @type {Object}
  */
 
