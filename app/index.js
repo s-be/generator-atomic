@@ -58,6 +58,7 @@ Generator.prototype.tools = function tools() {
   this.template('bowerrc', '.bowerrc');
   this.template('_bower.json', 'bower.json');
   this.template('_package.json', 'package.json');
+  this.template('_README.md', 'README.md');
 };
 
 Generator.prototype.editor = function editor() {
