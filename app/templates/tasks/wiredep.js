@@ -6,7 +6,7 @@
 module.exports = {
   app: {
     options: {
-      ignorePath: '../../bower_components/',
+      ignorePath: /\.\.\//g,
       // Make sure everything has an absolute path (starts with '/')
       fileTypes: {
         jade: {
