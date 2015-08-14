@@ -7,10 +7,10 @@ module.exports = {
   dist: {
     files: {
       src: [
-        '<%= folders.dist %>/scripts/{,*/}*.js',
-        '<%= folders.dist %>/styles/{,*/}*.css',
+        '<%= folders.dist %>/{,*/,**/}*.js',
+        '<%= folders.dist %>/{,*/,**/}*.css',
         '<%= folders.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
-        '<%= folders.dist %>/styles/fonts/*'
+        '<%= folders.dist %>/fonts/*'
       ]
     }
   }

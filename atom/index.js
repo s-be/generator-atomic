@@ -17,7 +17,7 @@ util.inherits(Generator, yeoman.generators.Base);
 
 Generator.prototype.promptConfig = function promptConfig() {
   var cb = this.async(),
-    welcomeMsg = 'generator-atomic version: ' + this.pkg.version,
+    welcomeMsg = 'generator-atomic:atom version: ' + this.pkg.version,
     prompts;
 
   console.log(welcomeMsg);
@@ -25,11 +25,11 @@ Generator.prototype.promptConfig = function promptConfig() {
   prompts = [
     {
       name: 'modulename',
-      message: 'Name your atom'
+      message: 'Name this atom'
     },
     {
       name: 'description',
-      message: 'Describe your atom'
+      message: 'Describe this atom'
     },
     {
       name: 'author',
@@ -61,6 +61,7 @@ Generator.prototype.promptConfig = function promptConfig() {
 
 Generator.prototype.sourceFiles = function sourceFiles() {
 
+  this.copy('_module.jade', 'app/1_atoms/'+ this.modulename +'/_'+ this.modulename +'.jade');
   this.copy('module.jade', 'app/1_atoms/'+ this.modulename +'/'+ this.modulename +'.jade');
   this.copy('module.less', 'app/1_atoms/'+ this.modulename +'/'+ this.modulename +'.less');
 

@@ -18,7 +18,7 @@ util.inherits(Generator, yeoman.generators.Base);
 
 Generator.prototype.promptConfig = function promptConfig() {
   var cb = this.async(),
-    welcomeMsg = 'generator-atomic version: ' + this.pkg.version,
+    welcomeMsg = 'generator-atomic:organism version: ' + this.pkg.version,
     prompts;
 
   console.log(welcomeMsg);
@@ -26,11 +26,11 @@ Generator.prototype.promptConfig = function promptConfig() {
   prompts = [
     {
       name: 'modulename',
-      message: 'Name your organism'
+      message: 'Name this organism'
     },
     {
       name: 'description',
-      message: 'Describe your organism'
+      message: 'Describe this organism'
     },
     {
       name: 'author',
