@@ -29,7 +29,14 @@
         lang: grunt.file.readJSON('app/0_basics/'+ language +'.json'),
         language: language
       },
-      init: true
+      init: true,
+      jitGrunt: {
+        staticMappings: {
+          useminPrepare: 'grunt-usemin',
+          'bump-only':   'grunt-bump',
+          changelog:     'grunt-conventional-changelog'
+        }
+      }
     });
   };
 })();

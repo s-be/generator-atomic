@@ -2,7 +2,7 @@
  * @name Molecule: <%= modulename %>
  * @description <%= description %>
  * @author <%= author %>
- * @see {@link http://github.com/documentation|GitHub}
+ * @see {@link http://github.com/documentation|Specification}
  */
 var <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
 <%= namespace %>.<%= modulenameCamelized %> = (function () {

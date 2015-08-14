@@ -30,7 +30,7 @@ Generator.prototype.promptConfig = function promptConfig() {
     },
     {
       name: 'namespace',
-      message: 'Choose a namespace (short, lowercase, no special-chars)'
+      message: 'Choose the javascript namespace (should be short, lowercase, no special-chars)'
     },
     {
       name:    'author',
@@ -42,7 +42,7 @@ Generator.prototype.promptConfig = function promptConfig() {
   this.prompt(prompts, function(props) {
     this.projectName = props.projectName;
     this.appname = s.slugify(this.projectName);
-    this.namespace = props.namespace;
+    this.namespace = props.namespace.replace(/[^\w\s]/gi, '');
     this.author = props.author;
 
     this.config.save();
@@ -58,6 +58,7 @@ Generator.prototype.tools = function tools() {
   this.template('bowerrc', '.bowerrc');
   this.template('_bower.json', 'bower.json');
   this.template('_package.json', 'package.json');
+  this.template('_README.md', 'README.md');
 };
 
 Generator.prototype.editor = function editor() {
@@ -126,6 +127,24 @@ Generator.prototype.sourceFiles = function sourceFiles() {
   this.directory('5_pages', 'app/5_pages');
   this.copy('index.jade', 'app/index.jade');
 
+  this.directory('images', 'app/images');
+  this.directory('fonts', 'app/fonts');
+
+};
+
+
+
+Generator.prototype.install = function() {
+  /*if (this.options['skip-install']) {
+    return;
+  }*/
+
+  //var done = this.async();
+  this.installDependencies(/*{
+    //skipMessage: this.options['skip-install-message'],
+    //skipInstall: this.options['skip-install'],
+    //callback: done
+  }*/);
 };
 
 Generator.prototype.installBaseModules = function() {
@@ -142,17 +161,4 @@ Generator.prototype.installBaseModules = function() {
     "footer", "The page footer"
   ]});
 
-}
-
-Generator.prototype.install = function() {
-  /*if (this.options['skip-install']) {
-    return;
-  }*/
-
-  //var done = this.async();
-  this.installDependencies(/*{
-    //skipMessage: this.options['skip-install-message'],
-    //skipInstall: this.options['skip-install'],
-    //callback: done
-  }*/);
 };
