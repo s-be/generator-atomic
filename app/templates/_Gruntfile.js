@@ -26,7 +26,6 @@
         folders: folders,
         packageJson: require('./package.json'),
         timestamp: grunt.template.today('dd.mm.yyyy HH:MM:ss'),
-        lang: grunt.file.readJSON('app/0_basics/'+ language +'.json'),
         language: language
       },
       init: true,
