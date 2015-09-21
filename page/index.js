@@ -50,6 +50,7 @@ Generator.prototype.promptConfig = function promptConfig() {
     this.appname   = this.config.get('appname');
     this.projectName = this.config.get('projectName');
     this.namespace = this.config.get('namespace');
+    this.modulenameCamelized = s.camelize(this.modulename);
 
     this.config.set('author', this.author);
 
@@ -63,6 +64,7 @@ Generator.prototype.sourceFiles = function sourceFiles() {
 
   this.copy('module.jade', 'app/5_pages/'+ this.modulename +'/'+ this.modulename +'.jade');
   this.copy('module.spec', 'app/5_pages/'+ this.modulename +'/'+ this.modulename +'.spec');
+  this.copy('module.yaml', 'app/5_pages/'+ this.modulename +'/'+ this.modulenameCamelized +'.yaml');
 
 };
 
