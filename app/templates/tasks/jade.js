@@ -21,11 +21,19 @@ module.exports = function (grunt, data) {
           path += '../';
         }
 
+        yaml = {};
+        grunt.file.expand('app/**/*.yaml').forEach(function(path) {
+          var _namespace = path.substr(path.lastIndexOf('/') + 1);
+          _namespace = _namespace.replace('.yaml', '');
+
+          yaml[_namespace] = grunt.file.readYAML(path);
+        });
+
         return {
           page: page,
           path: path,
           level: level,
-          lang:  data.lang,
+          yaml:  yaml,
           language: data.language,
           timestamp: data.timestamp
         };

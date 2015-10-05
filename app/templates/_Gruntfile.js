@@ -28,7 +28,6 @@
         folders: folders,
         packageJson: require('./package.json'),
         timestamp: grunt.template.today('dd.mm.yyyy HH:MM:ss'),
-        lang: langfile,
         language: language
       },
       init: true,
