@@ -1,7 +1,7 @@
 # generator-atomic
 
 This [Yeoman](http://yeoman.io) generator scaffolds an atomic-design templating framework based on the markup language [Jade](http://http://jade-lang.com/).
-It comes bundled with [BabelJS](http://babeljs.io/) for ES6 support, [Twitter Bootstrap](http://getbootstrap.com/), [LESS](http://lesscss.org/), ESLint and a build-in Livereload Server. 
+It comes bundled with [BabelJS](http://babeljs.io/) for ES6 support, [Twitter Bootstrap](http://getbootstrap.com/), [LESS](http://lesscss.org/), ESLint and a build-in Livereload Server.
 Several Subgenerators (atom, molecule, organism...) help you during your project to quickly add new modules and link them properly.
 [Grunt](http://gruntjs.com/) helps you to automate your workflow with several helpful tasks like "build", "release" and "serve" (default). For automated Layout-testing you can use the [Galen Framework](http://galenframework.com/).
 
@@ -83,8 +83,8 @@ Create a Release of the Project (bump and tag).
 ├── □ app                                   
 |   ├── □ 0_basics                        
 |   |   ├── _default.jade                 # HTML Mastertemplate (HTML Header/Footer)
-|   |   ├── controller.js                 # Javascript Main Controller 
-|   |   ├── de.json                       # Content JSON  
+|   |   ├── controller.js                 # Javascript Main Controller
+|   |   ├── basics.yaml                   # Global Content YAML
 |   |   ├── main.less                     # Less-file for Module imports
 |   |   ├── variables.less                # Less Variables
 |   |   ├── nojs.less                     # Fallback CSS for Browsers without JS
@@ -108,6 +108,7 @@ Each Module (atom, molecule, organism...) has this Directory Layout:
 |   |       ├── breadcrumb.js           # Script: ES2015 through BabelJS (not in atoms, templates and pages)
 |   |       ├── breadcrumb.less         # Styles: LESS precompiler
 |   |       └── breadcrumb.spec         # Test: Galen Specfile for Layout Tests
+|   |       └── breadcrumb.yaml         # Content Model for this module
 ```
 ## Contributing
 
