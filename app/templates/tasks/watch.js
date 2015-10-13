@@ -51,10 +51,7 @@ module.exports = {
     options: {
       livereload: false
     },
-    files: '<%= folders.app %>/{,*/,**/}*.json',
+    files: '<%= folders.app %>/{,*/,**/}*.yaml',
     tasks: ['parallelize:jade']
   }
 };
-
-
-
