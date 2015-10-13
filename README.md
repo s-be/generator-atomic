@@ -107,7 +107,8 @@ Each Module (atom, molecule, organism...) has this Directory Layout:
 |   |       ├── _breadcrumb.jade        # Markup: Jade Mixins (with _underscore)
 |   |       ├── breadcrumb.js           # Script: ES2015 through BabelJS (not in atoms, templates and pages)
 |   |       ├── breadcrumb.less         # Styles: LESS precompiler
-|   |       └── breadcrumb.spec         # Test: Galen Specfile for Layout Tests
+|   |       ├── breadcrumb.spec         # Test: Galen Specfile for Layout Tests
+|   |       └── breadcrumb.yaml         # Content Model for this module
 ```
 ## Contributing
 
