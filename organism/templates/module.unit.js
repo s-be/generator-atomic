@@ -7,7 +7,7 @@ describe('<%= modulenameCamelized %> tests', function () {
     // Arrange
     var num1 = 1;
     var num2 = 3;
-    var expected = 5;
+    var expected = 4;
 
     // Act
     var result = <%= namespace %>.<%= modulenameCamelized %>.publicFunctionExample(num1, num2);
