@@ -9,6 +9,15 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.registerTask('release', function () {
+    this.args.unshift('bump-only');
+    grunt.task.run([
+      this.args.join(':'),
+      'changelog',
+      'bump-commit'
+    ]);
+  });
+
 
   grunt.loadNpmTasks('grunt-release');
 };
