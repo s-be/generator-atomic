@@ -135,19 +135,22 @@ Generator.prototype.sourceFiles = function sourceFiles() {
 
 
 Generator.prototype.install = function() {
-  /*if (this.options['skip-install']) {
+  if (this.options['skip-install']) {
     return;
-  }*/
+  }
 
   //var done = this.async();
-  this.installDependencies(/*{
-    //skipMessage: this.options['skip-install-message'],
-    //skipInstall: this.options['skip-install'],
-    //callback: done
-  }*/);
+  this.installDependencies({/*
+    skipMessage: this.options['skip-install-message'],
+    skipInstall: this.options['skip-install'],
+    callback: done*/
+  });
 };
 
 Generator.prototype.installBaseModules = function() {
+  if (this.options['skip-install']) {
+    return;
+  }
   this.composeWith('atomic:molecule', { args: [
     "mainmenu", "The mainmenu"
   ]});
