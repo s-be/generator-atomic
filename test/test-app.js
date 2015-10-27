@@ -8,7 +8,7 @@ var os = require('os');
 describe('atomic:app', function () {
   before(function (done) {
     helpers.run(path.join(__dirname, '../app'))
-      .withPrompts({ name: 'Test Project' })
+      .withPrompts({ projectName: 'Test Project' })
       .withPrompts({ namespace: 'mse' })
       .withPrompts({ author: 'Test Runner' })
       .withOptions({ skipInstall: true })
