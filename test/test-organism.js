@@ -24,7 +24,8 @@ describe('atomic:organism', function () {
 
   it('creates javascript source file', function () {
     assert.file([
-      'app/3_organisms/TestModuleNameName/TestModuleNameName.js'
+      'app/3_organisms/TestModuleNameName/TestModuleNameName.js',
+      'app/3_organisms/TestModuleNameName/TestModuleNameName.unit.js'
     ]);
   });
 
