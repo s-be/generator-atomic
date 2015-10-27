@@ -1,3 +1,12 @@
+<a name"0.4.7"></a>
+### 0.4.7 (2015-10-27)
+
+
+#### Features
+
+* **release:** commit new changelog on release ([2abf5883](https://github.com/nexumAG/generator-atomic/commit/2abf5883))
+
+
 <a name"0.4.6"></a>
 ### 0.4.6 (2015-10-27)
 
