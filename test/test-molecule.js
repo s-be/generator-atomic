@@ -24,7 +24,8 @@ describe('atomic:molecule', function () {
 
   it('creates javascript source file', function () {
     assert.file([
-      'app/2_molecules/TestModuleNameName/TestModuleNameName.js'
+      'app/2_molecules/TestModuleNameName/TestModuleNameName.js',
+      'app/2_molecules/TestModuleNameName/TestModuleNameName.unit.js'
     ]);
   });
 

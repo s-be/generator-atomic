@@ -14,7 +14,8 @@ module.exports = {
       dest: '<%= folders.tmp %>',
       src: [
         '{,*/,**/}*.js',
-        '!bower_components/{,*/,**/}*.js'
+        '!bower_components/{,*/,**/}*.js',
+        '!*.unit.js'
       ]
     }]
   }
