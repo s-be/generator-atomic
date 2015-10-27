@@ -20,7 +20,8 @@ var <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
    * @function publicFunctionExample
    * @description example public function - made public through the return statement
    */
-  function publicFunctionExample() {
+  function publicFunctionExample(a, b) {
+    return a + b;
   }
 
   /**
@@ -37,5 +38,5 @@ var <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
 }());
 
 /** Example Usage:
-  <%= namespace %>.<%= modulenameCamelized %>.publicFunctionExample();
+  <%= namespace %>.<%= modulenameCamelized %>.publicFunctionExample(1,5); // = 6
 */
