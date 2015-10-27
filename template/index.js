@@ -62,14 +62,16 @@ Generator.prototype.promptConfig = function promptConfig() {
 
 Generator.prototype.sourceFiles = function sourceFiles() {
 
-  this.copy('module.jade', 'app/4_templates/'+ this.modulename +'/'+ this.modulename +'.jade');
-  this.copy('module.spec', 'app/4_templates/'+ this.modulename +'/'+ this.modulename +'.spec');
-  this.copy('module.yaml', 'app/4_templates/'+ this.modulename +'/'+ this.modulenameCamelized +'.yaml');
+  this.copy('module.jade', 'app/4_templates/'+ this.modulenameCamelized +'/'+ this.modulenameCamelized +'.jade');
+  this.copy('module.spec', 'app/4_templates/'+ this.modulenameCamelized +'/'+ this.modulenameCamelized +'.spec');
+  this.copy('module.yaml', 'app/4_templates/'+ this.modulenameCamelized +'/'+ this.modulenameCamelized +'.yaml');
 
 };
 
 Generator.prototype.install = function() {
-
+  if (this.options['skip-install']) {
+    return;
+  }
   this.spawnCommand('grunt', ['injector']);
 
 };

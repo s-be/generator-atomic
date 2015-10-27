@@ -63,16 +63,18 @@ Generator.prototype.promptConfig = function promptConfig() {
 
 Generator.prototype.sourceFiles = function sourceFiles() {
 
-  this.copy('module.jade', 'app/2_molecules/'+ this.modulename +'/'+ this.modulename +'.jade');
-  this.copy('_module.jade', 'app/2_molecules/'+ this.modulename +'/_'+ this.modulename +'.jade');
-  this.copy('module.less', 'app/2_molecules/'+ this.modulename +'/'+ this.modulename +'.less');
-  this.copy('module.js', 'app/2_molecules/'+ this.modulename +'/'+ this.modulename +'.js');
-  this.copy('module.spec', 'app/2_molecules/'+ this.modulename +'/'+ this.modulename +'.spec');
-  this.copy('module.yaml', 'app/2_molecules/'+ this.modulename +'/'+ this.modulenameCamelized +'.yaml');
+  this.copy('module.jade', 'app/2_molecules/'+ this.modulenameCamelized +'/'+ this.modulenameCamelized +'.jade');
+  this.copy('_module.jade', 'app/2_molecules/'+ this.modulenameCamelized +'/_'+ this.modulenameCamelized +'.jade');
+  this.copy('module.less', 'app/2_molecules/'+ this.modulenameCamelized +'/'+ this.modulenameCamelized +'.less');
+  this.copy('module.js', 'app/2_molecules/'+ this.modulenameCamelized +'/'+ this.modulenameCamelized +'.js');
+  this.copy('module.spec', 'app/2_molecules/'+ this.modulenameCamelized +'/'+ this.modulenameCamelized +'.spec');
+  this.copy('module.yaml', 'app/2_molecules/'+ this.modulenameCamelized +'/'+ this.modulenameCamelized +'.yaml');
 
 };
 
 Generator.prototype.install = function() {
-
+  if (this.options['skip-install']) {
+    return;
+  }
   this.spawnCommand('grunt', ['injector']);
 };
