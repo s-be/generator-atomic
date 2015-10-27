@@ -29,5 +29,6 @@ module.exports = function(grunt) {
   });
 
 
-  grunt.loadNpmTasks('grunt-release');
+  grunt.loadNpmTasks('grunt-bump');
+  grunt.loadNpmTasks('grunt-conventional-changelog');
 };
