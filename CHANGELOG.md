@@ -1,3 +1,12 @@
+<a name"0.4.5"></a>
+### 0.4.5 (2015-10-27)
+
+
+#### Bug Fixes
+
+* **release:** fix release task ([1905bebe](https://github.com/nexumAG/generator-atomic/commit/1905bebe))
+
+
 ### 0.4.3 - 2015-10-27
 ### 0.4.2 - 2015-10-27
 ### 0.4.1 - 2015-10-13
