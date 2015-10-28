@@ -8,6 +8,6 @@ module.exports = {
     configFile: 'tests/karma.conf.js',
     singleRun: true,
     port: 9002,
-    browsers: ['Chrome']
+    browsers: ['PhantomJS']
   }
 };
