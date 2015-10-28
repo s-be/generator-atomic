@@ -1,3 +1,23 @@
+<a name"0.6.1"></a>
+### 0.6.1 (2015-10-28)
+
+
+#### Bug Fixes
+
+* **autoprefixer:** rename default task ([66ae6820](https://github.com/nexumAG/generator-atomic/commit/66ae6820))
+* **injector:** remove unit tests from build ([59ee496d](https://github.com/nexumAG/generator-atomic/commit/59ee496d))
+* **karma:** correct copying of karma config ([caf4822e](https://github.com/nexumAG/generator-atomic/commit/caf4822e))
+
+
+#### Features
+
+* **democode:** add use strict to js demo code ([a37446ea](https://github.com/nexumAG/generator-atomic/commit/a37446ea))
+* **karma:** switch from chrome to phantomJS ([c10d7dec](https://github.com/nexumAG/generator-atomic/commit/c10d7dec))
+* **travis:** add travis build status icon ([1a78644f](https://github.com/nexumAG/generator-atomic/commit/1a78644f))
+* **unittests:** add globals ignores to unit test demos ([7ec508d4](https://github.com/nexumAG/generator-atomic/commit/7ec508d4))
+* **watch:** improve watch speed. Do Karma on js change ([c48c1764](https://github.com/nexumAG/generator-atomic/commit/c48c1764))
+
+
 <a name"0.6.0"></a>
 ## 0.6.0 (2015-10-27)
 
