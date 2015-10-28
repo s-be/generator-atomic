@@ -1,3 +1,4 @@
+'use strict';
 /**
  * @name Molecule: <%= modulename %>
  * @description <%= description %>
