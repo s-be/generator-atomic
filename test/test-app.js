@@ -35,6 +35,42 @@ describe('atomic:app', function () {
     ]);
   });
 
+  it('creates test config files', function () {
+    assert.file([
+      'tests/atomic.test.js',
+      'tests/karma.conf.js'
+    ]);
+  });
+
+  it('creates grunt task config files', function () {
+    assert.file([
+      'tasks/aliases.yaml',
+      'tasks/copy.js',
+      'tasks/less.js',
+      'tasks/autoprefixer.js',
+      'tasks/eslint.js',
+      'tasks/parallelize.js',
+      'tasks/babel.js',
+      'tasks/galen.js',
+      'tasks/rev.js',
+      'tasks/bump.js',
+      'tasks/htmlmin.js',
+      'tasks/svgmin.js',
+      'tasks/changelog.js',
+      'tasks/imagemin.js',
+      'tasks/usemin.js',
+      'tasks/clean.js',
+      'tasks/injector.js',
+      'tasks/useminPrepare.js',
+      'tasks/combine_mq.js',
+      'tasks/jade.js',
+      'tasks/watch.js',
+      'tasks/connect.js',
+      'tasks/karma.js',
+      'tasks/wiredep.js'
+    ]);
+  });
+
   it('creates jade source files', function () {
     assert.file([
       'app/index.jade',
