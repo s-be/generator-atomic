@@ -101,7 +101,7 @@ Generator.prototype.gruntfile = function gruntfile() {
   this.copy('tasks/eslint.js', 'tasks/eslint.js');
   this.copy('tasks/combine_mq.js', 'tasks/combine_mq.js');
   this.copy('tasks/galen.js', 'tasks/galen.js');
-  this.copy('tasks/galen.js', 'tasks/karma.js');
+  this.copy('tasks/karma.js', 'tasks/karma.js');
 
 };
 

@@ -9,8 +9,6 @@ module.exports = {
       livereload: true
     },
     files: [
-      '<%= folders.tmp %>/{,*/,**/}*.html',
-      '<%= folders.tmp %>/{,*/}*.css',
       '<%= folders.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
     ]
   },
@@ -20,12 +18,20 @@ module.exports = {
       livereload: true
     },
     files: ['<%= folders.app %>/{,*/,**/}*.js'],
-    tasks: ['newer:babel', 'newer:eslint' ]
+    tasks: ['newer:babel' ]
+  },
+
+  javascripttest: {
+    options: {
+      livereload: false
+    },
+    files: ['<%= folders.tmp %>/{,*/,**/}*.js'],
+    tasks: ['newer:eslint', 'karma' ]
   },
 
   less: {
     options: {
-      livereload: false
+      livereload: true
     },
     files: ['<%= folders.app %>/{,*/,**/}*.less'],
     tasks: ['less:server', 'autoprefixer']
@@ -33,7 +39,7 @@ module.exports = {
 
   jade: {
     options: {
-      livereload: false
+      livereload: true
     },
     files: ['<%= folders.app %>/{,*/,**/}*.jade', '!**/_*'],
     tasks: ['newer:jade:html']
@@ -41,7 +47,7 @@ module.exports = {
 
   jadeincludes: {
     options: {
-      livereload: false
+      livereload: true
     },
     files: '<%= folders.app %>/{,*/,**/}_*.jade',
     tasks: ['parallelize:jade']
@@ -49,7 +55,7 @@ module.exports = {
 
   content: {
     options: {
-      livereload: false
+      livereload: true
     },
     files: '<%= folders.app %>/{,*/,**/}*.yaml',
     tasks: ['parallelize:jade']
