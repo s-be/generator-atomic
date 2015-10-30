@@ -1,12 +1,3 @@
-<a name"2.0.0-0"></a>
-### 2.0.0-0 (2015-10-30)
-
-
-#### Features
-
-* **release:** add beta tag to prereleases ([d50d5d5b](https://github.com/nexumAG/generator-atomic/commit/d50d5d5b))
-
-
 <a name"0.6.1"></a>
 ### 0.6.1 (2015-10-28)
 
