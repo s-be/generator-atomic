@@ -82,19 +82,19 @@ module.exports = {
       ]
     }
   },
-  // Inject component less into main.less
-  less: {
+  // Inject component scss into main.scss
+  scss: {
     options: {
       transform: function(filePath) {
         filePath = filePath.replace('/app/', '');
-        return '@import \'' + filePath + '\';';
+        return '@import \'../' + filePath + '\';';
       },
       starttag: '// [injector]',
       endtag: '// [endinjector]'
     },
     files: {
-      '<%= folders.app %>/0_basics/main.less': [
-        '<%= folders.app %>/{,*/,**/}*.less',
+      '<%= folders.app %>/0_basics/main.scss': [
+        '<%= folders.app %>/{,*/,**/}*.scss',
         '!<%= folders.app %>/0_basics/**',
         '!<%= folders.app %>/bower_components/**'
       ]
