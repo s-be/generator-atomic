@@ -29,12 +29,12 @@ module.exports = {
     tasks: ['newer:eslint', 'karma' ]
   },
 
-  less: {
+  scss: {
     options: {
       livereload: true
     },
-    files: ['<%= folders.app %>/{,*/,**/}*.less'],
-    tasks: ['less:server', 'autoprefixer']
+    files: ['<%= folders.app %>/{,*/,**/}*.scss'],
+    tasks: ['sass', 'postcss:server']
   },
 
   jade: {
