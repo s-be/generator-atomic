@@ -42,16 +42,16 @@
     "page"
   ],
   "dependencies": {
-    "yeoman-generator": "0.19.2",
     "camelize": "1.0.0",
     "chalk": "1.1.1",
-    "yosay": "1.0.5",
-    "underscore.string": "3.2.2"
+    "underscore.string": "3.2.2",
+    "yeoman-generator": "^0.19.2",
+    "yosay": "1.0.5"
   },
   "devDependencies": {
-    "grunt-conventional-changelog": "^1.1.0",
-    "grunt-bump": "0.0.15",
     "grunt": "0.4.5",
+    "grunt-bump": "^0.6.0",
+    "grunt-conventional-changelog": "^5.0.0",
     "jshint": "2.8.0",
     "mocha": "^2.3.3"
   },
