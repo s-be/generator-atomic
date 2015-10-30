@@ -5,8 +5,8 @@ serve:
   - clean:server
   - injector
   - wiredep
-  - less:server
-  - autoprefixer
+  - sass
+  - postcss:server
   - babel
   - parallelize:jade
   - connect:server
@@ -18,8 +18,8 @@ build:
    - wiredep
 
    - babel
-   - less:dist
-   - autoprefixer
+   - sass
+   - postcss:dist
    - parallelize:jade
 
    - copy:dist
