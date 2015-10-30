@@ -1,4 +1,3 @@
-'use strict';
 /**
  * @name Molecule: <%= modulename %>
  * @description <%= description %>
@@ -7,14 +6,14 @@
  */
 var <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
 <%= namespace %>.<%= modulenameCamelized %> = (function () {
-
+  'use strict';
   /**
    * @function privateFunctionExample
    * @description example private function
    * @param {string} name - The Name of who should be greeted.
    */
   function privateFunctionExample(name) {
-    console.log('Molecule "<%= modulename %>" was loaded: Hello ' + name);
+    //console.log('Molecule "<%= modulename %>" was loaded: Hello ' + name);
   }
 
   /**
