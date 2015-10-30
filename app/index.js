@@ -86,7 +86,7 @@ Generator.prototype.gruntfile = function gruntfile() {
   this.copy('tasks/connect.js', 'tasks/connect.js');
   this.copy('tasks/copy.js', 'tasks/copy.js');
   this.copy('tasks/jade.js', 'tasks/jade.js');
-  this.copy('tasks/less.js', 'tasks/less.js');
+  this.copy('tasks/sass.js', 'tasks/sass.js');
   this.copy('tasks/watch.js', 'tasks/watch.js');
   this.copy('tasks/htmlmin.js', 'tasks/htmlmin.js');
   this.copy('tasks/injector.js', 'tasks/injector.js');
@@ -96,7 +96,7 @@ Generator.prototype.gruntfile = function gruntfile() {
   this.copy('tasks/usemin.js', 'tasks/usemin.js');
   this.copy('tasks/wiredep.js', 'tasks/wiredep.js');
   this.copy('tasks/useminPrepare.js', 'tasks/useminPrepare.js');
-  this.copy('tasks/autoprefixer.js', 'tasks/autoprefixer.js');
+  this.copy('tasks/postcss.js', 'tasks/postcss.js');
   this.copy('tasks/parallelize.js', 'tasks/parallelize.js');
   this.copy('tasks/eslint.js', 'tasks/eslint.js');
   this.copy('tasks/combine_mq.js', 'tasks/combine_mq.js');
@@ -111,14 +111,13 @@ Generator.prototype.tests = function tests() {
 
 
 Generator.prototype.sourceFiles = function sourceFiles() {
-  this.directory('0_basics/bootstrap', 'app/0_basics/bootstrap');
   this.directory('0_basics/nx-helpers', 'app/0_basics/nx-helpers');
   this.template('0_basics/_default.jade', 'app/0_basics/_default.jade');
   this.template('0_basics/controller.js', 'app/0_basics/controller.js');
-  this.template('0_basics/ie9.less', 'app/0_basics/ie9.less');
-  this.template('0_basics/main.less', 'app/0_basics/main.less');
-  this.template('0_basics/nojs.less', 'app/0_basics/nojs.less');
-  this.template('0_basics/variables.less', 'app/0_basics/variables.less');
+  this.template('0_basics/ie9.scss', 'app/0_basics/ie9.scss');
+  this.template('0_basics/main.scss', 'app/0_basics/main.scss');
+  this.template('0_basics/nojs.scss', 'app/0_basics/nojs.scss');
+  this.template('0_basics/variables.scss', 'app/0_basics/variables.scss');
   this.template('0_basics/basics.yaml', 'app/0_basics/basics.yaml');
 
   this.directory('1_atoms', 'app/1_atoms');

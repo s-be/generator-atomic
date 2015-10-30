@@ -64,7 +64,7 @@ Generator.prototype.sourceFiles = function sourceFiles() {
 
   this.copy('module.jade', 'app/3_organisms/'+ this.modulenameCamelized +'/'+ this.modulenameCamelized +'.jade');
   this.copy('_module.jade', 'app/3_organisms/'+ this.modulenameCamelized +'/_'+ this.modulenameCamelized +'.jade');
-  this.copy('module.less', 'app/3_organisms/'+ this.modulenameCamelized +'/'+ this.modulenameCamelized +'.less');
+  this.copy('module.scss', 'app/3_organisms/'+ this.modulenameCamelized +'/'+ this.modulenameCamelized +'.scss');
   this.copy('module.js', 'app/3_organisms/'+ this.modulenameCamelized +'/'+ this.modulenameCamelized +'.js');
   this.copy('module.unit.js', 'app/3_organisms/'+ this.modulenameCamelized +'/'+ this.modulenameCamelized +'.unit.js');
   this.copy('module.spec', 'app/3_organisms/'+ this.modulenameCamelized +'/'+ this.modulenameCamelized +'.spec');
