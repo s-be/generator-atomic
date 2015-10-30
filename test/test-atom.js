@@ -30,7 +30,7 @@ describe('atomic:atom', function () {
 
   it('creates stylesheet file', function () {
     assert.file([
-      'app/1_atoms/TestModuleNameName/TestModuleNameName.less'
+      'app/1_atoms/TestModuleNameName/TestModuleNameName.scss'
     ]);
   });
 

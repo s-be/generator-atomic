@@ -23,7 +23,7 @@ describe('atomic:template', function () {
 
   it('creates stylesheet file', function () {
     assert.file([
-      //'app/4_templates/TestModuleNameName/TestModuleNameName.less'
+      //'app/4_templates/TestModuleNameName/TestModuleNameName.scss'
     ]);
   });
 

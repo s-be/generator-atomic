@@ -23,7 +23,7 @@ describe('atomic:page', function () {
 
   it('creates stylesheet file', function () {
     assert.file([
-      //'app/5_pages/TestModuleNameName/TestModuleNameName.less'
+      //'app/5_pages/TestModuleNameName/TestModuleNameName.scss'
     ]);
   });
 

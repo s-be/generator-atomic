@@ -31,7 +31,7 @@ describe('atomic:organism', function () {
 
   it('creates stylesheet file', function () {
     assert.file([
-      'app/3_organisms/TestModuleNameName/TestModuleNameName.less'
+      'app/3_organisms/TestModuleNameName/TestModuleNameName.scss'
     ]);
   });
 

@@ -31,7 +31,7 @@ describe('atomic:molecule', function () {
 
   it('creates stylesheet file', function () {
     assert.file([
-      'app/2_molecules/TestModuleNameName/TestModuleNameName.less'
+      'app/2_molecules/TestModuleNameName/TestModuleNameName.scss'
     ]);
   });
 

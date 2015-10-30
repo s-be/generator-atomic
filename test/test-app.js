@@ -46,8 +46,8 @@ describe('atomic:app', function () {
     assert.file([
       'tasks/aliases.yaml',
       'tasks/copy.js',
-      'tasks/less.js',
-      'tasks/autoprefixer.js',
+      'tasks/sass.js',
+      'tasks/postcss.js',
       'tasks/eslint.js',
       'tasks/parallelize.js',
       'tasks/babel.js',
@@ -91,10 +91,10 @@ describe('atomic:app', function () {
 
   it('creates stylesheet files', function () {
     assert.file([
-      'app/0_basics/main.less',
-      'app/0_basics/ie9.less',
-      'app/0_basics/nojs.less',
-      'app/0_basics/variables.less'
+      'app/0_basics/main.scss',
+      'app/0_basics/ie9.scss',
+      'app/0_basics/nojs.scss',
+      'app/0_basics/variables.scss'
     ]);
   });
 
