@@ -13,26 +13,22 @@ serve:
   - watch
 
 build:
-   - clean:build
-   - injector
-   - wiredep
-
-   - babel
-   - sass
-   - postcss:dist
-   - parallelize:jade
-
-   - copy:dist
-   - useminPrepare
-
-   - concat
-   - uglify
-
-   - imagemin
-   - svgmin
-   - htmlmin
-   - rev
-   - usemin
+  - clean:build
+  - injector
+  - wiredep
+  - babel
+  - sass
+  - postcss:dist
+  - parallelize:jade
+  - copy:dist
+  - useminPrepare
+  - concat
+  - uglify
+  - imagemin
+  - svgmin
+  - htmlmin
+  - rev
+  - usemin
 
 test:
   - build

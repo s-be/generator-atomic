@@ -25,7 +25,7 @@ module.exports = {
     options: {
       livereload: false
     },
-    files: ['<%= folders.tmp %>/{,*/,**/}*.js'],
+    files: ['<%= folders.app %>/{,*/,**/}*.js'],
     tasks: ['newer:eslint', 'karma' ]
   },
 

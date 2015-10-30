@@ -1,5 +1,5 @@
 /**
- * grunt-jscs options
+ * grunt-eslint options
  * @type {Object}
  */
 
