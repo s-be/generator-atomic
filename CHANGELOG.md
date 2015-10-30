@@ -20,18 +20,6 @@
 * **sourcemaps:** copy sourcemaps to dist ([9157496e](https://github.com/nexumAG/generator-atomic/commit/9157496e))
 
 
-<a name"1.0.0-0"></a>
-### 1.0.0-0 (2015-10-30)
-
-
-<a name"1.0.0-0"></a>
-### 1.0.0-0 (2015-10-30)
-
-
-<a name"1.0.0-1"></a>
-### 1.0.0-1 (2015-10-30)
-
-
 <a name"0.6.1"></a>
 ### 0.6.1 (2015-10-28)
 
