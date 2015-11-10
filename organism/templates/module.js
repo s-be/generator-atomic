@@ -1,13 +1,12 @@
-'use strict';
 /**
  * @name Organism: <%= modulename %>
  * @description <%= description %>
  * @author <%= author %>
  * @see {@link http://github.com/documentation|Specification}
  */
-var <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
+const <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
 <%= namespace %>.<%= modulenameCamelized %> = (function () {
-
+  'use strict';
   /**
    * @function privateFunctionExample
    * @description example private function
