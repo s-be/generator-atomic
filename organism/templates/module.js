@@ -4,7 +4,7 @@
  * @author <%= author %>
  * @see {@link http://github.com/documentation|Specification}
  */
-var <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
+const <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
 <%= namespace %>.<%= modulenameCamelized %> = (function () {
   'use strict';
   /**
@@ -13,7 +13,7 @@ var <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
    * @param {string} name - The Name of who should be greeted.
    */
   function privateFunctionExample(name) {
-    //console.log('Organism "<%= modulename %>" was loaded: Hello ' + name);
+    console.log(`Organism "<%= modulename %>" was loaded: Hello ${name}`);
   }
 
   /**
