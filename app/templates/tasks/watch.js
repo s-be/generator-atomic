@@ -9,11 +9,9 @@ module.exports = {
   },
   server: {
     files: [
-      '<%= folders.tmp %>/{,*/,**/}*.html',
       '<%= folders.tmp %>/{,*/}*.css',
       '<%= folders.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
     ],
-    tasks: ['express']
   },
 
   javascript: {
@@ -22,10 +20,7 @@ module.exports = {
   },
 
   less: {
-    options: {
-      livereload: false
-    },
-    files: ['<%= folders.app %>/**/*.less'],
+    files: ['<%= folders.app %>/{,*/,**/}*.less'],
     tasks: ['less:server', 'autoprefixer']
   },
 
@@ -35,7 +30,6 @@ module.exports = {
 
   jadeincludes: {
     files: '<%= folders.app %>/{,*/,**/}_*.jade',
-    tasks: ['concat:jadeincludes']
   },
 
   content: {

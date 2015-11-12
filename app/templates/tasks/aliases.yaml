@@ -8,7 +8,6 @@ serve:
   - less:server
   - autoprefixer
   - babel
-  - concat:jadeincludes
   - express
   - open
   - watch

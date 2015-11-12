@@ -46,7 +46,6 @@
     "jade": "^1.11.0",
     "jit-grunt": "^0.9.1",
     "js-yaml": "^3.4.3",
-    "jit-grunt": "^0.9.1",
     "load-grunt-config": "^0.16.0",
     "load-grunt-tasks": "^2.0.0",
     "time-grunt": "^1.0.0",
