@@ -31,6 +31,7 @@
       init: true,
       jitGrunt: {
         staticMappings: {
+          express: 'grunt-express-server',
           useminPrepare: 'grunt-usemin',
           'bump-only':   'grunt-bump',
           changelog:     'grunt-conventional-changelog'

@@ -8,8 +8,8 @@ serve:
   - less:server
   - autoprefixer
   - babel
-  - parallelize:jade
-  - connect:server
+  - express
+  - open
   - watch
 
 build:
