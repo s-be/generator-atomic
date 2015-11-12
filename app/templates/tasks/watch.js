@@ -4,19 +4,16 @@
  */
 
 module.exports = {
+  options: {
+  livereload: true
+  },
   server: {
-    options: {
-      livereload: true
-    },
     files: [
       '<%= folders.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-    ]
+    ],
   },
 
   javascript: {
-    options: {
-      livereload: true
-    },
     files: ['<%= folders.app %>/{,*/,**/}*.js'],
     tasks: ['newer:babel' ]
   },
@@ -38,26 +35,14 @@ module.exports = {
   },
 
   jade: {
-    options: {
-      livereload: true
-    },
-    files: ['<%= folders.app %>/{,*/,**/}*.jade', '!**/_*'],
-    tasks: ['newer:jade:html']
+    files: ['<%= folders.app %>/{,*/,**/}*.jade', '!**/_*']
   },
 
   jadeincludes: {
-    options: {
-      livereload: true
-    },
     files: '<%= folders.app %>/{,*/,**/}_*.jade',
-    tasks: ['parallelize:jade']
   },
 
   content: {
-    options: {
-      livereload: true
-    },
     files: '<%= folders.app %>/{,*/,**/}*.yaml',
-    tasks: ['parallelize:jade']
   }
 };

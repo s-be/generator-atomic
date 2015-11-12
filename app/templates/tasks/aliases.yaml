@@ -8,8 +8,8 @@ serve:
   - sass
   - postcss:server
   - babel
-  - parallelize:jade
-  - connect:server
+  - express
+  - open
   - watch
 
 build:

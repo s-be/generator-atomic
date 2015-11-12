@@ -101,7 +101,9 @@ Generator.prototype.gruntfile = function gruntfile() {
   this.copy('tasks/combine_mq.js', 'tasks/combine_mq.js');
   this.copy('tasks/galen.js', 'tasks/galen.js');
   this.copy('tasks/karma.js', 'tasks/karma.js');
-
+  this.copy('tasks/concat.js', 'tasks/concat.js');
+  this.copy('tasks/express.js', 'tasks/express.js');
+  this.copy('tasks/open.js', 'tasks/open.js');
 };
 
 Generator.prototype.tests = function tests() {
@@ -129,6 +131,7 @@ Generator.prototype.sourceFiles = function sourceFiles() {
   this.directory('images', 'app/images');
   this.directory('fonts', 'app/fonts');
 
+  this.copy('server.js', 'server.js');
 };
 
 
