@@ -27,7 +27,6 @@ describe('atomic:app', function () {
   it('creates editor config files', function () {
     assert.file([
       '.editorconfig',
-      '.jshintrc',
       '.csscomb.json',
       '.stylelintrc',
       '.eslintrc'
