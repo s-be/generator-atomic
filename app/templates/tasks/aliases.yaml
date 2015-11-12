@@ -35,6 +35,8 @@ build:
    - usemin
 
 test:
+  - eslint
+  - postcss:stylelint
   - build
   - connect:test
   - galen:local

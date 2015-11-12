@@ -2,16 +2,19 @@
   "name": "<%= appname %>",
   "description": "Add your project Description here",
   "version": "0.0.0",
-  "license": "Add your License here",
+  "private": true,
+  "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": ""
   },
   "dependencies": {},
   "devDependencies": {
+    "autoprefixer": "*",
     "grunt": "^0.4.5",
     "babel-eslint": "^3.1.17",
     "connect-livereload": "^0.5.3",
+    "cssnano": "*",
     "express": "^4.13.3",
     "glob": "^5.0.15",
     "grunt": "^0.4.5",
@@ -54,7 +57,10 @@
     "karma-chrome-launcher": "^0.1.4",
     "karma-firefox-launcher": "^0.1.3",
     "karma-jasmine": "^0.1.5",
-    "karma-phantomjs-launcher": "^0.1.4"
+    "karma-phantomjs-launcher": "^0.1.4",
+    "postcss-reporter": "^1.3.0",
+    "stylelint": "^2.2.0",
+    "stylelint-config-suitcss": "^0.5.1",
   },
   "engines": {
     "node": ">=0.10.0"
