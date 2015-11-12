@@ -21,7 +21,19 @@ module.exports = {
   dist: {
     options: {
       processors: [
-        require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+        require('autoprefixer')({
+          browsers: [
+            'Android 2.3',
+            'Android >= 4',
+            'Chrome >= 35',
+            'Firefox >= 31',
+            'Edge >= 12',
+            'Explorer >= 9',
+            'iOS >= 7',
+            'Opera >= 12',
+            'Safari >= 7.1'
+          ]
+        }),
         require('cssnano')() // minify the result
       ]
     }
@@ -29,8 +41,36 @@ module.exports = {
   server: {
     options: {
       processors: [
-        require('autoprefixer')({browsers: 'last 2 versions'})// add vendor prefixes
+        require('autoprefixer')({
+          browsers: [
+            'Android 2.3',
+            'Android >= 4',
+            'Chrome >= 35',
+            'Firefox >= 31',
+            'Edge >= 12',
+            'Explorer >= 9',
+            'iOS >= 7',
+            'Opera >= 12',
+            'Safari >= 7.1'
+          ]
+        })
       ]
-    },
+    }
+  },
+  stylelint: {
+    src: ['<%= folders.app %>/{,*/,**/}*.scss', '!<%= folders.app %>/0_basics/{,*/,**/}*.scss'],
+    options: {
+      writeDest: false,
+      map: false,
+      failOnError: true,
+      processors: [
+        require('stylelint')(),
+        require('postcss-reporter')({
+          clearMessages: true,
+          throwError: true,
+          noPlugin: true
+        })
+      ]
+    }
   }
 };
