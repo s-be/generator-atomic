@@ -5,34 +5,31 @@
 
 module.exports = {
   options: {
-  livereload: true
+    livereload: true
   },
   server: {
     files: [
-      '<%= folders.tmp %>/{,*/}*.css',
-      '<%= folders.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-    ],
+      '<%= folders.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+      '<%= folders.app %>/{,*/,**/}*.jade',
+      '<%= folders.app %>/{,*/,**/}*.yaml'
+    ]
   },
 
   javascript: {
     files: ['<%= folders.app %>/{,*/,**/}*.js'],
-    tasks: ['newer:babel', 'newer:eslint' ]
+    tasks: ['newer:babel']
+  },
+
+  javascripttest: {
+    options: {
+      livereload: false
+    },
+    files: ['<%= folders.app %>/{,*/,**/}*.js'],
+    tasks: ['newer:eslint']
   },
 
   less: {
     files: ['<%= folders.app %>/{,*/,**/}*.less'],
     tasks: ['less:server', 'autoprefixer']
-  },
-
-  jade: {
-    files: ['<%= folders.app %>/{,*/,**/}*.jade', '!**/_*']
-  },
-
-  jadeincludes: {
-    files: '<%= folders.app %>/{,*/,**/}_*.jade',
-  },
-
-  content: {
-    files: '<%= folders.app %>/{,*/,**/}*.yaml',
   }
 };
