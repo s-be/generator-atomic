@@ -1,8 +1,8 @@
 /* global describe:false, it:false, expect:false, <%= namespace %>:false */
 // <reference path='<%= modulenameCamelized %>.js">
-'use strict';
 
-describe('<%= modulenameCamelized %> tests', function () {
+describe('<%= modulenameCamelized %> tests', () => {
+  'use strict';
 
   it('Adds two numbers', () => {
     // Arrange
