@@ -9,8 +9,10 @@ module.exports = {
   },
   server: {
     files: [
-      '<%= folders.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-    ],
+      '<%= folders.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+      '<%= folders.app %>/{,*/,**/}*.jade',
+      '<%= folders.app %>/{,*/,**/}*.yaml'
+    ]
   },
 
   javascript: {
@@ -27,22 +29,8 @@ module.exports = {
   },
 
   scss: {
-    options: {
-      livereload: true
-    },
     files: ['<%= folders.app %>/{,*/,**/}*.scss'],
     tasks: ['sass', 'postcss:server']
-  },
-
-  jade: {
-    files: ['<%= folders.app %>/{,*/,**/}*.jade', '!**/_*']
-  },
-
-  jadeincludes: {
-    files: '<%= folders.app %>/{,*/,**/}_*.jade',
-  },
-
-  content: {
-    files: '<%= folders.app %>/{,*/,**/}*.yaml',
   }
+
 };
