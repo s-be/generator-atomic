@@ -29,9 +29,8 @@ describe('atomic:app', function () {
       '.editorconfig',
       '.jshintrc',
       '.csscomb.json',
-      '.csslintrc',
-      '.eslintrc',
-      '.jshintrc'
+      '.stylelintrc',
+      '.eslintrc'
     ]);
   });
 

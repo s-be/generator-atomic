@@ -63,10 +63,9 @@ Generator.prototype.tools = function tools() {
 
 Generator.prototype.editor = function editor() {
   this.copy('csscomb.json', '.csscomb.json');
-  this.copy('csslintrc', '.csslintrc');
+  this.copy('_stylelintrc', '.stylelintrc');
 
   this.copy('eslintrc', '.eslintrc');
-  this.copy('jshintrc', '.jshintrc');
 
   this.copy('editorconfig', '.editorconfig');
 };
