@@ -118,7 +118,7 @@
       "no-use-before-define": 0,
 
       // Stylistic
-      "array-bracket-spacing": 2,
+      "array-bracket-spacing": 1,
       "block-spacing": 2,
       "brace-style": 2,
       "camelcase": 2,
@@ -158,7 +158,7 @@
       "quotes": [1, "single"],
       "semi": [2, "always"],
       "semi-spacing": 0,
-      "sort-vars": 2,
+      "sort-vars": 1,
       "space-after-keywords": 2,
       "space-before-blocks": 2,
       "space-before-function-paren": 0,
@@ -178,7 +178,7 @@
       "no-dupe-class-members": 2,
       "no-this-before-super": 2,
       "no-var": 2,
-      "object-shorthand": 2,
+      "object-shorthand": 1,
       "prefer-arrow-callback": 1,
       "prefer-const": 0,
       "prefer-reflect": 0,

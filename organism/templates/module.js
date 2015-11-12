@@ -13,7 +13,7 @@ const <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
    * @param {string} name - The Name of who should be greeted.
    */
   function privateFunctionExample(name) {
-    console.log(`Organism "<%= modulename %>" was loaded: Hello ${name}`);
+    console.log('Organism "<%= modulename %>" was loaded: Hello ' + name);
   }
 
   /**
@@ -32,7 +32,7 @@ const <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
 
   return {
     // use the return statement to make variables and functions public
-    publicFunctionExample: publicFunctionExample
+    publicFunctionExample
   };
 
 }());
