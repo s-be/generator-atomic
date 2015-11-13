@@ -1,3 +1,25 @@
+<a name"0.7.0"></a>
+## 0.7.0 (2015-11-13)
+
+
+#### Features
+
+* **autoprefixer:** switch from grunt-autoprefixer to postcss ([4d10c009](https://github.com/nexumAG/generator-atomic/commit/4d10c009))
+* **bootstrap:** outsource bootstrap less files to bower ([28f5b9eb](https://github.com/nexumAG/generator-atomic/commit/28f5b9eb))
+* **csscomb:** better sort order (support flexbox etc) ([f689c66d](https://github.com/nexumAG/generator-atomic/commit/f689c66d))
+* **es6:** arrow functions for unit tests ([7b1444b2](https://github.com/nexumAG/generator-atomic/commit/7b1444b2))
+* **eslint:**
+  * update eslintrc ([72670719](https://github.com/nexumAG/generator-atomic/commit/72670719))
+  * stronger eslint rules ([f3b05798](https://github.com/nexumAG/generator-atomic/commit/f3b05798))
+* **express-server:**
+  * modified index.js for task & server.js copy ([9d1f8668](https://github.com/nexumAG/generator-atomic/commit/9d1f8668))
+  * add express-server tasks ([7900dab1](https://github.com/nexumAG/generator-atomic/commit/7900dab1))
+  * add express-server component ([db13578b](https://github.com/nexumAG/generator-atomic/commit/db13578b))
+* **less:** output sourcemaps ([a0e99ba2](https://github.com/nexumAG/generator-atomic/commit/a0e99ba2))
+* **stylelint:** add stylelinter ([0fe8c3a3](https://github.com/nexumAG/generator-atomic/commit/0fe8c3a3))
+* **watch:** optimize watch task ([1d534eae](https://github.com/nexumAG/generator-atomic/commit/1d534eae))
+
+
 <a name"0.6.1"></a>
 ### 0.6.1 (2015-10-28)
 
