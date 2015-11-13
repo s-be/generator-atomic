@@ -24,12 +24,12 @@ module.exports = {
     options: {
       livereload: false
     },
-    files: ['<%= folders.app %>/{,*/,**/}*.js'],
-    tasks: ['newer:eslint']
+    files: ['<%= folders.tmp %>/{,*/,**/}*.js'],
+    tasks: ['newer:eslint', 'karma' ]
   },
 
   less: {
     files: ['<%= folders.app %>/{,*/,**/}*.less'],
-    tasks: ['less:server', 'autoprefixer']
+    tasks: ['less:server', 'postcss:server']
   }
 };

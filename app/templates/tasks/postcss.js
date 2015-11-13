@@ -58,7 +58,7 @@ module.exports = {
     }
   },
   stylelint: {
-    src: ['<%= folders.app %>/{,*/,**/}*.scss', '!<%= folders.app %>/0_basics/{,*/,**/}*.scss'],
+    src: ['<%= folders.app %>/{,*/,**/}*.less', '!<%= folders.app %>/0_basics/{,*/,**/}*.less'],
     options: {
       writeDest: false,
       map: false,

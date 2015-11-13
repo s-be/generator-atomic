@@ -6,7 +6,7 @@ serve:
   - injector
   - wiredep
   - less:server
-  - autoprefixer
+  - postcss:server
   - babel
   - express
   - open
@@ -19,7 +19,7 @@ build:
 
    - babel
    - less:dist
-   - autoprefixer
+   - postcss:dist
    - parallelize:jade
 
    - copy:dist

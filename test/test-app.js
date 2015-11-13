@@ -27,7 +27,6 @@ describe('atomic:app', function () {
   it('creates editor config files', function () {
     assert.file([
       '.editorconfig',
-      '.jshintrc',
       '.csscomb.json',
       '.stylelintrc',
       '.eslintrc'
@@ -46,7 +45,7 @@ describe('atomic:app', function () {
       'tasks/aliases.yaml',
       'tasks/copy.js',
       'tasks/less.js',
-      'tasks/autoprefixer.js',
+      'tasks/postcss.js',
       'tasks/eslint.js',
       'tasks/parallelize.js',
       'tasks/babel.js',

@@ -95,7 +95,7 @@ Generator.prototype.gruntfile = function gruntfile() {
   this.copy('tasks/usemin.js', 'tasks/usemin.js');
   this.copy('tasks/wiredep.js', 'tasks/wiredep.js');
   this.copy('tasks/useminPrepare.js', 'tasks/useminPrepare.js');
-  this.copy('tasks/autoprefixer.js', 'tasks/autoprefixer.js');
+  this.copy('tasks/postcss.js', 'tasks/postcss.js');
   this.copy('tasks/parallelize.js', 'tasks/parallelize.js');
   this.copy('tasks/eslint.js', 'tasks/eslint.js');
   this.copy('tasks/combine_mq.js', 'tasks/combine_mq.js');
