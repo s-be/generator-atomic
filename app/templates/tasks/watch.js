@@ -5,7 +5,7 @@
 
 module.exports = {
   options: {
-  livereload: true
+    livereload: true
   },
   server: {
     files: [
@@ -17,14 +17,14 @@ module.exports = {
 
   javascript: {
     files: ['<%= folders.app %>/{,*/,**/}*.js'],
-    tasks: ['newer:babel' ]
+    tasks: ['newer:babel']
   },
 
   javascripttest: {
     options: {
       livereload: false
     },
-    files: ['<%= folders.app %>/{,*/,**/}*.js'],
+    files: ['<%= folders.tmp %>/{,*/,**/}*.js'],
     tasks: ['newer:eslint', 'karma' ]
   },
 
