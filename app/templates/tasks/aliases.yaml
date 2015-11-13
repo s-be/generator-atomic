@@ -5,7 +5,7 @@ serve:
   - clean:server
   - injector
   - wiredep
-  - sass
+  - <%= cssPreprocessor %>
   - postcss:server
   - babel
   - express
@@ -17,7 +17,7 @@ build:
   - injector
   - wiredep
   - babel
-  - sass
+  - <%= cssPreprocessor %>
   - postcss:dist
   - parallelize:jade
   - copy:dist

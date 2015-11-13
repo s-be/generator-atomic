@@ -28,9 +28,9 @@ module.exports = {
     tasks: ['newer:eslint', 'karma' ]
   },
 
-  scss: {
+  <%= cssPreprocessor %>: {
     files: ['<%= folders.app %>/{,*/,**/}*.scss'],
-    tasks: ['sass', 'postcss:server']
+    tasks: ['<%= cssPreprocessor %>', 'postcss:server']
   }
 
 };

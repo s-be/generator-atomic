@@ -11,6 +11,7 @@ describe('atomic:app', function () {
       .withPrompts({ projectName: 'Test Project' })
       .withPrompts({ namespace: 'mse' })
       .withPrompts({ author: 'Test Runner' })
+      .withPrompts({ cssPreprocessor: 'sass' })
       .withOptions({ skipInstall: true })
       .on('end', done);
   });

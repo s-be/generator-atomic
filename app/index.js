@@ -36,6 +36,20 @@ Generator.prototype.promptConfig = function promptConfig() {
       name:    'author',
       message: 'Whats your name? (the author)',
       store:    true
+    },
+    {
+      type: 'list',
+      name: 'cssPreprocessor',
+      message: 'What would you like to use to ' + 'write styles'.blue + '?',
+      choices: ['Sass', 'Less'],
+      filter: function(val) {
+        var filterMap = {
+          'Sass': 'sass',
+          'Less': 'less'
+        };
+
+        return filterMap[val];
+      }
     }
   ];
 
@@ -44,12 +58,16 @@ Generator.prototype.promptConfig = function promptConfig() {
     this.appname = s.slugify(this.projectName);
     this.namespace = props.namespace.replace(/[^\w\s]/gi, '');
     this.author = props.author;
+    this.cssPreprocessor = props.cssPreprocessor;
+    this.cssPreprocessorExtension = this.cssPreprocessor.replace('sass','scss');
 
     this.config.save();
     this.config.set('appname', this.appname);
     this.config.set('projectName', this.projectName);
     this.config.set('namespace', this.namespace);
     this.config.set('author', this.author);
+    this.config.set('cssPreprocessor', this.cssPreprocessor);
+    this.config.set('cssPreprocessorExtension', this.cssPreprocessorExtension);
     cb();
   }.bind(this));
 };
@@ -85,7 +103,7 @@ Generator.prototype.gruntfile = function gruntfile() {
   this.copy('tasks/connect.js', 'tasks/connect.js');
   this.copy('tasks/copy.js', 'tasks/copy.js');
   this.copy('tasks/jade.js', 'tasks/jade.js');
-  this.copy('tasks/sass.js', 'tasks/sass.js');
+  this.copy('tasks/' + this.cssPreprocessor + '.js', 'tasks/' + this.cssPreprocessor + '.js');
   this.copy('tasks/watch.js', 'tasks/watch.js');
   this.copy('tasks/htmlmin.js', 'tasks/htmlmin.js');
   this.copy('tasks/injector.js', 'tasks/injector.js');
@@ -115,10 +133,10 @@ Generator.prototype.sourceFiles = function sourceFiles() {
   this.directory('0_basics/nx-helpers', 'app/0_basics/nx-helpers');
   this.template('0_basics/_default.jade', 'app/0_basics/_default.jade');
   this.template('0_basics/controller.js', 'app/0_basics/controller.js');
-  this.template('0_basics/ie9.scss', 'app/0_basics/ie9.scss');
-  this.template('0_basics/main.scss', 'app/0_basics/main.scss');
-  this.template('0_basics/nojs.scss', 'app/0_basics/nojs.scss');
-  this.template('0_basics/variables.scss', 'app/0_basics/variables.scss');
+  this.template('0_basics/ie9.' + this.cssPreprocessorExtension, 'app/0_basics/ie9.' + this.cssPreprocessorExtension);
+  this.template('0_basics/main.' + this.cssPreprocessorExtension, 'app/0_basics/main.' + this.cssPreprocessorExtension);
+  this.template('0_basics/nojs.' + this.cssPreprocessorExtension, 'app/0_basics/nojs.' + this.cssPreprocessorExtension);
+  this.template('0_basics/variables.' + this.cssPreprocessorExtension, 'app/0_basics/variables.' + this.cssPreprocessorExtension);
   this.template('0_basics/basics.yaml', 'app/0_basics/basics.yaml');
 
   this.directory('1_atoms', 'app/1_atoms');
