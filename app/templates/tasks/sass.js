@@ -9,7 +9,7 @@ module.exports = {
   },
   default: {
     options: {
-
+      sourceMap: true
     },
     files: [{
       expand: true,
