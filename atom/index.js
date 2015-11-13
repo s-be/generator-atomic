@@ -50,6 +50,8 @@ Generator.prototype.promptConfig = function promptConfig() {
     this.appname   = this.config.get('appname');
     this.projectName = this.config.get('projectName');
     this.namespace = this.config.get('namespace');
+    this.cssPreprocessor = this.config.get('cssPreprocessor') || 'less';
+    this.cssPreprocessorExtension = this.config.get('cssPreprocessorExtension') || 'less';
     this.modulenameCamelized = s.camelize(this.modulename);
 
     this.config.set('author', this.author);
@@ -64,7 +66,7 @@ Generator.prototype.sourceFiles = function sourceFiles() {
 
   this.copy('_module.jade', 'app/1_atoms/'+ this.modulenameCamelized +'/_'+ this.modulenameCamelized +'.jade');
   this.copy('module.jade',  'app/1_atoms/'+ this.modulenameCamelized +'/' + this.modulenameCamelized +'.jade');
-  this.copy('module.scss',  'app/1_atoms/'+ this.modulenameCamelized +'/' + this.modulenameCamelized +'.scss');
+  this.copy('module.' + this.cssPreprocessorExtension,  'app/1_atoms/'+ this.modulenameCamelized +'/' + this.modulenameCamelized + '.' + this.cssPreprocessorExtension);
   this.copy('module.yaml',  'app/1_atoms/'+ this.modulenameCamelized +'/' + this.modulenameCamelized +'.yaml');
   this.copy('module.spec',  'app/1_atoms/'+ this.modulenameCamelized +'/' + this.modulenameCamelized +'.spec');
 

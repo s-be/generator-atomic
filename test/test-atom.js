@@ -6,6 +6,9 @@ var helpers = require('yeoman-generator').test;
 var os = require('os');
 
 describe('atomic:atom', function () {
+  var cssPreprocessor = 'less';
+  var cssPreprocessorExtension = cssPreprocessor.replace('sass', 'scss');
+
   before(function (done) {
     helpers.run(path.join(__dirname, '../atom'))
       .withPrompts({ modulename: 'Test module-name_name' })
@@ -28,9 +31,9 @@ describe('atomic:atom', function () {
     ]);
   });
 
-  it('creates stylesheet file', function () {
+  it('creates stylesheet file: ' + cssPreprocessorExtension, function () {
     assert.file([
-      'app/1_atoms/TestModuleNameName/TestModuleNameName.scss'
+      'app/1_atoms/TestModuleNameName/TestModuleNameName.' + cssPreprocessorExtension
     ]);
   });
 

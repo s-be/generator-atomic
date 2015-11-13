@@ -6,12 +6,15 @@ var helpers = require('yeoman-generator').test;
 var os = require('os');
 
 describe('atomic:app', function () {
+  var cssPreprocessor = 'less';
+  var cssPreprocessorExtension = cssPreprocessor.replace('sass', 'scss');
+
   before(function (done) {
     helpers.run(path.join(__dirname, '../app'))
       .withPrompts({ projectName: 'Test Project' })
       .withPrompts({ namespace: 'mse' })
       .withPrompts({ author: 'Test Runner' })
-      .withPrompts({ cssPreprocessor: 'sass' })
+      .withPrompts({ cssPreprocessor: cssPreprocessor })
       .withOptions({ skipInstall: true })
       .on('end', done);
   });
@@ -45,7 +48,7 @@ describe('atomic:app', function () {
     assert.file([
       'tasks/aliases.yaml',
       'tasks/copy.js',
-      'tasks/sass.js',
+      'tasks/' + cssPreprocessor + '.js',
       'tasks/postcss.js',
       'tasks/eslint.js',
       'tasks/parallelize.js',
@@ -88,12 +91,12 @@ describe('atomic:app', function () {
     ]);
   });
 
-  it('creates stylesheet files', function () {
+  it('creates stylesheet files: ' + cssPreprocessorExtension, function () {
     assert.file([
-      'app/0_basics/main.scss',
-      'app/0_basics/ie9.scss',
-      'app/0_basics/nojs.scss',
-      'app/0_basics/variables.scss'
+      'app/0_basics/main.' + cssPreprocessorExtension,
+      'app/0_basics/ie9.' + cssPreprocessorExtension,
+      'app/0_basics/nojs.' + cssPreprocessorExtension,
+      'app/0_basics/variables.' + cssPreprocessorExtension
     ]);
   });
 
