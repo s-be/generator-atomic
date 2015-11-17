@@ -50,24 +50,98 @@ Generator.prototype.promptConfig = function promptConfig() {
 
         return filterMap[val];
       }
+    },
+    {
+      type: 'confirm',
+      name: 'galen',
+      message: 'Would you like to use Galen for Layout-Tests?',
+      default: true
+    },
+    {
+      type: 'confirm',
+      name: 'karma',
+      message: 'Would you like to include Karma / Jasmine for JS Unit-Tests?',
+      default: true
+    },
+    {
+      type: 'confirm',
+      name: 'camelized',
+      message: 'Would you like to camelize your sub-module names (highly recommended)?',
+      default: true
     }
   ];
 
   this.prompt(prompts, function(props) {
+    this.config.save();
+
     this.projectName = props.projectName;
+    this.config.set('projectName', this.projectName);
+
     this.appname = s.slugify(this.projectName);
+    this.config.set('appname', this.appname);
+
     this.namespace = props.namespace.replace(/[^\w\s]/gi, '');
+    this.config.set('namespace', this.namespace);
+
     this.author = props.author;
+    //this.config.set('author', this.author);
+
     this.cssPreprocessor = props.cssPreprocessor;
     this.cssPreprocessorExtension = this.cssPreprocessor.replace('sass','scss');
-
-    this.config.save();
-    this.config.set('appname', this.appname);
-    this.config.set('projectName', this.projectName);
-    this.config.set('namespace', this.namespace);
-    this.config.set('author', this.author);
     this.config.set('cssPreprocessor', this.cssPreprocessor);
     this.config.set('cssPreprocessorExtension', this.cssPreprocessorExtension);
+
+    this.galen = props.galen;
+    this.config.set('galen', this.galen);
+
+    this.karma = props.karma;
+    this.config.set('karma', this.karma);
+
+    this.camelized = props.camelized;
+    this.config.set('camelized', this.camelized);
+
+    this.config.set('atom', {
+        moduletype: 'atom',
+        modulefolder: '1_atoms',
+        markupmixins: true,
+        content: true,
+        scripts: false,
+        styles: true
+    });
+    this.config.set('molecule', {
+        moduletype: 'molecule',
+        modulefolder: '2_molecules',
+        markupmixins: true,
+        content: true,
+        scripts: true,
+        styles: true
+    });
+    this.config.set('organism', {
+      moduletype: 'organism',
+      modulefolder: '3_organisms',
+      markupmixins: true,
+      content: true,
+      scripts: true,
+      styles: true
+    });
+    this.config.set('template', {
+      moduletype: 'template',
+      modulefolder: '4_templates',
+      markupmixins: false,
+      content: true,
+      scripts: false,
+      styles: false
+    });
+    this.config.set('page', {
+      moduletype: 'page',
+      modulefolder: '5_pages',
+      markupmixins: false,
+      content: true,
+      scripts: false,
+      styles: false
+    });
+    this.config.save();
+
     cb();
   }.bind(this));
 };
@@ -117,15 +191,24 @@ Generator.prototype.gruntfile = function gruntfile() {
   this.copy('tasks/parallelize.js', 'tasks/parallelize.js');
   this.copy('tasks/eslint.js', 'tasks/eslint.js');
   this.copy('tasks/combine_mq.js', 'tasks/combine_mq.js');
-  this.copy('tasks/galen.js', 'tasks/galen.js');
-  this.copy('tasks/karma.js', 'tasks/karma.js');
+  if(this.galen) {
+    this.copy('tasks/galen.js', 'tasks/galen.js');
+  }
+  if(this.karma) {
+    this.copy('tasks/karma.js', 'tasks/karma.js');
+  }
   this.copy('tasks/concat.js', 'tasks/concat.js');
   this.copy('tasks/express.js', 'tasks/express.js');
   this.copy('tasks/open.js', 'tasks/open.js');
 };
 
 Generator.prototype.tests = function tests() {
-  this.directory('tests', 'tests');
+  if(this.galen) {
+    this.copy('tests/galen.test.js', 'tests/galen.test.js');
+  }
+  if(this.karma) {
+    this.copy('tests/karma.conf.js', 'tests/karma.conf.js');
+  }
 };
 
 

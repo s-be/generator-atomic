@@ -32,10 +32,11 @@ build:
 
 test:
   - eslint
-  - postcss:stylelint
+  - postcss:stylelint<%if (karma) { %>
+  - karma<% } %><%if (galen) { %>
   - build
   - connect:test
-  - galen:local
+  - galen:local<% } %>
 
 release:
   - bump-only

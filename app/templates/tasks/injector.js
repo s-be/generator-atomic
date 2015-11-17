@@ -18,9 +18,9 @@ module.exports = {
       endtag: '//- [endinjector]'
     },
     files: {
-      '<%= folders.app %>/0_basics/_default.jade': [
-        '<%= folders.app %>/{,*/,**/}_*.jade',
-        '!<%= folders.app %>/0_basics/_default.jade'
+      'app/0_basics/_default.jade': [
+        'app/{,*/,**/}_*.jade',
+        '!app/0_basics/_default.jade'
       ]
     }
   },
@@ -36,30 +36,30 @@ module.exports = {
       endtag: '//- [endinjector]'
     },
     files: {
-      '<%= folders.app %>/1_atoms/index.jade': [
-        '<%= folders.app %>/1_atoms/{,*/}*.jade',
-        '!<%= folders.app %>/1_atoms/index.jade',
-        '!<%= folders.app %>/1_atoms/{,*/}_*.jade'
+      'app/1_atoms/index.jade': [
+        'app/1_atoms/{,*/}*.jade',
+        '!app/1_atoms/index.jade',
+        '!app/1_atoms/{,*/}_*.jade'
       ],
-      '<%= folders.app %>/2_molecules/index.jade': [
-        '<%= folders.app %>/2_molecules/{,*/}*.jade',
-        '!<%= folders.app %>/2_molecules/index.jade',
-        '!<%= folders.app %>/2_molecules/{,*/}_*.jade'
+      'app/2_molecules/index.jade': [
+        'app/2_molecules/{,*/}*.jade',
+        '!app/2_molecules/index.jade',
+        '!app/2_molecules/{,*/}_*.jade'
       ],
-      '<%= folders.app %>/3_organisms/index.jade': [
-        '<%= folders.app %>/3_organisms/{,*/}*.jade',
-        '!<%= folders.app %>/3_organisms/index.jade',
-        '!<%= folders.app %>/3_organisms/{,*/}_*.jade'
+      'app/3_organisms/index.jade': [
+        'app/3_organisms/{,*/}*.jade',
+        '!app/3_organisms/index.jade',
+        '!app/3_organisms/{,*/}_*.jade'
       ],
-      '<%= folders.app %>/4_templates/index.jade': [
-        '<%= folders.app %>/4_templates/{,*/}*.jade',
-        '!<%= folders.app %>/4_templates/index.jade',
-        '!<%= folders.app %>/4_templates/{,*/}_*.jade'
+      'app/4_templates/index.jade': [
+        'app/4_templates/{,*/}*.jade',
+        '!app/4_templates/index.jade',
+        '!app/4_templates/{,*/}_*.jade'
       ],
-      '<%= folders.app %>/5_pages/index.jade': [
-        '<%= folders.app %>/5_pages/{,*/}*.jade',
-        '!<%= folders.app %>/5_pages/index.jade',
-        '!<%= folders.app %>/5_pages/{,*/}_*.jade'
+      'app/5_pages/index.jade': [
+        'app/5_pages/{,*/}*.jade',
+        '!app/5_pages/index.jade',
+        '!app/5_pages/{,*/}_*.jade'
       ]
     }
   },
@@ -74,16 +74,15 @@ module.exports = {
       endtag: '// [endinjector]'
     },
     files: {
-      '<%= folders.app %>/0_basics/_default.jade': [
-        '<%= folders.app %>/{,*/,**/}*.js',
-        '!<%= folders.app %>/{,*/,**/}*.unit.js',
-        '!<%= folders.app %>/0_basics/**',
-        '!<%= folders.app %>/bower_components/**'
+      'app/0_basics/_default.jade': [
+        'app/{,*/,**/}*.js',
+        '!app/{,*/,**/}*.unit.js',
+        '!app/0_basics/**'
       ]
     }
   },
-  // Inject component scss into main.scss
-  scss: {
+  // Inject component <%= cssPreprocessorExtension %> into main.<%= cssPreprocessorExtension %>
+  style: {
     options: {
       transform: function(filePath) {
         filePath = filePath.replace('/app/', '');
@@ -93,13 +92,12 @@ module.exports = {
       endtag: '// [endinjector]'
     },
     files: {
-      '<%= folders.app %>/0_basics/main.scss': [
-        '<%= folders.app %>/{,*/,**/}*.scss',
-        '!<%= folders.app %>/0_basics/**',
-        '!<%= folders.app %>/bower_components/**'
+      'app/0_basics/main.<%= cssPreprocessorExtension %>': [
+        'app/{,*/,**/}*.<%= cssPreprocessorExtension %>',
+        '!app/0_basics/**'
       ]
     }
-  },
+  }<%if (galen) { %>,
   specs: {
     options: {
       transform: function(filePath) {
@@ -113,9 +111,9 @@ module.exports = {
       endtag: '// [endinjector]'
     },
     files: {
-      'tests/atomic.test.js': [
-        '<%= folders.app %>/{,*/,**/}*.spec'
+      'tests/galen.test.js': [
+        'app/{,*/,**/}*.spec'
       ]
     }
-  }
+  }<% } %>
 };

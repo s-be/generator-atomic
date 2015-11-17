@@ -49,6 +49,7 @@
     "yosay": "1.0.5"
   },
   "devDependencies": {
+    "fs-extra": "^0.26.2",
     "grunt": "0.4.5",
     "grunt-bump": "^0.6.0",
     "grunt-conventional-changelog": "^5.0.0",
