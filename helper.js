@@ -46,6 +46,7 @@ module.exports = function(moduletype) {
       moduleconfig = this.config.get(moduletype);
 
       this.modulename = props.modulename || this.modulename;
+      this.modulename = s.slugify(this.modulename);
 
       this.author = props.author || ' ';
       this.description = props.description || this.description || moduletype + ' description here';
@@ -56,9 +57,9 @@ module.exports = function(moduletype) {
       this.cssPreprocessor = this.config.get('cssPreprocessor') || 'less';
       this.cssPreprocessorExtension = this.config.get('cssPreprocessorExtension') || 'less';
 
-      this.galen = this.config.get('galen') || true;
-      this.karma = this.config.get('karma') || true;
-      this.camelized = this.config.get('camelized') || true;
+      this.galen = this.config.get('galen');
+      this.karma = this.config.get('karma');
+      this.camelized = this.config.get('camelized');
 
       this.modulenameAlwaysCamelized = s.camelize(this.modulename);
       this.modulenameCamelized = (this.camelized) ? this.modulenameAlwaysCamelized : this.modulename;

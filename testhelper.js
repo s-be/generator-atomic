@@ -4,6 +4,7 @@ var assert = require('yeoman-generator').assert;
 var helpers = require('yeoman-generator').test;
 var os = require('os');
 var fs = require('fs-extra');
+var s = require("underscore.string");
 
 module.exports = function(options) {
   return function(subgenerator) {
@@ -50,12 +51,20 @@ module.exports = function(options) {
       var cssPreprocessor = options.cssPreprocessor;
       var cssPreprocessorExtension = cssPreprocessor.replace('sass', 'scss');
 
+      var moduleName = 'Test module-name_name';
+
+      var moduleNameCamelized = s.camelize(moduleName);
+      var moduleNameAlwaysCamelized = moduleNameCamelized;
+      if (!options.camelized) {
+        moduleNameCamelized = s.slugify(moduleName);
+      }
+
       before(function (done) {
         helpers.run(path.join(__dirname, './' + subgenerator))
           .inTmpDir(function (dir) {
             fs.copySync(path.join(__dirname, './templates/common/'+cssPreprocessor), dir)
           })
-          .withPrompts({ modulename: 'Test module-name_name' })
+          .withPrompts({ modulename: moduleName })
           .withPrompts({ description: 'Test Description' })
           .withPrompts({ author: 'Test Runner' })
           .withOptions({ skipInstall: true })
@@ -64,14 +73,14 @@ module.exports = function(options) {
 
       it('creates jade source files', function() {
         assert.file([
-          'app/' + config.modulefolder + '/TestModuleNameName/TestModuleNameName.jade'
+          'app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.jade'
         ]);
       });
 
       if (config.markupmixins) {
         it('creates jade mixin files', function() {
           assert.file([
-            'app/' + config.modulefolder + '/TestModuleNameName/_TestModuleNameName.jade'
+            'app/' + config.modulefolder + '/' + moduleNameCamelized + '/_' + moduleNameCamelized + '.jade'
           ]);
         });
       }
@@ -79,7 +88,7 @@ module.exports = function(options) {
       if (config.scripts) {
         it('creates javascript source file', function() {
           assert.file([
-            'app/' + config.modulefolder + '/TestModuleNameName/TestModuleNameName.js'
+            'app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.js'
           ]);
         });
       }
@@ -87,7 +96,7 @@ module.exports = function(options) {
       if (config.styles) {
         it('creates stylesheet file: ' + cssPreprocessorExtension, function() {
           assert.file([
-            'app/' + config.modulefolder + '/TestModuleNameName/TestModuleNameName.' + cssPreprocessorExtension
+            'app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.' + cssPreprocessorExtension
           ]);
         });
       }
@@ -95,7 +104,7 @@ module.exports = function(options) {
       if (config.content) {
         it('creates content file', function() {
           assert.file([
-            'app/' + config.modulefolder + '/TestModuleNameName/TestModuleNameName.yaml'
+            'app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameAlwaysCamelized + '.yaml'
           ]);
         });
       }
@@ -103,7 +112,7 @@ module.exports = function(options) {
       if (options.karma) {
         it('creates javascript unit test', function() {
           assert.file([
-            'app/' + config.modulefolder + '/TestModuleNameName/TestModuleNameName.unit.js'
+            'app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.unit.js'
           ]);
         });
       }
@@ -111,7 +120,7 @@ module.exports = function(options) {
       if(options.galen) {
         it('creates spec file', function() {
           assert.file([
-            'app/' + config.modulefolder + '/TestModuleNameName/TestModuleNameName.spec'
+            'app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.spec'
           ]);
         });
       }
