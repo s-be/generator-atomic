@@ -5,7 +5,7 @@
 
 module.exports = {
   local: {
-    src: ['tests/atomic.test.js'],
+    src: ['tests/galen.test.js'],
     options: {
       url: 'http://localhost:9001',
       htmlReport: true,
