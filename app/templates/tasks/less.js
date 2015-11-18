@@ -8,8 +8,8 @@ module.exports = {
     cleancss: true,
     paths: ['<%= folders.app %>/'],
     sourceMap: true,
-    //sourceMapURL: 'main.less.map',
-    sourceMapFilename: '<%= folders.dist %>/0_basics/main.less.map',
+    sourceMapURL: 'main.css.map',
+    //sourceMapFilename: '<%= folders.tmp %>/0_basics/main.css.map',
     outputSourceFiles: true
   },
   default: {
