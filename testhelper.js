@@ -80,11 +80,18 @@ module.exports = function(options) {
         ]);
       });
 
+      it('checks EJS Patterns in JADE Files have been resolved', function() {
+        assert.noFileContent('app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.jade', '<%=');
+      });
+
       if (config.markupmixins) {
         it('creates jade mixin files', function() {
           assert.file([
             'app/' + config.modulefolder + '/' + moduleNameCamelized + '/_' + moduleNameCamelized + '.jade'
           ]);
+        });
+        it('checks EJS Patterns in JadeMixins have been resolved', function() {
+          assert.noFileContent('app/' + config.modulefolder + '/' + moduleNameCamelized + '/_' + moduleNameCamelized + '.jade', '<%=');
         });
       }
 
@@ -94,6 +101,9 @@ module.exports = function(options) {
             'app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.js'
           ]);
         });
+        it('checks EJS Patterns in Javascript Files have been resolved', function() {
+          assert.noFileContent('app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.js', '<%=');
+        });
       }
 
       if (config.styles) {
@@ -101,6 +111,9 @@ module.exports = function(options) {
           assert.file([
             'app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.' + cssPreprocessorExtension
           ]);
+        });
+        it('checks EJS Patterns in Stylesheets have been resolved', function() {
+          assert.noFileContent('app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.' + cssPreprocessorExtension, '<%=');
         });
       }
 
@@ -118,6 +131,9 @@ module.exports = function(options) {
             'app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.unit.js'
           ]);
         });
+        it('checks EJS Patterns in UNIT-Tests have been resolved', function() {
+          assert.noFileContent('app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.unit.js', '<%=');
+        });
       }
 
       if(options.galen) {
@@ -125,6 +141,9 @@ module.exports = function(options) {
           assert.file([
             'app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.spec'
           ]);
+        });
+        it('checks EJS Patterns in SPEC Files have been resolved', function() {
+          assert.noFileContent('app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.spec', '<%=');
         });
       }
 
