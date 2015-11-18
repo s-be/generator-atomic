@@ -1,3 +1,20 @@
+<a name"1.0.1"></a>
+### 1.0.1 (2015-11-18)
+
+
+#### Bug Fixes
+
+* **galen:** correct config filename ([01dd896f](https://github.com/nexumAG/generator-atomic/commit/01dd896f))
+
+
+#### Features
+
+* **galen:** use newest version of galen ([5f4c1f05](https://github.com/nexumAG/generator-atomic/commit/5f4c1f05))
+* **less:** output sourcemaps ([53403991](https://github.com/nexumAG/generator-atomic/commit/53403991))
+* **subgenerator:** if no author is provided write "empty" ([2b2d6f6a](https://github.com/nexumAG/generator-atomic/commit/2b2d6f6a))
+* **tasks:** remove unused tasks ([affa127e](https://github.com/nexumAG/generator-atomic/commit/affa127e))
+
+
 <a name"1.0.0"></a>
 ## 1.0.0 (2015-11-18)
 
