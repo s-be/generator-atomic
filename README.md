@@ -1,12 +1,12 @@
-# generator-atomic [![Build Status](https://travis-ci.org/nexumAG/generator-atomic.svg?branch=master)](https://travis-ci.org/nexumAG/generator-atomic)
+# generator-atomic [![Build Status](https://travis-ci.org/nexumAG/generator-atomic.svg?branch=master)](https://travis-ci.org/nexumAG/generator-atomic) [![Dependency Status](https://david-dm.org/nexumAG/generator-atomic.svg)](https://david-dm.org/nexumAG/generator-atomic)
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/nexumAg/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/nexumAg/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Percentage of issues still open")
 
 This [Yeoman](http://yeoman.io) generator scaffolds an atomic-design templating framework based on the markup language [Jade](http://http://jade-lang.com/).
-It comes bundled with [BabelJS](http://babeljs.io/) for ES6 support, [Twitter Bootstrap](http://getbootstrap.com/), [LESS](http://lesscss.org/), ESLint and a build-in Livereload Server. 
+It comes bundled with [BabelJS](http://babeljs.io/) for ES6 support, [Twitter Bootstrap](http://getbootstrap.com/), [SCSS](http://sass-lang.com/), ESLint and a build-in Livereload Server. 
 Several Subgenerators (atom, molecule, organism...) help you during your project to quickly add new modules and link them properly.
 [Grunt](http://gruntjs.com/) helps you to automate your workflow with several helpful tasks like "build", "release" and "serve" (default). For automated Layout-testing you can use the [Galen Framework](http://galenframework.com/).
 
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/nexumAg/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Average time to resolve an issue")
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/nexumAg/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Percentage of issues still open")
 
 ## Installation
 
@@ -85,11 +85,10 @@ Create a Release of the Project (bump and tag).
 |   |   ├── _default.jade                 # HTML Mastertemplate (HTML Header/Footer)
 |   |   ├── controller.js                 # Javascript Main Controller 
 |   |   ├── basics.yaml                   # Content YAML
-|   |   ├── main.less                     # Less-file for Module imports
-|   |   ├── variables.less                # Less Variables
-|   |   ├── nojs.less                     # Fallback CSS for Browsers without JS
-|   |   ├── ie9.less                      # Fallback CSS for IE9
-|   |   ├── □ bootstrap                   # Twitter bootstrap
+|   |   ├── main.scss                     # Less-file for Module imports
+|   |   ├── variables.scss                # Less Variables
+|   |   ├── nojs.scss                     # Fallback CSS for Browsers without JS
+|   |   ├── ie9.scss                      # Fallback CSS for IE9
 |   |   └── □ nx helpers                  # Less Helper Classes
 |   ├── □ 1_atoms                         # Folder for Atoms
 |   ├── □ 2_molecules                     # Folder for Molecules
@@ -106,7 +105,8 @@ Each Module (atom, molecule, organism...) has this Directory Layout:
 |   |       ├── breadcrumb.jade         # Demo: showcase the Module in all available versions
 |   |       ├── _breadcrumb.jade        # Markup: Jade Mixins (with _underscore)
 |   |       ├── breadcrumb.js           # Script: ES2015 through BabelJS (not in atoms, templates and pages)
-|   |       ├── breadcrumb.less         # Styles: LESS precompiler
+|   |       ├── breadcrumb.unit.js      # Unit-Test: Karma/Jasmine Unit Test
+|   |       ├── breadcrumb.scss         # Styles: LESS precompiler
 |   |       ├── breadcrumb.spec         # Test: Galen Specfile for Layout Tests
 |   |       └── breadcrumb.yaml         # Content Model for this module
 ```

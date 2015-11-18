@@ -21,7 +21,8 @@ module.exports = {
       cwd: '<%= folders.tmp %>',
       dest: '<%= folders.dist %>',
       src: [
-        '**/*.css'
+        '**/*.css',
+        '**/*.map'
       ]
     }]
   }
