@@ -1,2 +1,0 @@
-# data-model for <%= modulename %>
-# access in jade via yaml.<%= modulenameCamelized %>

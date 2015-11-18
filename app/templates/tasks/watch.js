@@ -4,60 +4,40 @@
  */
 
 module.exports = {
+  options: {
+    livereload: true
+  },
   server: {
-    options: {
-      livereload: true
-    },
     files: [
-      '<%= folders.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+      'app/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+      'app/{,*/,**/}*.jade',
+      'app/{,*/,**/}*.yaml'
     ]
   },
 
-  javascript: {
-    options: {
-      livereload: true
-    },
-    files: ['<%= folders.app %>/{,*/,**/}*.js'],
-    tasks: ['newer:babel' ]
+  script: {
+    files: [ 'app/{,*/,**/}*.js' ],
+    tasks: [ 'newer:babel' ]
   },
 
-  javascripttest: {
+  scripttest: {
     options: {
       livereload: false
     },
-    files: ['<%= folders.tmp %>/{,*/,**/}*.js'],
-    tasks: ['newer:eslint', 'karma' ]
+    files: [ '.tmp/{,*/,**/}*.js' ],
+    tasks: [ 'newer:eslint'<%if (karma) { %>, 'karma' <% } %> ]
   },
 
-  less: {
-    options: {
-      livereload: true
-    },
-    files: ['<%= folders.app %>/{,*/,**/}*.less'],
-    tasks: ['less:server', 'autoprefixer']
+  style: {
+    files: [ 'app/{,*/,**/}*.scss' ],
+    tasks: [ '<%= cssPreprocessor %>', 'postcss:server' ]
   },
-
-  jade: {
+  styletest: {
     options: {
-      livereload: true
+      livereload: false
     },
-    files: ['<%= folders.app %>/{,*/,**/}*.jade', '!**/_*'],
-    tasks: ['newer:jade:html']
-  },
-
-  jadeincludes: {
-    options: {
-      livereload: true
-    },
-    files: '<%= folders.app %>/{,*/,**/}_*.jade',
-    tasks: ['parallelize:jade']
-  },
-
-  content: {
-    options: {
-      livereload: true
-    },
-    files: '<%= folders.app %>/{,*/,**/}*.yaml',
-    tasks: ['parallelize:jade']
+    files: [ '.tmp/{,*/,**/}*.css' ],
+    tasks: [ 'postcss:stylelint' ]
   }
+
 };

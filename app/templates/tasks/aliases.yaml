@@ -5,39 +5,38 @@ serve:
   - clean:server
   - injector
   - wiredep
-  - less:server
-  - autoprefixer
+  - <%= cssPreprocessor %>
+  - postcss:server
   - babel
-  - parallelize:jade
-  - connect:server
+  - express
+  - open
   - watch
 
 build:
-   - clean:build
-   - injector
-   - wiredep
-
-   - babel
-   - less:dist
-   - autoprefixer
-   - parallelize:jade
-
-   - copy:dist
-   - useminPrepare
-
-   - concat
-   - uglify
-
-   - imagemin
-   - svgmin
-   - htmlmin
-   - rev
-   - usemin
+  - clean:build
+  - injector
+  - wiredep
+  - babel
+  - <%= cssPreprocessor %>
+  - postcss:dist
+  - parallelize:jade
+  - copy:dist
+  - useminPrepare
+  - concat
+  - uglify
+  - imagemin
+  - svgmin
+  - htmlmin
+  - rev
+  - usemin
 
 test:
+  - eslint
+  - postcss:stylelint<%if (karma) { %>
+  - karma<% } %><%if (galen) { %>
   - build
   - connect:test
-  - galen:local
+  - galen:local<% } %>
 
 release:
   - bump-only

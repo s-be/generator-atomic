@@ -5,17 +5,24 @@ var assert = require('yeoman-generator').assert;
 var helpers = require('yeoman-generator').test;
 var os = require('os');
 
-describe('atomic:app', function () {
-  before(function (done) {
+describe('atomic:app', function() {
+  var cssPreprocessor = 'less';
+  var cssPreprocessorExtension = cssPreprocessor.replace('sass', 'scss');
+
+  before(function(done) {
     helpers.run(path.join(__dirname, '../app'))
       .withPrompts({ projectName: 'Test Project' })
       .withPrompts({ namespace: 'mse' })
       .withPrompts({ author: 'Test Runner' })
+      .withPrompts({ cssPreprocessor: cssPreprocessor })
+      .withPrompts({ galen: true })
+      .withPrompts({ karma: true })
+      .withPrompts({ camelized: true })
       .withOptions({ skipInstall: true })
       .on('end', done);
   });
 
-  it('creates project files', function () {
+  it('creates project files', function() {
     assert.file([
       'bower.json',
       'package.json',
@@ -24,30 +31,28 @@ describe('atomic:app', function () {
     ]);
   });
 
-  it('creates editor config files', function () {
+  it('creates editor config files', function() {
     assert.file([
       '.editorconfig',
-      '.jshintrc',
       '.csscomb.json',
-      '.csslintrc',
-      '.eslintrc',
-      '.jshintrc'
+      '.stylelintrc',
+      '.eslintrc'
     ]);
   });
 
-  it('creates test config files', function () {
+  it('creates test config files', function() {
     assert.file([
-      'tests/atomic.test.js',
+      'tests/galen.test.js',
       'tests/karma.conf.js'
     ]);
   });
 
-  it('creates grunt task config files', function () {
+  it('creates grunt task config files', function() {
     assert.file([
       'tasks/aliases.yaml',
       'tasks/copy.js',
-      'tasks/less.js',
-      'tasks/autoprefixer.js',
+      'tasks/' + cssPreprocessor + '.js',
+      'tasks/postcss.js',
       'tasks/eslint.js',
       'tasks/parallelize.js',
       'tasks/babel.js',
@@ -71,7 +76,7 @@ describe('atomic:app', function () {
     ]);
   });
 
-  it('creates jade source files', function () {
+  it('creates jade source files', function() {
     assert.file([
       'app/index.jade',
       'app/0_basics/_default.jade',
@@ -83,24 +88,29 @@ describe('atomic:app', function () {
     ]);
   });
 
-  it('creates javascript source files', function () {
+  it('creates javascript source files', function() {
     assert.file([
       'app/0_basics/controller.js'
     ]);
   });
 
-  it('creates stylesheet files', function () {
+  it('creates stylesheet files: ' + cssPreprocessorExtension, function() {
     assert.file([
-      'app/0_basics/main.less',
-      'app/0_basics/ie9.less',
-      'app/0_basics/nojs.less',
-      'app/0_basics/variables.less'
+      'app/0_basics/main.' + cssPreprocessorExtension,
+      'app/0_basics/ie9.' + cssPreprocessorExtension,
+      'app/0_basics/nojs.' + cssPreprocessorExtension,
+      'app/0_basics/variables.' + cssPreprocessorExtension
     ]);
   });
 
-  it('creates content files', function () {
+  it('creates content files', function() {
     assert.file([
       'app/0_basics/basics.yaml'
     ]);
   });
+
+  it('checks if all EJS Patterns have been resolved', function() {
+    assert.noFileContent('tasks/watch.js', '<%=');
+    assert.noFileContent('tasks/injector.js', '<%=');
+  })
 });

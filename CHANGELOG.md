@@ -1,3 +1,25 @@
+<a name"1.0.0-0"></a>
+### 1.0.0-0 (2015-10-30)
+
+
+#### Features
+
+* **autoprefixer:** switch from autoprefixer to postCSS autoprefixer ([af70b50d](https://github.com/nexumAG/generator-atomic/commit/af70b50d))
+* **bootstrap:** outsource bootstrap less files to bower ([28f5b9eb](https://github.com/nexumAG/generator-atomic/commit/28f5b9eb))
+* **release:** add beta tag to prereleases ([d50d5d5b](https://github.com/nexumAG/generator-atomic/commit/d50d5d5b))
+* **sass:**
+  * update injector ([c0faa07a](https://github.com/nexumAG/generator-atomic/commit/c0faa07a))
+  * copy new scss files ([5d486115](https://github.com/nexumAG/generator-atomic/commit/5d486115))
+  * change npm packages to install ([e27dfdd6](https://github.com/nexumAG/generator-atomic/commit/e27dfdd6))
+  * remove unused grunt configs ([d80cfadd](https://github.com/nexumAG/generator-atomic/commit/d80cfadd))
+  * update the build chain ([d2644c88](https://github.com/nexumAG/generator-atomic/commit/d2644c88))
+  * new sass grunt task ([380e02bb](https://github.com/nexumAG/generator-atomic/commit/380e02bb))
+  * use the latest Bootstrap4 sass based version ([b9dd0188](https://github.com/nexumAG/generator-atomic/commit/b9dd0188))
+  * convert less files to sass ([7b4c5daf](https://github.com/nexumAG/generator-atomic/commit/7b4c5daf))
+  * remove old less files ([185e3852](https://github.com/nexumAG/generator-atomic/commit/185e3852))
+* **sourcemaps:** copy sourcemaps to dist ([9157496e](https://github.com/nexumAG/generator-atomic/commit/9157496e))
+
+
 <a name"0.6.1"></a>
 ### 0.6.1 (2015-10-28)
 
