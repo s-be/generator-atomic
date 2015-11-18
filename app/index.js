@@ -211,13 +211,18 @@ Generator.prototype.tests = function tests() {
 
 
 Generator.prototype.sourceFiles = function sourceFiles() {
-  this.directory('0_basics/nx-helpers', 'app/0_basics/nx-helpers');
   this.template('0_basics/_default.jade', 'app/0_basics/_default.jade');
   this.template('0_basics/controller.js', 'app/0_basics/controller.js');
   this.template('0_basics/ie9.' + this.cssPreprocessorExtension, 'app/0_basics/ie9.' + this.cssPreprocessorExtension);
   this.template('0_basics/main.' + this.cssPreprocessorExtension, 'app/0_basics/main.' + this.cssPreprocessorExtension);
   this.template('0_basics/nojs.' + this.cssPreprocessorExtension, 'app/0_basics/nojs.' + this.cssPreprocessorExtension);
   this.template('0_basics/variables.' + this.cssPreprocessorExtension, 'app/0_basics/variables.' + this.cssPreprocessorExtension);
+
+  this.copy('0_basics/nx-helpers/nx-colorclasses.' + this.cssPreprocessorExtension, 'app/0_basics/nx-helpers/nx-colorclasses.' + this.cssPreprocessorExtension);
+  this.copy('0_basics/nx-helpers/nx-mediaqueries.' + this.cssPreprocessorExtension, 'app/0_basics/nx-helpers/nx-mediaqueries.' + this.cssPreprocessorExtension);
+  this.copy('0_basics/nx-helpers/nx-radiocheckbox.' + this.cssPreprocessorExtension, 'app/0_basics/nx-helpers/nx-radiocheckbox.' + this.cssPreprocessorExtension);
+  this.copy('0_basics/nx-helpers/nx-spacerclasses.' + this.cssPreprocessorExtension, 'app/0_basics/nx-helpers/nx-spacerclasses.' + this.cssPreprocessorExtension);
+
   this.template('0_basics/basics.yaml', 'app/0_basics/basics.yaml');
 
   this.directory('1_atoms', 'app/1_atoms');
