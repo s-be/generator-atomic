@@ -46,7 +46,7 @@ module.exports = function(moduletype) {
       moduleconfig = this.config.get(moduletype);
 
       this.modulename = props.modulename || this.modulename;
-      this.modulename = s.slugify(this.modulename);
+      this.modulename = s(this.modulename).trim().slugify().value();
 
       this.author = props.author || ' ';
       this.description = props.description || this.description || moduletype + ' description here';

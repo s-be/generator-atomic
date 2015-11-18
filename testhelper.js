@@ -51,12 +51,15 @@ module.exports = function(options) {
       var cssPreprocessor = options.cssPreprocessor;
       var cssPreprocessorExtension = cssPreprocessor.replace('sass', 'scss');
 
-      var moduleName = 'Test module-name_name';
+      var moduleNameOriginal = ' Test ä;ö,ß#ü module-name_name ';
 
+      var moduleName = s(moduleNameOriginal).trim().slugify().value();
       var moduleNameCamelized = s.camelize(moduleName);
+
       var moduleNameAlwaysCamelized = moduleNameCamelized;
+
       if (!options.camelized) {
-        moduleNameCamelized = s.slugify(moduleName);
+        moduleNameCamelized = moduleName;
       }
 
       before(function (done) {
@@ -64,7 +67,7 @@ module.exports = function(options) {
           .inTmpDir(function (dir) {
             fs.copySync(path.join(__dirname, './templates/common/'+cssPreprocessor), dir)
           })
-          .withPrompts({ modulename: moduleName })
+          .withPrompts({ modulename: moduleNameOriginal })
           .withPrompts({ description: 'Test Description' })
           .withPrompts({ author: 'Test Runner' })
           .withOptions({ skipInstall: true })
