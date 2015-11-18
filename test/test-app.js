@@ -61,7 +61,6 @@ describe('atomic:app', function() {
       'tasks/bump.js',
       'tasks/htmlmin.js',
       'tasks/svgmin.js',
-      'tasks/changelog.js',
       'tasks/imagemin.js',
       'tasks/usemin.js',
       'tasks/clean.js',

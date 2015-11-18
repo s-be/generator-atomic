@@ -172,7 +172,6 @@ Generator.prototype.gruntfile = function gruntfile() {
   this.copy('tasks/aliases.yaml', 'tasks/aliases.yaml');
   this.copy('tasks/babel.js', 'tasks/babel.js');
   this.copy('tasks/bump.js', 'tasks/bump.js');
-  this.copy('tasks/changelog.js', 'tasks/changelog.js');
   this.copy('tasks/clean.js', 'tasks/clean.js');
   this.copy('tasks/connect.js', 'tasks/connect.js');
   this.copy('tasks/copy.js', 'tasks/copy.js');
@@ -197,7 +196,6 @@ Generator.prototype.gruntfile = function gruntfile() {
   if(this.karma) {
     this.copy('tasks/karma.js', 'tasks/karma.js');
   }
-  this.copy('tasks/concat.js', 'tasks/concat.js');
   this.copy('tasks/express.js', 'tasks/express.js');
   this.copy('tasks/open.js', 'tasks/open.js');
 };
