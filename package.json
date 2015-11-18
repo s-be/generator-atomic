@@ -39,7 +39,10 @@
     "molecule",
     "organism",
     "template",
-    "page"
+    "templates",
+    "page",
+    "helper.js",
+    "testhelper.js"
   ],
   "dependencies": {
     "camelize": "1.0.0",
