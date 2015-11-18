@@ -45,10 +45,12 @@ module.exports = function(moduletype) {
 
       moduleconfig = this.config.get(moduletype);
 
+      this.moduletype = moduletype;
+
       this.modulename = props.modulename || this.modulename;
       this.modulename = s(this.modulename).trim().slugify().value();
 
-      this.author = props.author || ' ';
+      this.author = props.author || 'empty';
       this.description = props.description || this.description || moduletype + ' description here';
 
       this.appname   = this.config.get('appname');
