@@ -4,7 +4,7 @@
  */
 
 module.exports = {
-  build: {
+  dist: {
     files: [{
       dot: true,
       src: [
