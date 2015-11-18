@@ -17,6 +17,6 @@ module.exports = {
       src: ['*.scss', '!**/_*', '!variables.scss'],
       dest: '<%= folders.tmp %>/0_basics',
       ext: '.css'
-    }],
+    }]
   }
 };

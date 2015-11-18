@@ -20,7 +20,7 @@ module.exports = {
       exclude: [
         'bower_components/html5shiv/',
         'bower_components/consolelog/',
-        'bower_components/modernizr/',
+        'bower_components/modernizr/'
       ],
       overrides: {
       }

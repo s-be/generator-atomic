@@ -15,8 +15,8 @@ module.exports = {
         '.htaccess',
         'images/{,*/}*.{jpg,jpeg,png,webp,gif,svg}',
         'fonts/**'
-      ]
-    }, {
+      ]},
+    {
       expand: true,
       cwd: '<%= folders.tmp %>',
       dest: '<%= folders.dist %>',
