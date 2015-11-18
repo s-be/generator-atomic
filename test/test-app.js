@@ -98,7 +98,12 @@ describe('atomic:app', function() {
       'app/0_basics/main.' + cssPreprocessorExtension,
       'app/0_basics/ie9.' + cssPreprocessorExtension,
       'app/0_basics/nojs.' + cssPreprocessorExtension,
-      'app/0_basics/variables.' + cssPreprocessorExtension
+      'app/0_basics/variables.' + cssPreprocessorExtension,
+
+      'app/0_basics/nx-helpers/nx-colorclasses.' + cssPreprocessorExtension,
+      'app/0_basics/nx-helpers/nx-mediaqueries.' + cssPreprocessorExtension,
+      'app/0_basics/nx-helpers/nx-radiocheckbox.' + cssPreprocessorExtension,
+      'app/0_basics/nx-helpers/nx-spacerclasses.' + cssPreprocessorExtension
     ]);
   });
 
