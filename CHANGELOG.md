@@ -1,3 +1,20 @@
+<a name"1.0.2"></a>
+### 1.0.2 (2015-11-19)
+
+
+#### Bug Fixes
+
+* **karma:** only generate unit tests if JS is generated ([ec2e2d8f](https://github.com/nexumAG/generator-atomic/commit/ec2e2d8f))
+* **styles:** only copy the correct less/sass helperfiles ([474aa4f8](https://github.com/nexumAG/generator-atomic/commit/474aa4f8))
+
+
+#### Features
+
+* **galen:**
+  * use new galen 2 spec language for demo spec files ([44d7ba1e](https://github.com/nexumAG/generator-atomic/commit/44d7ba1e))
+  * allow galen tests during development with grunt galen:server ([7391ffd1](https://github.com/nexumAG/generator-atomic/commit/7391ffd1))
+
+
 <a name"1.0.1"></a>
 ### 1.0.1 (2015-11-18)
 
