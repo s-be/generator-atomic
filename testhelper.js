@@ -125,7 +125,7 @@ module.exports = function(options) {
         });
       }
 
-      if (options.karma) {
+      if (options.karma && config.scripts) {
         it('creates javascript unit test', function() {
           assert.file([
             'app/' + config.modulefolder + '/' + moduleNameCamelized + '/' + moduleNameCamelized + '.unit.js'

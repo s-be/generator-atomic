@@ -85,7 +85,7 @@ module.exports = function(moduletype) {
     if (moduleconfig.scripts) {
       this.copy('../../templates/module.js', 'app/' + moduleconfig.modulefolder + '/' + this.modulenameCamelized + '/' + this.modulenameCamelized + '.js');
     }
-    if (this.karma) {
+    if (this.karma && moduleconfig.scripts) {
       this.copy('../../templates/module.unit.js', 'app/' + moduleconfig.modulefolder + '/' + this.modulenameCamelized + '/' + this.modulenameCamelized + '.unit.js');
     }
     if (this.galen) {
