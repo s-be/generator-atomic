@@ -1,3 +1,12 @@
+<a name"1.0.3"></a>
+### 1.0.3 (2015-11-20)
+
+
+#### Bug Fixes
+
+* **specs:** fix galen spec files ([30cedc61](https://github.com/nexumAG/generator-atomic/commit/30cedc61))
+
+
 <a name"1.0.2"></a>
 ### 1.0.2 (2015-11-19)
 
