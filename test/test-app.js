@@ -114,7 +114,39 @@ describe('atomic:app', function() {
   });
 
   it('checks if all EJS Patterns have been resolved', function() {
-    assert.noFileContent('tasks/watch.js', '<%=');
-    assert.noFileContent('tasks/injector.js', '<%=');
+    assert.noFileContent('tasks/watch.js', '<%= cssPreprocessor %>');
+    assert.noFileContent('tasks/watch.js', '<%- folders.app %>');
+    assert.fileContent('tasks/watch.js', '<%= folders.app %>');
+    assert.noFileContent('tasks/watch.js', '<%- folders.tmp %>');
+    assert.fileContent('tasks/watch.js', '<%= folders.tmp %>');
+
+    assert.noFileContent('tasks/injector.js', '<%= cssPreprocessorExtension %>');
+    assert.noFileContent('tasks/injector.js', '<%- folders.app %>');
+    assert.fileContent('tasks/injector.js', '<%= folders.app %>');
+
+
+    assert.noFileContent('tasks/connect.js', '<%-');
+    assert.noFileContent('tasks/express.js', '<%-');
+    assert.noFileContent('tasks/imagemin.js', '<%-');
+    assert.noFileContent('tasks/karma.js', '<%-');
+    assert.noFileContent('tasks/parallelize.js', '<%-');
+    assert.noFileContent('tasks/' + cssPreprocessor + '.js', '<%-');
+    assert.noFileContent('tasks/useminPrepare.js', '<%-');
+    assert.noFileContent('tasks/babel.js', '<%-');
+    assert.noFileContent('tasks/clean.js', '<%-');
+    assert.noFileContent('tasks/copy.js', '<%-');
+    assert.noFileContent('tasks/galen.js', '<%-');
+    assert.noFileContent('tasks/postcss.js', '<%-');
+    assert.noFileContent('tasks/svgmin.js', '<%-');
+    assert.noFileContent('tasks/bump.js', '<%-');
+    assert.noFileContent('tasks/combine_mq.js', '<%-');
+    assert.noFileContent('tasks/eslint.js', '<%-');
+    assert.noFileContent('tasks/htmlmin.js', '<%-');
+    assert.noFileContent('tasks/jade.js', '<%-');
+    assert.noFileContent('tasks/open.js', '<%-');
+    assert.noFileContent('tasks/rev.js', '<%-');
+    assert.noFileContent('tasks/usemin.js', '<%-');
+    assert.noFileContent('tasks/wiredep.js', '<%-');
+
   })
 });
