@@ -10,8 +10,8 @@ module.exports = {
   default: {
     files: [{
       expand: true,
-      cwd: '<%= folders.app %>',
-      dest: '<%= folders.tmp %>',
+      cwd: '<%- folders.app %>',
+      dest: '<%- folders.tmp %>',
       src: [
         '{,*/,**/}*.js',
         '!bower_components/{,*/,**/}*.js',

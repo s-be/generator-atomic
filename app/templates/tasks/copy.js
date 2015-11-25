@@ -8,8 +8,8 @@ module.exports = {
     files: [{
       expand: true,
       dot: true,
-      cwd: '<%= folders.app %>',
-      dest: '<%= folders.dist %>',
+      cwd: '<%- folders.app %>',
+      dest: '<%- folders.dist %>',
       src: [
         '*.{ico,txt}',
         '.htaccess',
@@ -18,8 +18,8 @@ module.exports = {
       ]},
     {
       expand: true,
-      cwd: '<%= folders.tmp %>',
-      dest: '<%= folders.dist %>',
+      cwd: '<%- folders.tmp %>',
+      dest: '<%- folders.dist %>',
       src: [
         '**/*.css',
         '**/*.map'

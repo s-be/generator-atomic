@@ -6,13 +6,13 @@
 module.exports = {
   files: [{
     expand: true,
-    cwd: '<%= folders.tmp %>/0_basics',
+    cwd: '<%- folders.tmp %>/0_basics',
     src: ['*.css'],
-    dest: '<%= folders.tmp %>/0_basics',
+    dest: '<%- folders.tmp %>/0_basics',
     ext: '.css'
   }],
   options: {
-    paths: ['<%= folders.tmp %>/'],
+    paths: ['<%- folders.tmp %>/'],
     map: {
       inline: false, // save all sourcemaps as separate files...
       annotation: '.tmp/0_basics' // ...to the specified directory
@@ -58,7 +58,7 @@ module.exports = {
     }
   },
   stylelint: {
-    src: ['<%= folders.app %>/{,*/,**/}*.scss', '!<%= folders.app %>/0_basics/{,*/,**/}*.scss'],
+    src: ['<%- folders.app %>/{,*/,**/}*.scss', '!<%- folders.app %>/0_basics/{,*/,**/}*.scss'],
     options: {
       writeDest: false,
       map: false,

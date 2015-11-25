@@ -4,10 +4,10 @@
  */
 
 module.exports = {
-  html: ['<%= folders.dist %>/{,*/,**/}*.html'],
-  css: ['<%= folders.dist %>/{,*/,**/}*.css'],
+  html: ['<%- folders.dist %>/{,*/,**/}*.html'],
+  css: ['<%- folders.dist %>/{,*/,**/}*.css'],
   options: {
-    dirs: ['<%= folders.dist %>'] /*,
+    dirs: ['<%- folders.dist %>'] /*,
     blockReplacements: { // use this to async load js and css
       js: function (block){
         console.log(block.dest);

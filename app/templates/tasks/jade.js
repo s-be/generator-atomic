@@ -42,9 +42,9 @@ module.exports = function (grunt, data) {
     html: {
       expand: true,
       //flatten: true,
-      //cwd: '<%= folders.app %>/jade',
-      src: ['<%= folders.app %>/{,*/,**/}*.jade', '!**/_*'],
-      dest: '<%= folders.tmp %>',
+      //cwd: '<%- folders.app %>/jade',
+      src: ['<%- folders.app %>/{,*/,**/}*.jade', '!**/_*'],
+      dest: '<%- folders.tmp %>',
       ext: '.html',
       rename: function(dest, src) {
         return src.replace('app/', '.tmp/');

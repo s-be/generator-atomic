@@ -8,11 +8,11 @@ module.exports = {
     files: [{
       dot: true,
       src: [
-        '<%= folders.tmp %>',
-        '<%= folders.dist %>/*',
-        '!<%= folders.dist %>/.git*'
+        '<%- folders.tmp %>',
+        '<%- folders.dist %>/*',
+        '!<%- folders.dist %>/.git*'
       ]
     }]
   },
-  server: '<%= folders.tmp %>'
+  server: '<%- folders.tmp %>'
 };

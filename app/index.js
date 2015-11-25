@@ -100,6 +100,12 @@ Generator.prototype.promptConfig = function promptConfig() {
     this.camelized = props.camelized;
     this.config.set('camelized', this.camelized);
 
+    this.folders =  {
+      tmp: '<%= folders.tmp %>',
+      app: '<%= folders.app %>',
+      dist: '<%= folders.dist %>'
+    };
+
     this.config.set('atom', {
         moduletype: 'atom',
         modulefolder: '1_atoms',

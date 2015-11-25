@@ -4,7 +4,10 @@
  */
 
 module.exports = {
-  files: ["<%= folders.app %>/{,*/,**/}*.js", '!<%= folders.app %>/bower_components/**'],
+  files: [
+    '<%- folders.app %>/{,*/,**/}*.js',
+    '!<%- folders.app %>/bower_components/**'
+  ],
   options: {
     configFile: ".eslintrc"
   }
