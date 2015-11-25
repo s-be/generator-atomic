@@ -1,8 +1,9 @@
-@objects
-<%= modulename %>                .<%= modulename %>
-maincontent           body > .container
-header                header
-footer                footer
+==============================================
+<%= modulename %>               css .<%= modulename %>
+maincontent          css body > .container
+header               css header
+footer               css footer
+==============================================
 
 @ all
 <%= modulename %>
