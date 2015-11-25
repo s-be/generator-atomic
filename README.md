@@ -87,8 +87,8 @@ Create a Release of the Project (bump and tag).
 |   |   ├── _default.jade                 # HTML Mastertemplate (HTML Header/Footer)
 |   |   ├── controller.js                 # Javascript Main Controller 
 |   |   ├── basics.yaml                   # Content YAML
-|   |   ├── main.scss                     # Less-file for Module imports
-|   |   ├── variables.scss                # Less Variables
+|   |   ├── main.scss                     # Stylesheet-file for Module imports
+|   |   ├── variables.scss                # Stylesheet Variables
 |   |   ├── nojs.scss                     # Fallback CSS for Browsers without JS
 |   |   ├── ie9.scss                      # Fallback CSS for IE9
 |   |   └── □ nx helpers                  # Less Helper Classes
@@ -108,7 +108,7 @@ Each Module (atom, molecule, organism...) has this Directory Layout:
 |   |       ├── _breadcrumb.jade        # Markup: Jade Mixins (with _underscore)
 |   |       ├── breadcrumb.js           # Script: ES2015 through BabelJS (not in atoms, templates and pages)
 |   |       ├── breadcrumb.unit.js      # Unit-Test: Karma/Jasmine Unit Test
-|   |       ├── breadcrumb.scss         # Styles: LESS precompiler
+|   |       ├── breadcrumb.scss         # Stylesheet
 |   |       ├── breadcrumb.spec         # Test: Galen Specfile for Layout Tests
 |   |       └── breadcrumb.yaml         # Content Model for this module
 ```
