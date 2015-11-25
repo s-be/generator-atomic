@@ -48,8 +48,8 @@
     "camelize": "1.0.0",
     "chalk": "1.1.1",
     "underscore.string": "3.2.2",
-    "yeoman-generator": "^0.19.2",
-    "yosay": "1.0.5"
+    "yeoman-generator": "^0.21.1",
+    "yosay": "^1.1.0"
   },
   "devDependencies": {
     "fs-extra": "^0.26.2",
