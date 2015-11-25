@@ -1,3 +1,18 @@
+<a name"1.0.4"></a>
+### 1.0.4 (2015-11-25)
+
+
+#### Bug Fixes
+
+* **galen:** revert to galen 1.6.x ([ad5788d4](https://github.com/nexumAG/generator-atomic/commit/ad5788d4))
+* **injector:** fix wrong namespace cleaning ([18b2bb78](https://github.com/nexumAG/generator-atomic/commit/18b2bb78))
+
+
+#### Features
+
+* **generator:** correct copying of folder template paths ([d7b4db5a](https://github.com/nexumAG/generator-atomic/commit/d7b4db5a))
+
+
 <a name"1.0.3"></a>
 ### 1.0.3 (2015-11-20)
 
