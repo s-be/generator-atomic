@@ -11,7 +11,7 @@ module.exports = {
   jademixins: {
     options: {
       transform: function(filePath) {
-        filePath = filePath.replace('/<%- folders.app %>/', '/');
+        filePath = filePath.replace('/app/', '/');
         return 'include ' + filePath;
       },
       starttag: '//- [injector:jademixins]',
@@ -27,7 +27,7 @@ module.exports = {
   jadelinks: {
     options: {
       transform: function(filePath) {
-        filePath = filePath.replace('.jade', '.html').replace('/<%- folders.app %>/', '../');
+        filePath = filePath.replace('.jade', '.html').replace('/app/', '../');
         linkTitle = filePath.split('/').pop().replace('.html', '');
         linkTitle = linkTitle.charAt(0).toUpperCase() + linkTitle.substr(1);
         return 'p: a(href="' + filePath + '") ' + linkTitle ;
@@ -67,7 +67,7 @@ module.exports = {
   scripts: {
     options: {
       transform: function(filePath) {
-        filePath = filePath.replace('/<%- folders.app %>/', '');
+        filePath = filePath.replace('/app/', '');
         return '<script src="/' + filePath + '"></script>';
       },
       starttag: '// [injector:js]',
@@ -85,7 +85,7 @@ module.exports = {
   style: {
     options: {
       transform: function(filePath) {
-        filePath = filePath.replace('/<%- folders.app %>/', '');
+        filePath = filePath.replace('/app/', '');
         return '@import \'../' + filePath + '\';';
       },
       starttag: '// [injector]',
@@ -101,7 +101,7 @@ module.exports = {
   specs: {
     options: {
       transform: function(filePath) {
-        filePath = filePath.replace('/<%- folders.app %>/', '/');
+        filePath = filePath.replace('/app/', '/');
         htmlPath = filePath.replace('.spec', '.html');
         linkTitle = filePath.split('/').pop().replace('.spec', '');
         linkTitle = linkTitle.charAt(0).toUpperCase() + linkTitle.substr(1);
