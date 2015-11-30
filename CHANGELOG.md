@@ -1,3 +1,13 @@
+<a name"1.0.6"></a>
+### 1.0.6 (2015-11-30)
+
+
+#### Bug Fixes
+
+* **postcss:** correct postcss target src fpr server and dist ([e0720e0d](https://github.com/nexumAG/generator-atomic/commit/e0720e0d))
+* **styles:** replace hard coded cssPreprocessor Extensions ([7db90cbf](https://github.com/nexumAG/generator-atomic/commit/7db90cbf))
+
+
 <a name"1.0.5"></a>
 ### 1.0.5 (2015-11-28)
 
