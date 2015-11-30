@@ -29,7 +29,7 @@ module.exports = {
   },
 
   style: {
-    files: [ '<%- folders.app %>/{,*/,**/}*.scss' ],
+    files: [ '<%- folders.app %>/{,*/,**/}*.<%= cssPreprocessorExtension %>' ],
     tasks: [ '<%= cssPreprocessor %>', 'postcss:server' ]
   },
   styletest: {

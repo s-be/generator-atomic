@@ -14,7 +14,7 @@ module.exports = {
     files: [{
       expand: true,
       cwd: '<%- folders.app %>/0_basics',
-      src: ['*.scss', '!**/_*', '!variables.scss'],
+      src: ['*.<%= cssPreprocessorExtension %>', '!**/_*', '!variables.<%= cssPreprocessorExtension %>'],
       dest: '<%- folders.tmp %>/0_basics',
       ext: '.css'
     }]
