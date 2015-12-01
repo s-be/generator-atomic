@@ -1,3 +1,12 @@
+<a name"1.1.0"></a>
+## 1.1.0 (2015-12-01)
+
+
+#### Features
+
+* **galen:** update to new grunt-galen version (based on galen 2) ([daa1fb66](https://github.com/nexumAG/generator-atomic/commit/daa1fb66))
+
+
 <a name"1.0.6"></a>
 ### 1.0.6 (2015-11-30)
 
