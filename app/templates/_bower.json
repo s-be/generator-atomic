@@ -5,7 +5,7 @@
     "jquery": "^2.1.4",<% if (cssPreprocessor === 'less') { %>
     "bootstrap": "^3",<% } %><% if (cssPreprocessor === 'sass') { %>
     "bootstrap": "^4",<% } %>
-    "underscore": "^1.8.3"
+    "lodash": "^3.10.1"
   },
   "devDependencies": {}
 }
