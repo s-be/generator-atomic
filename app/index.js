@@ -8,6 +8,13 @@ var yeoman = require('yeoman-generator');
 
 var Generator = module.exports = function Generator(args, options) {
   yeoman.generators.Base.apply(this, arguments);
+  this.argument('projectName', { type: String, required: false });
+  this.argument('namespace', { type: String, required: false });
+  this.argument('author', { type: String, required: false });
+  this.argument('cssPreprocessor', { type: String, required: false });
+  this.argument('karma', { type: Boolean, required: false });
+  this.argument('galen', { type: Boolean, required: false });
+  this.argument('camelized', { type: Boolean, required: false });
   this.pkg = require('../package.json');
 
 };
@@ -71,33 +78,38 @@ Generator.prototype.promptConfig = function promptConfig() {
     }
   ];
 
+  if(this.projectName) {
+    prompts = [];
+  }
+
   this.prompt(prompts, function(props) {
     this.config.save();
 
-    this.projectName = props.projectName;
+    this.projectName = props.projectName || this.projectName;
     this.config.set('projectName', this.projectName);
 
     this.appname = s.slugify(this.projectName);
     this.config.set('appname', this.appname);
 
-    this.namespace = props.namespace.replace(/[^\w\s]/gi, '');
+    this.namespace = props.namespace || this.namespace;
+    this.namespace = this.namespace.replace(/[^\w\s]/gi, '');
     this.config.set('namespace', this.namespace);
 
-    this.author = props.author;
+    this.author = props.author || this.author;
     //this.config.set('author', this.author);
 
-    this.cssPreprocessor = props.cssPreprocessor;
+    this.cssPreprocessor = props.cssPreprocessor || this.cssPreprocessor;
     this.cssPreprocessorExtension = this.cssPreprocessor.replace('sass','scss');
     this.config.set('cssPreprocessor', this.cssPreprocessor);
     this.config.set('cssPreprocessorExtension', this.cssPreprocessorExtension);
 
-    this.galen = props.galen;
+    this.galen = props.galen || this.galen;
     this.config.set('galen', this.galen);
 
-    this.karma = props.karma;
+    this.karma = props.karma || this.karma;
     this.config.set('karma', this.karma);
 
-    this.camelized = props.camelized;
+    this.camelized = props.camelized || this.camelized;
     this.config.set('camelized', this.camelized);
 
     this.folders =  {
