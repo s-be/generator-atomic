@@ -4,12 +4,18 @@
  */
 
 module.exports = {
+  options: {
+    concat: true,
+    output: false
+  },
   local: {
-    src: ['tests/galen.test.js'],
+    src: ['app/{,*/,**/}*.galen.js', 'tests/galen.test.js'],
     options: {
-      url: 'http://localhost:9001',
+      url: 'http://localhost:9002',
       htmlReport: true,
       htmlReportDest: 'report',
+      testngReport: true,
+      testngReportDest: 'report/testng.xml',
       devices: {
         desktop: {
           deviceName: 'desktop',
