@@ -39,11 +39,13 @@ module.exports = {
     }
   },
   server: {
-    src: ['tests/galen.test.js'],
+    src: ['app/{,*/,**/}*.galen.js', 'tests/galen.test.js'],
     options: {
       url: 'http://localhost:3000',
       htmlReport: true,
       htmlReportDest: 'report',
+      testngReport: true,
+      testngReportDest: 'report/testng.xml',
       devices: {
         desktop: {
           deviceName: 'desktop',

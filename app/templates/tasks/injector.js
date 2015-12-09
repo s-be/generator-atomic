@@ -77,6 +77,7 @@ module.exports = {
       '<%- folders.app %>/0_basics/_default.jade': [
         '<%- folders.app %>/{,*/,**/}*.js',
         '!<%- folders.app %>/{,*/,**/}*.unit.js',
+        '!<%- folders.app %>/{,*/,**/}*.galen.js',
         '!<%- folders.app %>/0_basics/**'
       ]
     }

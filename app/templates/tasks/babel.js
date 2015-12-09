@@ -15,6 +15,7 @@ module.exports = {
       src: [
         '{,*/,**/}*.js',
         '!bower_components/{,*/,**/}*.js',
+        '!*.galen.js',
         '!*.unit.js'
       ]
     }]
