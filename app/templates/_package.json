@@ -60,7 +60,7 @@
 
     "grunt-bump": "^0.6.0",
     "grunt-conventional-changelog": "^5.0.0"<% if (galen) { %>,
-    "grunt-galen": "git://github.com/michaseel/grunt-galen.git#e7ee6acdd9d60092645f6e29b6aa249f99c63f7c"<% } %><% if (karma) { %>,
+    "grunt-galen": "git://github.com/michaseel/grunt-galen.git#f76c5363cd5e56383a6a9157d22394aa7936a292"<% } %><% if (karma) { %>,
     "karma": "^0.13.14",
     "karma-chrome-launcher": "^0.2.1",
     "karma-firefox-launcher": "*",
