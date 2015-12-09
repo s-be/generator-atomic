@@ -6,7 +6,7 @@
 module.exports = {
   options: {
     concat: true,
-    output: true
+    output: false
   },
   local: {
     src: ['app/{,*/,**/}*.galen.js', 'tests/galen.test.js'],
