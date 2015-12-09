@@ -7,12 +7,12 @@ module.exports = {
   options: {
     // change this to '0.0.0.0' to access the server from outside
     hostname: 'localhost',
-    open: true
+    open: false
   },
   dist: {
     options: {
       port: 3000,
-      keepalive: true,
+      keepalive: false,
       base: [
         '<%- folders.dist %>'
       ],

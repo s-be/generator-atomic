@@ -36,7 +36,6 @@ lint:
   - karma<% } %>
 <%if (galen) { %>
 test:
-  - serve
   - galen:local
   - connect:testresults
 
