@@ -1,3 +1,25 @@
+<a name"1.1.1"></a>
+### 1.1.1 (2015-12-09)
+
+
+#### Bug Fixes
+
+* **test:** remove "waiting forever" from test run ([633b2bcc](https://github.com/nexumAG/generator-atomic/commit/633b2bcc))
+
+
+#### Features
+
+* **app:** command line options (used for travis) ([786ebe3c](https://github.com/nexumAG/generator-atomic/commit/786ebe3c))
+* **galen:**
+  * provide grunt lint, test and test:production targets ([da5822b9](https://github.com/nexumAG/generator-atomic/commit/da5822b9))
+  * allow module specific galen tests (*.galen.js) ([bb9d9f8c](https://github.com/nexumAG/generator-atomic/commit/bb9d9f8c))
+  * allow module specific galen tests (*.galen.js) ([8c2ab1a3](https://github.com/nexumAG/generator-atomic/commit/8c2ab1a3))
+  * use latest grunt galen ([d95bcec5](https://github.com/nexumAG/generator-atomic/commit/d95bcec5))
+* **injector:** generate cleaner galen tests ([f6c46a9c](https://github.com/nexumAG/generator-atomic/commit/f6c46a9c))
+* **lodash:** bump lodash dependenciy ([d086f536](https://github.com/nexumAG/generator-atomic/commit/d086f536))
+* **serve:** cleanup serve task ([d749fae6](https://github.com/nexumAG/generator-atomic/commit/d749fae6))
+
+
 <a name"1.1.0"></a>
 ## 1.1.0 (2015-12-01)
 
