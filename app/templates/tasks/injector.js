@@ -106,7 +106,9 @@ module.exports = {
         htmlPath = filePath.replace('.spec', '.html');
         linkTitle = filePath.split('/').pop().replace('.spec', '');
         linkTitle = linkTitle.charAt(0).toUpperCase() + linkTitle.substr(1);
-        return "test('"+ linkTitle + " on ' + device.deviceName, function () { gl.openPage(device, config.getProjectPage()+'" + htmlPath + "'); gl.runSpecFile(device, '<%- folders.app %>" + filePath + "', device.tags);});";
+        return "test('"+ linkTitle + " on ' + device.deviceName, function () { \n"
+        +"    gl.openPage(device, config.getProjectPage()+'" + htmlPath + "');\n"
+        +"    gl.runSpecFile(device, 'app" + filePath + "', device.tags);\n  });\n";
       },
       starttag: '// [injector:spec]',
       endtag: '// [endinjector]'
