@@ -5,24 +5,13 @@
 
 module.exports = {
   options: {
-    port: 9000,
     // change this to '0.0.0.0' to access the server from outside
     hostname: 'localhost',
     open: true
   },
-  server: {
-    options: {
-      livereload: true,
-      base: [
-        '<%- folders.tmp %>',
-        '<%- folders.app %>',
-        'bower_components'
-      ]
-    }
-  },
   dist: {
     options: {
-      useAvailablePort: true,
+      port: 9000,
       keepalive: true,
       base: [
         '<%- folders.dist %>'
@@ -30,14 +19,15 @@ module.exports = {
       livereload: false
     }
   },
-  test: {
+  testresults: {
     options: {
       port: 9001,
       base: [
-        '<%- folders.dist %>'
+        'report/'
       ],
       livereload: false,
-      open: false
+      keepalive: true,
+      open: 'http://localhost:9001/report.html'
     }
   }
 };
