@@ -40,7 +40,6 @@ test:
   - connect:testresults
 
 test:production:
-  - build
   - connect:dist
   - galen:local<% } %>
 

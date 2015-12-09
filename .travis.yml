@@ -1,11 +1,11 @@
 sudo: false
 language: node_js
 node_js:
-  - '0.10'
+  - '0.12'
   - '4.2'
   - '5.0'
 before_install: npm install -g grunt-cli yo bower && npm link
-install: mkdir testrun && cd testrun &&  yo atomic testProk test TestRunner less true true true
+install: mkdir testrun && cd testrun &&  yo atomic testProk test TestRunner less true true true && grunt build
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
