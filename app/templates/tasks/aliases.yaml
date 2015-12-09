@@ -30,12 +30,19 @@ build:
   - rev
   - usemin
 
-test:
+lint:
   - eslint
   - postcss:stylelint<%if (karma) { %>
-  - karma<% } %><%if (galen) { %>
+  - karma<% } %>
+<%if (galen) { %>
+test:
+  - serve
+  - galen:local
+  - connect:testresults
+
+test:production:
   - build
-  - connect:test
+  - connect:dist
   - galen:local<% } %>
 
 release:

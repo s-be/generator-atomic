@@ -11,7 +11,7 @@ module.exports = {
   },
   dist: {
     options: {
-      port: 9000,
+      port: 3000,
       keepalive: true,
       base: [
         '<%- folders.dist %>'
