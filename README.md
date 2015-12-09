@@ -114,11 +114,24 @@ Each Module (atom, molecule, organism...) has this Directory Layout:
 ```
 ## Contributing
 
-1. Fork it
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'feat(filename): add my-new-feature...'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request
+You can contribute by  
+
+* Issue submission
+* writing Unit Tests
+* providing Bugfixes
+
+Please use the [Angular Commit Message Format](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit-message-format) for easier Changelog generation.
+
+## Pull Request Guidelines
+
+* Please check to make sure that there aren't existing pull requests attempting to address the issue mentioned. We also recommend checking for issues related to the issue on the tracker, as a team member may be working on the issue in a branch or fork.
+* Non-trivial changes should be discussed in an issue first
+* Develop in a topic branch, not master
+* Add relevant tests to cover the change
+* Make sure test-suite passes: `npm test`
+* Squash your commits
+* Write a convincing description of your PR and why we should land it
+
 
 Thank you for your time, we appreciate it.
 
