@@ -1,4 +1,5 @@
 # generator-atomic
+[![npm version](https://badge.fury.io/js/generator-atomic.svg)](https://badge.fury.io/js/generator-atomic)
 [![Build Status](https://travis-ci.org/nexumAG/generator-atomic.svg?branch=master)](https://travis-ci.org/nexumAG/generator-atomic) 
 [![Dependency Status](https://david-dm.org/nexumAG/generator-atomic.svg)](https://david-dm.org/nexumAG/generator-atomic)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/nexumAg/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Average time to resolve an issue")
