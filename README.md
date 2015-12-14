@@ -112,6 +112,11 @@ Each Module (atom, molecule, organism...) has this Directory Layout:
 |   |       ├── breadcrumb.spec         # Test: Galen Specfile for Layout Tests
 |   |       └── breadcrumb.yaml         # Content Model for this module
 ```
+
+## Note for Windows-Users:
+Windows Users with npm3/node5 should use the Microsoft PowerShell.
+The Standard-Shell has Problems with the prompts.
+
 ## Contributing
 
 You can contribute by  
