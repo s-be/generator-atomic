@@ -1,3 +1,17 @@
+<a name"1.2.0"></a>
+## 1.2.0 (2015-12-14)
+
+
+#### Bug Fixes
+
+* **subgenerators:** always use camelized Modulenames in Jade / Less / Scss ([4f87db8a](https://github.com/nexumAG/generator-atomic/commit/4f87db8a))
+
+
+#### Features
+
+* **galen:** optimize galen usage ([8384bd48](https://github.com/nexumAG/generator-atomic/commit/8384bd48))
+
+
 <a name"1.1.1"></a>
 ### 1.1.1 (2015-12-09)
 
