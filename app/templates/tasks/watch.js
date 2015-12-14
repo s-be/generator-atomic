@@ -16,7 +16,7 @@ module.exports = {
   },
 
   script: {
-    files: [ '<%- folders.app %>/{,*/,**/}*.js' ],
+    files: [ '<%- folders.app %>/{,*/,**/}*.js', '!app/{,*/,**/}*galen.js' ],
     tasks: [ 'newer:babel' ]
   },
 

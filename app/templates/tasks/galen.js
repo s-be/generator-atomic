@@ -6,6 +6,10 @@
 module.exports = {
   options: {
     concat: true,
+    concatScripts: [
+      '../gl.js',
+      '../bower_components/underscore/underscore.js'
+    ],
     output: false
   },
   local: {
