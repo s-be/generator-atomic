@@ -1,5 +1,5 @@
 @objects
-  <%= modulename %>                .<%= modulename %>
+  <%= modulenameCamelized %>                .<%= modulenameCamelized %>
   maincontent           body > .container
   header                header
   footer                footer
