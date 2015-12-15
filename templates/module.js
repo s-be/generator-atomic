@@ -1,5 +1,5 @@
 /**
- * @name Molecule: <%= modulename %>
+ * @name <%= moduletype %>: <%= modulenameCamelized %>
  * @description <%= description %>
  * @author <%= author %>
  * @see {@link http://github.com/documentation|Specification}
@@ -13,7 +13,7 @@ const <%= namespace %> = <%= namespace %> || {}; // get the apps namespace
    * @param {string} name - The Name of who should be greeted.
    */
   function privateFunctionExample(name) {
-    console.log('Molecule "<%= modulename %>" was loaded: Hello ' + name);
+    console.log('<%= moduletype %> "<%= modulenameCamelized %>" was loaded: Hello ' + name);
   }
 
   /**
