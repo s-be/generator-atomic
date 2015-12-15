@@ -8,6 +8,13 @@ var yeoman = require('yeoman-generator');
 
 var Generator = module.exports = function Generator(args, options) {
   yeoman.generators.Base.apply(this, arguments);
+  this.argument('projectName', { type: String, required: false });
+  this.argument('namespace', { type: String, required: false });
+  this.argument('author', { type: String, required: false });
+  this.argument('cssPreprocessor', { type: String, required: false });
+  this.argument('karma', { type: Boolean, required: false });
+  this.argument('galen', { type: Boolean, required: false });
+  this.argument('camelized', { type: Boolean, required: false });
   this.pkg = require('../package.json');
 
 };
@@ -71,34 +78,45 @@ Generator.prototype.promptConfig = function promptConfig() {
     }
   ];
 
+  if(this.projectName) {
+    prompts = [];
+  }
+
   this.prompt(prompts, function(props) {
     this.config.save();
 
-    this.projectName = props.projectName;
+    this.projectName = props.projectName || this.projectName;
     this.config.set('projectName', this.projectName);
 
     this.appname = s.slugify(this.projectName);
     this.config.set('appname', this.appname);
 
-    this.namespace = props.namespace.replace(/[^\w\s]/gi, '');
+    this.namespace = props.namespace || this.namespace;
+    this.namespace = this.namespace.replace(/[^\w\s]/gi, '');
     this.config.set('namespace', this.namespace);
 
-    this.author = props.author;
+    this.author = props.author || this.author;
     //this.config.set('author', this.author);
 
-    this.cssPreprocessor = props.cssPreprocessor;
+    this.cssPreprocessor = props.cssPreprocessor || this.cssPreprocessor;
     this.cssPreprocessorExtension = this.cssPreprocessor.replace('sass','scss');
     this.config.set('cssPreprocessor', this.cssPreprocessor);
     this.config.set('cssPreprocessorExtension', this.cssPreprocessorExtension);
 
-    this.galen = props.galen;
+    this.galen = props.galen || this.galen;
     this.config.set('galen', this.galen);
 
-    this.karma = props.karma;
+    this.karma = props.karma || this.karma;
     this.config.set('karma', this.karma);
 
-    this.camelized = props.camelized;
+    this.camelized = props.camelized || this.camelized;
     this.config.set('camelized', this.camelized);
+
+    this.folders =  {
+      tmp: '<%= folders.tmp %>',
+      app: '<%= folders.app %>',
+      dist: '<%= folders.dist %>'
+    };
 
     this.config.set('atom', {
         moduletype: 'atom',
@@ -172,7 +190,6 @@ Generator.prototype.gruntfile = function gruntfile() {
   this.copy('tasks/aliases.yaml', 'tasks/aliases.yaml');
   this.copy('tasks/babel.js', 'tasks/babel.js');
   this.copy('tasks/bump.js', 'tasks/bump.js');
-  this.copy('tasks/changelog.js', 'tasks/changelog.js');
   this.copy('tasks/clean.js', 'tasks/clean.js');
   this.copy('tasks/connect.js', 'tasks/connect.js');
   this.copy('tasks/copy.js', 'tasks/copy.js');
@@ -192,12 +209,11 @@ Generator.prototype.gruntfile = function gruntfile() {
   this.copy('tasks/eslint.js', 'tasks/eslint.js');
   this.copy('tasks/combine_mq.js', 'tasks/combine_mq.js');
   if(this.galen) {
-    this.copy('tasks/galen.js', 'tasks/galen.js');
+    this.copy('tasks/galenframework.js', 'tasks/galenframework.js');
   }
   if(this.karma) {
     this.copy('tasks/karma.js', 'tasks/karma.js');
   }
-  this.copy('tasks/concat.js', 'tasks/concat.js');
   this.copy('tasks/express.js', 'tasks/express.js');
   this.copy('tasks/open.js', 'tasks/open.js');
 };
@@ -213,13 +229,18 @@ Generator.prototype.tests = function tests() {
 
 
 Generator.prototype.sourceFiles = function sourceFiles() {
-  this.directory('0_basics/nx-helpers', 'app/0_basics/nx-helpers');
   this.template('0_basics/_default.jade', 'app/0_basics/_default.jade');
   this.template('0_basics/controller.js', 'app/0_basics/controller.js');
   this.template('0_basics/ie9.' + this.cssPreprocessorExtension, 'app/0_basics/ie9.' + this.cssPreprocessorExtension);
   this.template('0_basics/main.' + this.cssPreprocessorExtension, 'app/0_basics/main.' + this.cssPreprocessorExtension);
   this.template('0_basics/nojs.' + this.cssPreprocessorExtension, 'app/0_basics/nojs.' + this.cssPreprocessorExtension);
   this.template('0_basics/variables.' + this.cssPreprocessorExtension, 'app/0_basics/variables.' + this.cssPreprocessorExtension);
+
+  this.copy('0_basics/nx-helpers/nx-colorclasses.' + this.cssPreprocessorExtension, 'app/0_basics/nx-helpers/nx-colorclasses.' + this.cssPreprocessorExtension);
+  this.copy('0_basics/nx-helpers/nx-mediaqueries.' + this.cssPreprocessorExtension, 'app/0_basics/nx-helpers/nx-mediaqueries.' + this.cssPreprocessorExtension);
+  this.copy('0_basics/nx-helpers/nx-radiocheckbox.' + this.cssPreprocessorExtension, 'app/0_basics/nx-helpers/nx-radiocheckbox.' + this.cssPreprocessorExtension);
+  this.copy('0_basics/nx-helpers/nx-spacerclasses.' + this.cssPreprocessorExtension, 'app/0_basics/nx-helpers/nx-spacerclasses.' + this.cssPreprocessorExtension);
+
   this.template('0_basics/basics.yaml', 'app/0_basics/basics.yaml');
 
   this.directory('1_atoms', 'app/1_atoms');

@@ -1,24 +1,22 @@
-==================================================
-<%= modulename %>              css      .<%= modulename %>
-maincontent         css      body > .container
-header              css      header
-footer              css      footer
-==================================================
-
-@ all
---------------------------
-<%= modulename %>
-    height: 40px
-
-@ lg
---------------------------
-<%= modulename %>
-    height: 30px
+@objects
+  <%= modulenameCamelized %>                .<%= modulenameCamelized %>
+  maincontent           body > .container
+  header                header
+  footer                footer
 
 
-@ xs, sm
---------------------------
-<%= modulename %>
-    height: 20px
+= Main section =
+
+  @on all
+    <%= modulename %>:
+        height 40px
+
+  @on lg
+    <%= modulename %>:
+        height 30px
+
+  @on xs, sm
+    <%= modulename %>:
+        height 20px
 
 

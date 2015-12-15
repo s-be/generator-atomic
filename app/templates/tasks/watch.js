@@ -9,14 +9,14 @@ module.exports = {
   },
   server: {
     files: [
-      'app/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-      'app/{,*/,**/}*.jade',
-      'app/{,*/,**/}*.yaml'
+      '<%- folders.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+      '<%- folders.app %>/{,*/,**/}*.jade',
+      '<%- folders.app %>/{,*/,**/}*.yaml'
     ]
   },
 
   script: {
-    files: [ 'app/{,*/,**/}*.js' ],
+    files: [ '<%- folders.app %>/{,*/,**/}*.js', '!app/{,*/,**/}*galen.js' ],
     tasks: [ 'newer:babel' ]
   },
 
@@ -24,19 +24,19 @@ module.exports = {
     options: {
       livereload: false
     },
-    files: [ '.tmp/{,*/,**/}*.js' ],
+    files: [ '<%- folders.tmp %>/{,*/,**/}*.js' ],
     tasks: [ 'newer:eslint'<%if (karma) { %>, 'karma' <% } %> ]
   },
 
   style: {
-    files: [ 'app/{,*/,**/}*.scss' ],
+    files: [ '<%- folders.app %>/{,*/,**/}*.<%= cssPreprocessorExtension %>' ],
     tasks: [ '<%= cssPreprocessor %>', 'postcss:server' ]
   },
   styletest: {
     options: {
       livereload: false
     },
-    files: [ '.tmp/{,*/,**/}*.css' ],
+    files: [ '<%- folders.tmp %>/{,*/,**/}*.css' ],
     tasks: [ 'postcss:stylelint' ]
   }
 

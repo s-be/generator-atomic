@@ -6,18 +6,18 @@
 module.exports = {
   options: {
     cleancss: true,
-    paths: ['<%= folders.app %>/'],
+    paths: ['<%- folders.app %>/'],
     sourceMap: true,
-    //sourceMapURL: 'main.less.map',
-    sourceMapFilename: '<%= folders.dist %>/0_basics/main.less.map',
+    sourceMapURL: 'main.css.map',
+    //sourceMapFilename: '<%- folders.tmp %>/0_basics/main.css.map',
     outputSourceFiles: true
   },
   default: {
     files: [{
       expand: true,
-      cwd: '<%= folders.app %>/0_basics',
-      src: ['*.less', '!**/_*', '!variables.less'],
-      dest: '<%= folders.tmp %>/0_basics',
+      cwd: '<%- folders.app %>/0_basics',
+      src: ['*.<%= cssPreprocessorExtension %>', '!**/_*', '!variables.<%= cssPreprocessorExtension %>'],
+      dest: '<%- folders.tmp %>/0_basics',
       ext: '.css'
     }]
   }

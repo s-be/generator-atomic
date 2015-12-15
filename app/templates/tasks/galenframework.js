@@ -1,15 +1,25 @@
 /**
- * grunt-galen options
+ * grunt-galenframework options
  * @type {Object}
  */
 
 module.exports = {
+  options: {
+    concat: true,
+    concatScripts: [
+      '../gl.js',
+      '../bower_components/underscore/underscore.js'
+    ],
+    output: false
+  },
   local: {
-    src: ['tests/atomic.test.js'],
+    src: ['app/{,*/,**/}*.galen.js', 'tests/galen.test.js'],
     options: {
-      url: 'http://localhost:9001',
+      url: 'http://localhost:3000',
       htmlReport: true,
       htmlReportDest: 'report',
+      testngReport: true,
+      testngReportDest: 'report/testng.xml',
       devices: {
         desktop: {
           deviceName: 'desktop',

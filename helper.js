@@ -45,10 +45,12 @@ module.exports = function(moduletype) {
 
       moduleconfig = this.config.get(moduletype);
 
+      this.moduletype = moduletype;
+
       this.modulename = props.modulename || this.modulename;
       this.modulename = s(this.modulename).trim().slugify().value();
 
-      this.author = props.author || ' ';
+      this.author = props.author || 'empty';
       this.description = props.description || this.description || moduletype + ' description here';
 
       this.appname   = this.config.get('appname');
@@ -69,25 +71,28 @@ module.exports = function(moduletype) {
   };
 
   var sourceFiles = function() {
-    this.copy('../../templates/module.jade', 'app/' + moduleconfig.modulefolder + '/' + this.modulenameCamelized + '/' + this.modulenameCamelized + '.jade');
+    var srcpath = '../../templates/';
+    var destpath = 'app/' + moduleconfig.modulefolder + '/' + this.modulenameCamelized;
+
+    this.copy(srcpath + 'module.jade', destpath + '/' + this.modulenameCamelized + '.jade');
 
     if (moduleconfig.markupmixins) {
-      this.copy('../../templates/_module.jade', 'app/' + moduleconfig.modulefolder + '/' + this.modulenameCamelized + '/_' + this.modulenameCamelized + '.jade');
+      this.copy(srcpath + '_module.jade', destpath + '/_' + this.modulenameCamelized + '.jade');
     }
     if (moduleconfig.content) {
-      this.copy('../../templates/module.yaml', 'app/' + moduleconfig.modulefolder + '/' + this.modulenameCamelized + '/' + this.modulenameAlwaysCamelized + '.yaml');
+      this.copy(srcpath + 'module.yaml', destpath + '/' + this.modulenameAlwaysCamelized + '.yaml');
     }
     if (moduleconfig.styles) {
-      this.copy('../../templates/module.' + this.cssPreprocessorExtension, 'app/' + moduleconfig.modulefolder + '/' + this.modulenameCamelized + '/' + this.modulenameCamelized + '.' + this.cssPreprocessorExtension);
+      this.copy(srcpath + 'module.' + this.cssPreprocessorExtension, destpath + '/' + this.modulenameCamelized + '.' + this.cssPreprocessorExtension);
     }
     if (moduleconfig.scripts) {
-      this.copy('../../templates/module.js', 'app/' + moduleconfig.modulefolder + '/' + this.modulenameCamelized + '/' + this.modulenameCamelized + '.js');
+      this.copy(srcpath + 'module.js', destpath + '/' + this.modulenameCamelized + '.js');
     }
-    if (this.karma) {
-      this.copy('../../templates/module.unit.js', 'app/' + moduleconfig.modulefolder + '/' + this.modulenameCamelized + '/' + this.modulenameCamelized + '.unit.js');
+    if (this.karma && moduleconfig.scripts) {
+      this.copy(srcpath + 'module.unit.js', destpath + '/' + this.modulenameCamelized + '.unit.js');
     }
     if (this.galen) {
-      this.copy('../../templates/module.spec', 'app/' + moduleconfig.modulefolder + '/' + this.modulenameCamelized + '/' + this.modulenameCamelized + '.spec');
+      this.copy(srcpath + 'module.spec', destpath + '/' + this.modulenameCamelized + '.spec');
     }
   };
 

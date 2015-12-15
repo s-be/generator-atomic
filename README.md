@@ -1,9 +1,12 @@
-# generator-atomic [![Build Status](https://travis-ci.org/nexumAG/generator-atomic.svg?branch=master)](https://travis-ci.org/nexumAG/generator-atomic) [![Dependency Status](https://david-dm.org/nexumAG/generator-atomic.svg)](https://david-dm.org/nexumAG/generator-atomic)
+# generator-atomic
+[![npm version](https://badge.fury.io/js/generator-atomic.svg)](https://badge.fury.io/js/generator-atomic)
+[![Build Status](https://travis-ci.org/nexumAG/generator-atomic.svg?branch=master)](https://travis-ci.org/nexumAG/generator-atomic) 
+[![Dependency Status](https://david-dm.org/nexumAG/generator-atomic.svg)](https://david-dm.org/nexumAG/generator-atomic)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/nexumAg/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/nexumAg/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Percentage of issues still open")
 
 This [Yeoman](http://yeoman.io) generator scaffolds an atomic-design templating framework based on the markup language [Jade](http://http://jade-lang.com/).
-It comes bundled with [BabelJS](http://babeljs.io/) for ES6 support, [Twitter Bootstrap](http://getbootstrap.com/), [SCSS](http://sass-lang.com/), ESLint and a build-in Livereload Server. 
+It comes bundled with [BabelJS](http://babeljs.io/) for ES6 support, [Twitter Bootstrap](http://getbootstrap.com/), [LESS](http://www.lesscss.org/) or [SCSS](http://sass-lang.com/), ESLint and a build-in Livereload Server. 
 Several Subgenerators (atom, molecule, organism...) help you during your project to quickly add new modules and link them properly.
 [Grunt](http://gruntjs.com/) helps you to automate your workflow with several helpful tasks like "build", "release" and "serve" (default). For automated Layout-testing you can use the [Galen Framework](http://galenframework.com/).
 
@@ -85,8 +88,8 @@ Create a Release of the Project (bump and tag).
 |   |   ├── _default.jade                 # HTML Mastertemplate (HTML Header/Footer)
 |   |   ├── controller.js                 # Javascript Main Controller 
 |   |   ├── basics.yaml                   # Content YAML
-|   |   ├── main.scss                     # Less-file for Module imports
-|   |   ├── variables.scss                # Less Variables
+|   |   ├── main.scss                     # Stylesheet-file for Module imports
+|   |   ├── variables.scss                # Stylesheet Variables
 |   |   ├── nojs.scss                     # Fallback CSS for Browsers without JS
 |   |   ├── ie9.scss                      # Fallback CSS for IE9
 |   |   └── □ nx helpers                  # Less Helper Classes
@@ -106,17 +109,35 @@ Each Module (atom, molecule, organism...) has this Directory Layout:
 |   |       ├── _breadcrumb.jade        # Markup: Jade Mixins (with _underscore)
 |   |       ├── breadcrumb.js           # Script: ES2015 through BabelJS (not in atoms, templates and pages)
 |   |       ├── breadcrumb.unit.js      # Unit-Test: Karma/Jasmine Unit Test
-|   |       ├── breadcrumb.scss         # Styles: LESS precompiler
+|   |       ├── breadcrumb.scss         # Stylesheet
 |   |       ├── breadcrumb.spec         # Test: Galen Specfile for Layout Tests
 |   |       └── breadcrumb.yaml         # Content Model for this module
 ```
+
+## Note for Windows-Users:
+Windows Users with npm3/node5 should use the Microsoft PowerShell.
+The Standard-Shell has Problems with the prompts.
+
 ## Contributing
 
-1. Fork it
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'feat(filename): add my-new-feature...'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request
+You can contribute by  
+
+* Issue submission
+* writing Unit Tests
+* providing Bugfixes
+
+Please use the [Angular Commit Message Format](https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit-message-format) for easier Changelog generation.
+
+## Pull Request Guidelines
+
+* Please check to make sure that there aren't existing pull requests attempting to address the issue mentioned. We also recommend checking for issues related to the issue on the tracker, as a team member may be working on the issue in a branch or fork.
+* Non-trivial changes should be discussed in an issue first
+* Develop in a topic branch, not master
+* Add relevant tests to cover the change
+* Make sure test-suite passes: `npm test`
+* Squash your commits
+* Write a convincing description of your PR and why we should land it
+
 
 Thank you for your time, we appreciate it.
 

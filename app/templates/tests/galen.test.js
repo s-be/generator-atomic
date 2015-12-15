@@ -1,6 +1,6 @@
-load ('../gl.js');
+var devices = config.getDevices();
 
-forAll(config.getDevices(), function (device) {
+forAll(devices, function (device) {
   // [injector:spec]
   // [endinjector]
 });

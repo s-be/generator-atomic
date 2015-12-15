@@ -13,7 +13,7 @@ serve:
   - watch
 
 build:
-  - clean:build
+  - clean:dist
   - injector
   - wiredep
   - babel
@@ -30,13 +30,18 @@ build:
   - rev
   - usemin
 
-test:
+lint:
   - eslint
   - postcss:stylelint<%if (karma) { %>
-  - karma<% } %><%if (galen) { %>
-  - build
-  - connect:test
-  - galen:local<% } %>
+  - karma<% } %>
+<%if (galen) { %>
+test:
+  - galenframework:local
+  - connect:testresults
+
+test:production:
+  - connect:dist
+  - galenframework:local<% } %>
 
 release:
   - bump-only

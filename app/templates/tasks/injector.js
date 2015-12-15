@@ -18,9 +18,9 @@ module.exports = {
       endtag: '//- [endinjector]'
     },
     files: {
-      'app/0_basics/_default.jade': [
-        'app/{,*/,**/}_*.jade',
-        '!app/0_basics/_default.jade'
+      '<%- folders.app %>/0_basics/_default.jade': [
+        '<%- folders.app %>/{,*/,**/}_*.jade',
+        '!<%- folders.app %>/0_basics/_default.jade'
       ]
     }
   },
@@ -36,30 +36,30 @@ module.exports = {
       endtag: '//- [endinjector]'
     },
     files: {
-      'app/1_atoms/index.jade': [
-        'app/1_atoms/{,*/}*.jade',
-        '!app/1_atoms/index.jade',
-        '!app/1_atoms/{,*/}_*.jade'
+      '<%- folders.app %>/1_atoms/index.jade': [
+        '<%- folders.app %>/1_atoms/{,*/}*.jade',
+        '!<%- folders.app %>/1_atoms/index.jade',
+        '!<%- folders.app %>/1_atoms/{,*/}_*.jade'
       ],
-      'app/2_molecules/index.jade': [
-        'app/2_molecules/{,*/}*.jade',
-        '!app/2_molecules/index.jade',
-        '!app/2_molecules/{,*/}_*.jade'
+      '<%- folders.app %>/2_molecules/index.jade': [
+        '<%- folders.app %>/2_molecules/{,*/}*.jade',
+        '!<%- folders.app %>/2_molecules/index.jade',
+        '!<%- folders.app %>/2_molecules/{,*/}_*.jade'
       ],
-      'app/3_organisms/index.jade': [
-        'app/3_organisms/{,*/}*.jade',
-        '!app/3_organisms/index.jade',
-        '!app/3_organisms/{,*/}_*.jade'
+      '<%- folders.app %>/3_organisms/index.jade': [
+        '<%- folders.app %>/3_organisms/{,*/}*.jade',
+        '!<%- folders.app %>/3_organisms/index.jade',
+        '!<%- folders.app %>/3_organisms/{,*/}_*.jade'
       ],
-      'app/4_templates/index.jade': [
-        'app/4_templates/{,*/}*.jade',
-        '!app/4_templates/index.jade',
-        '!app/4_templates/{,*/}_*.jade'
+      '<%- folders.app %>/4_templates/index.jade': [
+        '<%- folders.app %>/4_templates/{,*/}*.jade',
+        '!<%- folders.app %>/4_templates/index.jade',
+        '!<%- folders.app %>/4_templates/{,*/}_*.jade'
       ],
-      'app/5_pages/index.jade': [
-        'app/5_pages/{,*/}*.jade',
-        '!app/5_pages/index.jade',
-        '!app/5_pages/{,*/}_*.jade'
+      '<%- folders.app %>/5_pages/index.jade': [
+        '<%- folders.app %>/5_pages/{,*/}*.jade',
+        '!<%- folders.app %>/5_pages/index.jade',
+        '!<%- folders.app %>/5_pages/{,*/}_*.jade'
       ]
     }
   },
@@ -74,10 +74,11 @@ module.exports = {
       endtag: '// [endinjector]'
     },
     files: {
-      'app/0_basics/_default.jade': [
-        'app/{,*/,**/}*.js',
-        '!app/{,*/,**/}*.unit.js',
-        '!app/0_basics/**'
+      '<%- folders.app %>/0_basics/_default.jade': [
+        '<%- folders.app %>/{,*/,**/}*.js',
+        '!<%- folders.app %>/{,*/,**/}*.unit.js',
+        '!<%- folders.app %>/{,*/,**/}*.galen.js',
+        '!<%- folders.app %>/0_basics/**'
       ]
     }
   },
@@ -92,9 +93,9 @@ module.exports = {
       endtag: '// [endinjector]'
     },
     files: {
-      'app/0_basics/main.<%= cssPreprocessorExtension %>': [
-        'app/{,*/,**/}*.<%= cssPreprocessorExtension %>',
-        '!app/0_basics/**'
+      '<%- folders.app %>/0_basics/main.<%= cssPreprocessorExtension %>': [
+        '<%- folders.app %>/{,*/,**/}*.<%= cssPreprocessorExtension %>',
+        '!<%- folders.app %>/0_basics/**'
       ]
     }
   }<%if (galen) { %>,
@@ -105,14 +106,16 @@ module.exports = {
         htmlPath = filePath.replace('.spec', '.html');
         linkTitle = filePath.split('/').pop().replace('.spec', '');
         linkTitle = linkTitle.charAt(0).toUpperCase() + linkTitle.substr(1);
-        return "test('"+ linkTitle + " on ' + device.deviceName, function () { gl.openPage(device, config.getProjectPage()+'" + htmlPath + "'); gl.runSpecFile(device, 'app" + filePath + "', device.tags);});";
+        return "test('"+ linkTitle + " on ' + device.deviceName, function () { \n"
+        +"    gl.openPage(device, config.getProjectPage()+'" + htmlPath + "');\n"
+        +"    gl.runSpecFile(device, 'app" + filePath + "', device.tags);\n  });\n";
       },
       starttag: '// [injector:spec]',
       endtag: '// [endinjector]'
     },
     files: {
       'tests/galen.test.js': [
-        'app/{,*/,**/}*.spec'
+        '<%- folders.app %>/{,*/,**/}*.spec'
       ]
     }
   }<% } %>

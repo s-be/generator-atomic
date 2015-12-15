@@ -1,3 +1,120 @@
+<a name"1.2.0"></a>
+## 1.2.0 (2015-12-14)
+
+
+#### Bug Fixes
+
+* **subgenerators:** always use camelized Modulenames in Jade / Less / Scss ([4f87db8a](https://github.com/nexumAG/generator-atomic/commit/4f87db8a))
+
+
+#### Features
+
+* **galen:** optimize galen usage ([8384bd48](https://github.com/nexumAG/generator-atomic/commit/8384bd48))
+
+
+<a name"1.1.1"></a>
+### 1.1.1 (2015-12-09)
+
+
+#### Bug Fixes
+
+* **test:** remove "waiting forever" from test run ([633b2bcc](https://github.com/nexumAG/generator-atomic/commit/633b2bcc))
+
+
+#### Features
+
+* **app:** command line options (used for travis) ([786ebe3c](https://github.com/nexumAG/generator-atomic/commit/786ebe3c))
+* **galen:**
+  * provide grunt lint, test and test:production targets ([da5822b9](https://github.com/nexumAG/generator-atomic/commit/da5822b9))
+  * allow module specific galen tests (*.galen.js) ([bb9d9f8c](https://github.com/nexumAG/generator-atomic/commit/bb9d9f8c))
+  * allow module specific galen tests (*.galen.js) ([8c2ab1a3](https://github.com/nexumAG/generator-atomic/commit/8c2ab1a3))
+  * use latest grunt galen ([d95bcec5](https://github.com/nexumAG/generator-atomic/commit/d95bcec5))
+* **injector:** generate cleaner galen tests ([f6c46a9c](https://github.com/nexumAG/generator-atomic/commit/f6c46a9c))
+* **lodash:** bump lodash dependenciy ([d086f536](https://github.com/nexumAG/generator-atomic/commit/d086f536))
+* **serve:** cleanup serve task ([d749fae6](https://github.com/nexumAG/generator-atomic/commit/d749fae6))
+
+
+<a name"1.1.0"></a>
+## 1.1.0 (2015-12-01)
+
+
+#### Features
+
+* **galen:** update to new grunt-galen version (based on galen 2) ([daa1fb66](https://github.com/nexumAG/generator-atomic/commit/daa1fb66))
+
+
+<a name"1.0.6"></a>
+### 1.0.6 (2015-11-30)
+
+
+#### Bug Fixes
+
+* **postcss:** correct postcss target src fpr server and dist ([e0720e0d](https://github.com/nexumAG/generator-atomic/commit/e0720e0d))
+* **styles:** replace hard coded cssPreprocessor Extensions ([7db90cbf](https://github.com/nexumAG/generator-atomic/commit/7db90cbf))
+
+
+<a name"1.0.5"></a>
+### 1.0.5 (2015-11-28)
+
+
+<a name"1.0.4"></a>
+### 1.0.4 (2015-11-25)
+
+
+#### Bug Fixes
+
+* **galen:** revert to galen 1.6.x ([ad5788d4](https://github.com/nexumAG/generator-atomic/commit/ad5788d4))
+* **injector:** fix wrong namespace cleaning ([18b2bb78](https://github.com/nexumAG/generator-atomic/commit/18b2bb78))
+
+
+#### Features
+
+* **generator:** correct copying of folder template paths ([d7b4db5a](https://github.com/nexumAG/generator-atomic/commit/d7b4db5a))
+
+
+<a name"1.0.3"></a>
+### 1.0.3 (2015-11-20)
+
+
+#### Bug Fixes
+
+* **specs:** fix galen spec files ([30cedc61](https://github.com/nexumAG/generator-atomic/commit/30cedc61))
+
+
+<a name"1.0.2"></a>
+### 1.0.2 (2015-11-19)
+
+
+#### Bug Fixes
+
+* **karma:** only generate unit tests if JS is generated ([ec2e2d8f](https://github.com/nexumAG/generator-atomic/commit/ec2e2d8f))
+* **styles:** only copy the correct less/sass helperfiles ([474aa4f8](https://github.com/nexumAG/generator-atomic/commit/474aa4f8))
+
+
+#### Features
+
+* **galen:**
+  * use new galen 2 spec language for demo spec files ([44d7ba1e](https://github.com/nexumAG/generator-atomic/commit/44d7ba1e))
+  * allow galen tests during development with grunt galen:server ([7391ffd1](https://github.com/nexumAG/generator-atomic/commit/7391ffd1))
+
+
+<a name"1.0.1"></a>
+### 1.0.1 (2015-11-18)
+
+
+#### Bug Fixes
+
+* **galen:** correct config filename ([01dd896f](https://github.com/nexumAG/generator-atomic/commit/01dd896f))
+
+
+#### Features
+
+* **galen:** use newest version of galen ([5f4c1f05](https://github.com/nexumAG/generator-atomic/commit/5f4c1f05))
+* **less:** output sourcemaps ([53403991](https://github.com/nexumAG/generator-atomic/commit/53403991))
+* **subgenerator:** if no author is provided write "empty" ([2b2d6f6a](https://github.com/nexumAG/generator-atomic/commit/2b2d6f6a))
+* **tasks:** remove unused tasks ([affa127e](https://github.com/nexumAG/generator-atomic/commit/affa127e))
+
+
 <a name"1.0.0"></a>
 ## 1.0.0 (2015-11-18)
 
