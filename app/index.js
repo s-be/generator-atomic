@@ -209,7 +209,7 @@ Generator.prototype.gruntfile = function gruntfile() {
   this.copy('tasks/eslint.js', 'tasks/eslint.js');
   this.copy('tasks/combine_mq.js', 'tasks/combine_mq.js');
   if(this.galen) {
-    this.copy('tasks/galen.js', 'tasks/galen.js');
+    this.copy('tasks/galenframework.js', 'tasks/galenframework.js');
   }
   if(this.karma) {
     this.copy('tasks/karma.js', 'tasks/karma.js');

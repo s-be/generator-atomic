@@ -56,7 +56,7 @@ describe('atomic:app', function() {
       'tasks/eslint.js',
       'tasks/parallelize.js',
       'tasks/babel.js',
-      'tasks/galen.js',
+      'tasks/galenframework.js',
       'tasks/rev.js',
       'tasks/bump.js',
       'tasks/htmlmin.js',
@@ -135,7 +135,7 @@ describe('atomic:app', function() {
     assert.noFileContent('tasks/babel.js', '<%-');
     assert.noFileContent('tasks/clean.js', '<%-');
     assert.noFileContent('tasks/copy.js', '<%-');
-    assert.noFileContent('tasks/galen.js', '<%-');
+    assert.noFileContent('tasks/galenframework.js', '<%-');
     assert.noFileContent('tasks/postcss.js', '<%-');
     assert.noFileContent('tasks/svgmin.js', '<%-');
     assert.noFileContent('tasks/bump.js', '<%-');
