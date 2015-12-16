@@ -20,7 +20,7 @@ module.exports = function(moduletype) {
     },
     {
       name: 'description',
-      message: 'Describe this' + moduletype
+      message: 'Describe this ' + moduletype
     },
     {
       name: 'author',
