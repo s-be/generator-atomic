@@ -1,3 +1,16 @@
+<a name"1.2.1"></a>
+### 1.2.1 (2015-12-18)
+
+
+#### Bug Fixes
+
+* **merge:** copy and test galenframework.js  instead of galen.js ([62b2789b](https://github.com/nexumAG/generator-atomic/commit/62b2789b))
+* **prompts:** add missing space ([1155a852](https://github.com/nexumAG/generator-atomic/commit/1155a852))
+* **subgenerators:**
+  * replace hardcoded module types ([5615fcae](https://github.com/nexumAG/generator-atomic/commit/5615fcae))
+  * replace hardcoded module types ([64a4e65d](https://github.com/nexumAG/generator-atomic/commit/64a4e65d))
+
+
 <a name"1.2.0"></a>
 ## 1.2.0 (2015-12-14)
 
