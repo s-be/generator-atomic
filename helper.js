@@ -66,6 +66,9 @@ module.exports = function(moduletype) {
       this.modulenameAlwaysCamelized = s.camelize(this.modulename);
       this.modulenameCamelized = (this.camelized) ? this.modulenameAlwaysCamelized : this.modulename;
 
+      this.modulefolder = moduleconfig.modulefolder;
+      this.markupmixins = moduleconfig.markupmixins;
+
       cb();
     }.bind(this));
   };
@@ -76,7 +79,7 @@ module.exports = function(moduletype) {
 
     this.copy(srcpath + 'module.jade', destpath + '/' + this.modulenameCamelized + '.jade');
 
-    if (moduleconfig.markupmixins) {
+    if (this.markupmixins) {
       this.copy(srcpath + '_module.jade', destpath + '/_' + this.modulenameCamelized + '.jade');
     }
     if (moduleconfig.content) {
