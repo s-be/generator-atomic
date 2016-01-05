@@ -1,3 +1,12 @@
+<a name"1.2.2"></a>
+### 1.2.2 (2016-01-05)
+
+
+#### Bug Fixes
+
+* **subgenerator:** only call markup mixin if it exists. ([a65f366c](https://github.com/nexumAG/generator-atomic/commit/a65f366c))
+
+
 <a name"1.2.1"></a>
 ### 1.2.1 (2015-12-18)
 
