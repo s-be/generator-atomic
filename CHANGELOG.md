@@ -1,3 +1,12 @@
+<a name"1.2.3"></a>
+### 1.2.3 (2016-01-22)
+
+
+#### Bug Fixes
+
+* **stylelint:** add empty line before non-nested rule. ([86eac064](https://github.com/nexumAG/generator-atomic/commit/86eac064), closes [#48](https://github.com/nexumAG/generator-atomic/issues/48))
+
+
 <a name"1.2.2"></a>
 ### 1.2.2 (2016-01-05)
 
