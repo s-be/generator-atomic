@@ -1,14 +1,14 @@
-var path = require('path');
-var fs = require('fs');
-var url = require('url');
-var express = require('express');
-var glob = require('glob');
-var yaml = require('js-yaml');
-var jade = require('jade');
+'use strict';
 
-var app = express();
+const path = require('path');
+const fs = require('fs');
+const url = require('url');
+const express = require('express');
+const glob = require('glob');
+const yaml = require('js-yaml');
+const jade = require('jade');
 
-var contents = getContents();
+const app = express();
 
 app.use(require('connect-livereload')({
     port: 35729
@@ -18,7 +18,7 @@ app.use(require('connect-livereload')({
  * middleware to handle template requests
  */
 app.use(function(req, res, next) {
-  var _filepath = getTemplatePath(req.originalUrl);
+  let _filepath = getTemplatePath(req.originalUrl);
 
   if (!_filepath) {
     return next();
@@ -34,17 +34,17 @@ app.use(function(req, res, next) {
     }
 
     // prepare global jade path variables
-    var level = req.originalUrl.match(/\//g).length - 1;
-    var path = '../'.repeat(level);
+    let level = req.originalUrl.match(/\//g).length - 1;
+    let path = '../'.repeat(level);
 
-    var contents = {};
+    let contents = {};
     // get all yaml-file-paths
     glob('app/**/*.yaml', function(err, files) {
-      var _fileCount = files.length;
+      let _fileCount = files.length;
       files.forEach(function(filepath) {
         // generate namespace
-        var _namespace = filepath.substr(filepath.lastIndexOf('/') + 1);
-        _namespace = _namespace.replace('.yaml', '').toLowerCase();
+        let _namespace = filepath.substr(filepath.lastIndexOf('/') + 1);
+        _namespace = _namespace.replace('.yaml', '');
         // load the yaml file
         fs.readFile(filepath, function(err, data) {
           _fileCount--;
@@ -77,38 +77,25 @@ app.use(function(req, res, next) {
   });
 });
 
-var staticFolders = ['/.tmp', '/app', '/bower_components'];
+const staticFolders = ['/.tmp', '/app', '/bower_components'];
 
 staticFolders.forEach(function(folder) {
   app.use(express.static(__dirname + folder));
 });
 
-var server = app.listen(3000, function() {
-  var host = server.address().address;
-  var port = server.address().port;
+const server = app.listen(3000, function() {
+  let host = server.address().address;
+  let port = server.address().port;
 
   console.log('Express server listening at http://%s:%s', host, port);
 });
 
-function getContents() {
-  var contents = {};
-  glob('app/**/*.yaml', function(err, files) {
-    files.forEach(function(filepath) {
-      var _namespace = filepath.substr(filepath.lastIndexOf('/') + 1);
-      _namespace = _namespace.replace('.yaml', '').toLowerCase();
-      contents[_namespace] = yaml.load(fs.readFileSync(filepath));
-    });
-  });
-
-  return contents;
-}
-
 function getTemplatePath(requestUrl) {
-  var _extenstions = ['.html', '.htm', '.jade'];
-  var _parsed = url.parse(requestUrl);
-  var _pathname = _parsed.pathname.replace(__dirname + '/app', '');
-  var _requestedExt = path.extname(_pathname);
-  var _pathnameWithoutExt = _pathname.substr(0, _pathname.length - _requestedExt.length);
+  let _extenstions = ['.html', '.htm', '.jade'];
+  let _parsed = url.parse(requestUrl);
+  let _pathname = _parsed.pathname.replace(__dirname + '/app', '');
+  let _requestedExt = path.extname(_pathname);
+  let _pathnameWithoutExt = _pathname.substr(0, _pathname.length - _requestedExt.length);
 
   // get index file for directory requests
   if (_requestedExt === '') {
@@ -125,8 +112,8 @@ function getTemplatePath(requestUrl) {
   }
 
   // find the template and return the path
-  var _ext = '.jade';
-  var _filepath = path.join(__dirname + '/app', _pathnameWithoutExt + _ext);
+  let _ext = '.jade';
+  let _filepath = path.join(__dirname + '/app', _pathnameWithoutExt + _ext);
   if (fs.existsSync(_filepath)) {
     return _filepath;
   }
