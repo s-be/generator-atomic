@@ -1,3 +1,12 @@
+<a name"1.2.4"></a>
+### 1.2.4 (2016-02-01)
+
+
+#### Bug Fixes
+
+* **server.js:** remove unused code and fix yaml namespaces; use ES6 declarations ([aa7fe340](https://github.com/nexumAG/generator-atomic/commit/aa7fe340))
+
+
 <a name"1.2.3"></a>
 ### 1.2.3 (2016-01-22)
 
