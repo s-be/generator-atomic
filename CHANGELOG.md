@@ -1,3 +1,12 @@
+<a name"1.2.5"></a>
+### 1.2.5 (2016-02-10)
+
+
+#### Features
+
+* **initialContent:** add Option to deactivate demo Content generation #30 Use the flag initialContent ([3a76b49a](https://github.com/nexumAG/generator-atomic/commit/3a76b49a))
+
+
 <a name"1.2.4"></a>
 ### 1.2.4 (2016-02-01)
 
