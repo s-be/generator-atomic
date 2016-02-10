@@ -1,3 +1,43 @@
+<a name"1.2.4"></a>
+### 1.2.4 (2016-02-01)
+
+
+#### Bug Fixes
+
+* **server.js:** remove unused code and fix yaml namespaces; use ES6 declarations ([aa7fe340](https://github.com/nexumAG/generator-atomic/commit/aa7fe340))
+
+
+<a name"1.2.3"></a>
+### 1.2.3 (2016-01-22)
+
+
+#### Bug Fixes
+
+* **stylelint:** add empty line before non-nested rule. ([86eac064](https://github.com/nexumAG/generator-atomic/commit/86eac064), closes [#48](https://github.com/nexumAG/generator-atomic/issues/48))
+
+
+<a name"1.2.2"></a>
+### 1.2.2 (2016-01-05)
+
+
+#### Bug Fixes
+
+* **subgenerator:** only call markup mixin if it exists. ([a65f366c](https://github.com/nexumAG/generator-atomic/commit/a65f366c))
+
+
+<a name"1.2.1"></a>
+### 1.2.1 (2015-12-18)
+
+
+#### Bug Fixes
+
+* **merge:** copy and test galenframework.js  instead of galen.js ([62b2789b](https://github.com/nexumAG/generator-atomic/commit/62b2789b))
+* **prompts:** add missing space ([1155a852](https://github.com/nexumAG/generator-atomic/commit/1155a852))
+* **subgenerators:**
+  * replace hardcoded module types ([5615fcae](https://github.com/nexumAG/generator-atomic/commit/5615fcae))
+  * replace hardcoded module types ([64a4e65d](https://github.com/nexumAG/generator-atomic/commit/64a4e65d))
+
+
 <a name"1.2.0"></a>
 ## 1.2.0 (2015-12-14)
 
