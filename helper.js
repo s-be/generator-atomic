@@ -63,6 +63,8 @@ module.exports = function(moduletype) {
       this.karma = this.config.get('karma');
       this.camelized = this.config.get('camelized');
 
+      this.fileContent = this.config.get('fileContent') || 'initial';
+
       this.modulenameAlwaysCamelized = s.camelize(this.modulename);
       this.modulenameCamelized = (this.camelized) ? this.modulenameAlwaysCamelized : this.modulename;
 
@@ -74,24 +76,26 @@ module.exports = function(moduletype) {
   };
 
   var sourceFiles = function() {
-    var srcpath = '../../templates/';
+    var srcpath = '../../templates/' + this.fileContent + '/';
     var destpath = 'app/' + moduleconfig.modulefolder + '/' + this.modulenameCamelized;
 
-    this.copy(srcpath + 'module.jade', destpath + '/' + this.modulenameCamelized + '.jade');
+    if (moduleconfig.markup !== false) {
+      this.copy(srcpath + 'module.jade', destpath + '/' + this.modulenameCamelized + '.jade');
+    }
 
-    if (this.markupmixins) {
+    if (this.markupmixins !== false) {
       this.copy(srcpath + '_module.jade', destpath + '/_' + this.modulenameCamelized + '.jade');
     }
-    if (moduleconfig.content) {
+    if (moduleconfig.content !== false) {
       this.copy(srcpath + 'module.yaml', destpath + '/' + this.modulenameAlwaysCamelized + '.yaml');
     }
-    if (moduleconfig.styles) {
+    if (moduleconfig.styles !== false) {
       this.copy(srcpath + 'module.' + this.cssPreprocessorExtension, destpath + '/' + this.modulenameCamelized + '.' + this.cssPreprocessorExtension);
     }
-    if (moduleconfig.scripts) {
+    if (moduleconfig.scripts !== false) {
       this.copy(srcpath + 'module.js', destpath + '/' + this.modulenameCamelized + '.js');
     }
-    if (this.karma && moduleconfig.scripts) {
+    if (this.karma && moduleconfig.scripts !== false) {
       this.copy(srcpath + 'module.unit.js', destpath + '/' + this.modulenameCamelized + '.unit.js');
     }
     if (this.galen) {

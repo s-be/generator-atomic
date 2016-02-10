@@ -112,6 +112,8 @@ Generator.prototype.promptConfig = function promptConfig() {
     this.camelized = props.camelized || this.camelized;
     this.config.set('camelized', this.camelized);
 
+    this.config.set('fileContent', 'initial');
+
     this.folders =  {
       tmp: '<%= folders.tmp %>',
       app: '<%= folders.app %>',
@@ -121,6 +123,7 @@ Generator.prototype.promptConfig = function promptConfig() {
     this.config.set('atom', {
         moduletype: 'atom',
         modulefolder: '1_atoms',
+        markup: true,
         markupmixins: true,
         content: true,
         scripts: false,
@@ -129,34 +132,38 @@ Generator.prototype.promptConfig = function promptConfig() {
     this.config.set('molecule', {
         moduletype: 'molecule',
         modulefolder: '2_molecules',
+        markup: true,
         markupmixins: true,
         content: true,
         scripts: true,
         styles: true
     });
     this.config.set('organism', {
-      moduletype: 'organism',
-      modulefolder: '3_organisms',
-      markupmixins: true,
-      content: true,
-      scripts: true,
-      styles: true
+        moduletype: 'organism',
+        modulefolder: '3_organisms',
+        markup: true,
+        markupmixins: true,
+        content: true,
+        scripts: true,
+        styles: true
     });
     this.config.set('template', {
-      moduletype: 'template',
-      modulefolder: '4_templates',
-      markupmixins: false,
-      content: true,
-      scripts: false,
-      styles: false
+        moduletype: 'template',
+        modulefolder: '4_templates',
+        markup: true,
+        markupmixins: false,
+        content: true,
+        scripts: false,
+        styles: false
     });
     this.config.set('page', {
-      moduletype: 'page',
-      modulefolder: '5_pages',
-      markupmixins: false,
-      content: true,
-      scripts: false,
-      styles: false
+        moduletype: 'page',
+        modulefolder: '5_pages',
+        markup: true,
+        markupmixins: false,
+        content: true,
+        scripts: false,
+        styles: false
     });
     this.config.save();
 
