@@ -20,7 +20,7 @@ module.exports = function(moduletype) {
     },
     {
       name: 'description',
-      message: 'Describe this' + moduletype
+      message: 'Describe this ' + moduletype
     },
     {
       name: 'author',
@@ -68,6 +68,9 @@ module.exports = function(moduletype) {
       this.modulenameAlwaysCamelized = s.camelize(this.modulename);
       this.modulenameCamelized = (this.camelized) ? this.modulenameAlwaysCamelized : this.modulename;
 
+      this.modulefolder = moduleconfig.modulefolder;
+      this.markupmixins = moduleconfig.markupmixins;
+
       cb();
     }.bind(this));
   };
@@ -79,7 +82,8 @@ module.exports = function(moduletype) {
     if (moduleconfig.markup !== false) {
       this.copy(srcpath + 'module.jade', destpath + '/' + this.modulenameCamelized + '.jade');
     }
-    if (moduleconfig.markupmixins !== false) {
+
+    if (this.markupmixins !== false) {
       this.copy(srcpath + '_module.jade', destpath + '/_' + this.modulenameCamelized + '.jade');
     }
     if (moduleconfig.content !== false) {

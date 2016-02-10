@@ -8,15 +8,15 @@
 = Main section =
 
   @on all
-    <%= modulename %>:
+    <%= modulenameCamelized %>:
         height 40px
 
   @on lg
-    <%= modulename %>:
+    <%= modulenameCamelized %>:
         height 30px
 
   @on xs, sm
-    <%= modulename %>:
+    <%= modulenameCamelized %>:
         height 20px
 
 

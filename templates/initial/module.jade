@@ -3,5 +3,7 @@ block content
   .container
     .row
       .col-lg-12
-        h1 Demo of the <%= moduletype %>: <%= modulename %>
+        h1 Demo of the <%= moduletype %>: <%= modulenameCamelized %>
+        <% if (markupmixins) { %>
         +<%= modulenameCamelized %>
+        <% } %>

@@ -1,6 +1,6 @@
 {
   "name": "generator-atomic",
-  "version": "1.2.0",
+  "version": "1.2.4",
   "description": "Yeoman Generator for Atomic-Design with Jade, Less and BabelJS. Integrated Galen for easy Layout-Tests.",
   "keywords": [
     "yeoman-generator",
@@ -48,13 +48,13 @@
     "camelize": "1.0.0",
     "chalk": "1.1.1",
     "underscore.string": "3.2.2",
-    "yeoman-generator": "^0.21.1",
+    "yeoman-generator": "^0.22.1",
     "yosay": "^1.1.0"
   },
   "devDependencies": {
     "fs-extra": "^0.26.2",
     "grunt": "0.4.5",
-    "grunt-bump": "^0.6.0",
+    "grunt-bump": "^0.7.0",
     "grunt-conventional-changelog": "^5.0.0",
     "jshint": "2.8.0",
     "mocha": "^2.3.3",
