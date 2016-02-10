@@ -8,6 +8,7 @@
     "galen": false,
     "karma": false,
     "camelized": false,
+    "fileContent": "clean",
     "atom": {
       "moduletype": "atom",
       "modulefolder": "1_atoms",
