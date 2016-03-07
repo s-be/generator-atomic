@@ -97,7 +97,7 @@ Create a Release of the Project (bump and tag).
 |   ├── □ 2_molecules                     # Folder for Molecules
 |   ├── □ 3_organisms                     # Folder for Organisms
 |   ├── □ 4_templates                     # Folder for Templates
-|   └── □ 5_templates                     # Folder for Templates
+|   └── □ 5_pages                         # Folder for Pages
 ```
 
 ### Module Directory Layout
