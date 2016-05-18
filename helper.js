@@ -7,7 +7,7 @@ module.exports = function(moduletype) {
   var moduleconfig;
 
   var Generator = function(args, options) {
-    yeoman.generators.Base.apply(this, arguments);
+    yeoman.Base.apply(this, arguments);
     this.argument('modulename', { type: String, required: false });
     this.argument('description', { type: String, required: false });
     this.pkg = require('./package.json');
