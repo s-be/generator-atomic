@@ -49,7 +49,12 @@ app.use(function(req, res, next) {
         fs.readFile(filepath, function(err, data) {
           _fileCount--;
           // parse yaml
-          contents[_namespace] = yaml.load(data);
+          try {
+            contents[_namespace] = yaml.load(data);
+          }
+          catch (err) {
+            console.log('Error parsing file [%s]: %s', filepath, err.message);
+          }
 
           // if all files are parsed, render template
           if (_fileCount <= 0) {

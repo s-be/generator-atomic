@@ -4,7 +4,7 @@ var yeoman = require('yeoman-generator');
 
 var helper = require('../helper.js')('organism');
 var Generator = module.exports = helper.Generator;
-util.inherits(Generator, yeoman.generators.Base);
+util.inherits(Generator, yeoman.Base);
 Generator.prototype.promptConfig = helper.promptConfig;
 Generator.prototype.sourceFiles = helper.sourceFiles;
 Generator.prototype.install = helper.install;

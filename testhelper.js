@@ -1,7 +1,7 @@
 'use strict';
 var path = require('path');
-var assert = require('yeoman-generator').assert;
-var helpers = require('yeoman-generator').test;
+var assert = require('yeoman-assert');
+var helpers = require('yeoman-test');
 var os = require('os');
 var fs = require('fs-extra');
 var s = require("underscore.string");
