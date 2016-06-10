@@ -1,6 +1,6 @@
 {
   "name": "generator-atomic",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Yeoman Generator for Atomic-Design with Jade, Less and BabelJS. Integrated Galen for easy Layout-Tests.",
   "keywords": [
     "yeoman-generator",
