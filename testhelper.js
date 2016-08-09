@@ -53,13 +53,13 @@ module.exports = function(options) {
 
       var moduleNameOriginal = ' Test ä;ö,ß#ü module-name_name ';
 
-      var moduleName = s(moduleNameOriginal).trim().slugify().value();
+      var moduleName = s(moduleNameOriginal).trim().value();
       var moduleNameCamelized = s.camelize(moduleName);
 
       var moduleNameAlwaysCamelized = moduleNameCamelized;
 
       if (!options.camelized) {
-        moduleNameCamelized = moduleName;
+        moduleNameCamelized = s.slugify(moduleName);
       }
 
       before(function (done) {
