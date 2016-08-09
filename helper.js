@@ -48,7 +48,7 @@ module.exports = function(moduletype) {
       this.moduletype = moduletype;
 
       this.modulename = props.modulename || this.modulename;
-      this.modulename = s(this.modulename).trim().slugify().value();
+      this.modulename = s(this.modulename).trim().value();
 
       this.author = props.author || 'empty';
       this.description = props.description || this.description || moduletype + ' description here';
@@ -66,7 +66,7 @@ module.exports = function(moduletype) {
       this.fileContent = this.config.get('fileContent') || 'initial';
 
       this.modulenameAlwaysCamelized = s.camelize(this.modulename);
-      this.modulenameCamelized = (this.camelized) ? this.modulenameAlwaysCamelized : this.modulename;
+      this.modulenameCamelized = (this.camelized) ? this.modulenameAlwaysCamelized : s.slugify(this.modulename);
 
       this.modulefolder = moduleconfig.modulefolder;
       this.markupmixins = moduleconfig.markupmixins;
