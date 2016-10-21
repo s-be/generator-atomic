@@ -1,7 +1,7 @@
 'use strict';
 var path = require('path');
-var assert = require('yeoman-generator').assert;
-var helpers = require('yeoman-generator').test;
+var assert = require('yeoman-assert');
+var helpers = require('yeoman-test');
 var os = require('os');
 var fs = require('fs-extra');
 var s = require("underscore.string");
@@ -53,13 +53,13 @@ module.exports = function(options) {
 
       var moduleNameOriginal = ' Test ä;ö,ß#ü module-name_name ';
 
-      var moduleName = s(moduleNameOriginal).trim().slugify().value();
+      var moduleName = s(moduleNameOriginal).trim().value();
       var moduleNameCamelized = s.camelize(moduleName);
 
       var moduleNameAlwaysCamelized = moduleNameCamelized;
 
       if (!options.camelized) {
-        moduleNameCamelized = moduleName;
+        moduleNameCamelized = s.slugify(moduleName);
       }
 
       before(function (done) {

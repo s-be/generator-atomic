@@ -7,7 +7,7 @@ var yeoman = require('yeoman-generator');
 //var yosay = require('yosay');
 
 var Generator = module.exports = function Generator(args, options) {
-  yeoman.generators.Base.apply(this, arguments);
+  yeoman.Base.apply(this, arguments);
   this.argument('projectName', { type: String, required: false });
   this.argument('namespace', { type: String, required: false });
   this.argument('author', { type: String, required: false });
@@ -19,7 +19,7 @@ var Generator = module.exports = function Generator(args, options) {
 
 };
 
-util.inherits(Generator, yeoman.generators.Base);
+util.inherits(Generator, yeoman.Base);
 
 
 
