@@ -22,7 +22,7 @@
     "grunt-newer": "*",
     "grunt-parallelize": "*",
 
-    "pug": "^2.0.0-alpha6",
+    "pug": "^2.0.0-beta6",
     "js-yaml": "^3.4.3",
     "glob": "^5.0.15",
     "express": "^4.13.3",
