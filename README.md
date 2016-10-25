@@ -2,8 +2,6 @@
 [![npm version](https://badge.fury.io/js/generator-atomic.svg)](https://badge.fury.io/js/generator-atomic)
 [![Build Status](https://travis-ci.org/nexumAG/generator-atomic.svg?branch=master)](https://travis-ci.org/nexumAG/generator-atomic)
 [![Dependency Status](https://david-dm.org/nexumAG/generator-atomic.svg)](https://david-dm.org/nexumAG/generator-atomic)
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/nexumAg/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Average time to resolve an issue")
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/nexumAg/generator-atomic.svg)](http://isitmaintained.com/project/nexumAG/generator-atomic "Percentage of issues still open")
 
 This [Yeoman](http://yeoman.io) generator scaffolds an atomic-design templating framework based on the markup language [Pug](http://http://pug-lang.com/).
 It comes bundled with [BabelJS](http://babeljs.io/) for ES6 support, [Twitter Bootstrap](http://getbootstrap.com/), [LESS](http://www.lesscss.org/) or [SCSS](http://sass-lang.com/), ESLint and a build-in Livereload Server.
