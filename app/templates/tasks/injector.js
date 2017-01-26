@@ -39,7 +39,8 @@ module.exports = {
       '<%- folders.app %>/1_atoms/index.jade': [
         '<%- folders.app %>/1_atoms/{,*/}*.jade',
         '!<%- folders.app %>/1_atoms/index.jade',
-        '!<%- folders.app %>/1_atoms/{,*/}_*.jade'
+        '!<%- folders.app %>/1_atoms/{,*/}_*.jade',
+        '!<%- folders.app %>/1_atoms/pattern.jade'
       ],
       '<%- folders.app %>/2_molecules/index.jade': [
         '<%- folders.app %>/2_molecules/{,*/}*.jade',
