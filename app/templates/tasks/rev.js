@@ -14,7 +14,7 @@ module.exports = {
       src: [
         '<%= folders.dist %>/{,*/,**/}*.js',
         '<%= folders.dist %>/{,*/,**/}*.css',
-        '<%= folders.dist %>/images/{,*/}*.{jpg,jpeg,gif,webp}',
+        '<%= folders.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
         '<%= folders.dist %>/fonts/*'
       ]
     }
