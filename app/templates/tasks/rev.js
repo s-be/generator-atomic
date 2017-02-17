@@ -6,9 +6,9 @@
 module.exports = {
   dist: {
     options: {
-    encoding: 'utf8',
-    algorithm: 'md5',
-    length: 4
+      encoding: 'utf8',
+      algorithm: 'md5',
+      length: 4
     },
     files: {
       src: [
