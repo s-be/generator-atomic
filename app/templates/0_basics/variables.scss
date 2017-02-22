@@ -180,6 +180,22 @@ $brand-secondary-900:     darken($brand-secondary,22%);
 //// Set the number of columns and specify the width of the gutters.
 //
 //$grid-columns:               12 !default;
+$grid-gutter-width:          1.875rem !default; // 30px
+//
+//// Extra Large Screen / extra wide desktop
+$screen-xl-min:                 120rem; // 1920px
+$screen-lg-max: ($screen-xl-min - 1);
+/// Extra large screen / extra wide desktop
+////** For `@screen-xl-min` and up.
+$container-extralarge-desktop:      ($screen-xl-min - $grid-gutter-width);
+$container-xl:                      $container-extralarge-desktop;
+// expand grid.less
+.container {
+  @media (min-width: $screen-xl-min) {
+    width: $container-xl !important;
+  }
+}
+//
 //$grid-gutter-width-base:     30px !default;
 //$grid-gutter-widths: (
 //        xs: $grid-gutter-width-base,
@@ -884,4 +900,3 @@ $brand-secondary-900:     darken($brand-secondary,22%);
 //$pre-color:                   $gray-dark !default;
 //$pre-border-color:            #ccc !default;
 //$pre-scrollable-max-height:   340px !default;
-
