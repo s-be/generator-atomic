@@ -20,13 +20,16 @@ module.exports = {
       exclude: [
         'bower_components/html5shiv/',
         'bower_components/consolelog/',
-        'bower_components/modernizr/'
+        'bower_components/modernizr/',
+        'bower_components/jquery/dist/',
+        'bower_components/bootstrap/dist/*.js',
+        'app/media/'
       ],
       overrides: {
       }
     },
     src: [
-      '<%- folders.app %>/0_basics/_default.pug'
+      '<%= folders.app %>/0_basics/_default.pug'
     ]
   }
 };
