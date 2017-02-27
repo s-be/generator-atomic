@@ -7,6 +7,8 @@ serve:
   - wiredep
   - <%= cssPreprocessor %>
   - postcss:server
+  - svgmin
+  - svgstore
   - babel
   - express
   - open
@@ -19,6 +21,8 @@ build:
   - babel
   - <%= cssPreprocessor %>
   - postcss:dist
+  - svgmin
+  - svgstore
   - parallelize:pug
   - copy:dist
   - useminPrepare

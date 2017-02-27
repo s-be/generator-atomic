@@ -58,6 +58,9 @@
     "grunt-usemin": "*",
     "grunt-rev": "*",
 
+    "grunt-svgmin": "^3.1.2",
+    "grunt-svgstore": "^1.0.0",
+
     "grunt-bump": "^0.6.0",
     "grunt-conventional-changelog": "^5.0.0"<% if (galen) { %>,
     "grunt-galenframework": "^0.5.5"<% } %><% if (karma) { %>,
