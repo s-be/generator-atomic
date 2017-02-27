@@ -1,0 +1,12 @@
+//-
+  @name svg
+  @description reference an svg file from images/svg/build/svg-defs.svg
+  @author sb
+  @see {@link https://github.com/FWeinb/grunt-svgstore}
+
+mixin svg(content)
+
+  // @start: svg
+  svg.svg.img-responsive.no-select(class=content.id)
+    use(xlink:href='#' + content.id)
+  // @end: svg

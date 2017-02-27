@@ -1,0 +1,5 @@
+# data-model for svg
+# access in jade via yaml.svg
+
+logo:
+  id: logo
