@@ -33,6 +33,10 @@ html
     <link href="#{path}0_basics/ie9.css" rel="stylesheet">
     <![endif]-->
   body(class=page)
+    //- @start: svg definitions
+    #svg-defs--hidden(style='display:none')
+      include ../../.tmp/images/svg/build/svg-defs.svg
+    //- @end: svg definitions
     +header
     block content
     +footer
