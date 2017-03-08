@@ -24,12 +24,14 @@ $gray-900:              $gray-darker;
 $brand-primary:             #0275d8 !default;
 $brand-secondary:           #5cb85c !default;
 
-
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #f0ad4e !default;
 $brand-danger:              #d9534f !default;
 
+$white:                 #fff;
+$black:                 #000;
+$brand-transparency:    rgba(255, 255, 255, 0.92);
 
 $brand-primary-100:     lighten($brand-primary,22%);
 $brand-primary-300:     lighten($brand-primary,10%);
