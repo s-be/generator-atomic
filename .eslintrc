@@ -130,7 +130,7 @@
       "func-style": 0,
       "indent": 0,
       "key-spacing": 0,
-      "linebreak-style": 2,
+      "linebreak-style": 0,
       "lines-around-comment": 0,
       "new-cap": 0,
       "newline-after-var": 0,
