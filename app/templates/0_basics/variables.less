@@ -335,17 +335,20 @@
 //@screen-lg-min:              @screen-lg;
 ////** Deprecated `@screen-lg-desktop` as of v3.0.1
 //@screen-lg-desktop:          @screen-lg-min;
-@screen-lg-max: (@screen-xl-min - 1);
+
 //
 //// Extra Large Screen / extra wide desktop
+
+/* FEATURE XL BREAKPOINT */
+/*
+@screen-lg-max: (@screen-xl-min - 1);
 @screen-xl-min:                1920px;
-//
-// expand grid.less
 .container {
   @media (min-width: @screen-xl-min) {
     width: @container-xl !important;
   }
 }
+*/
 //
 //// So media queries don't overlap when required, provide a maximum
 //@screen-xs-max:              (@screen-sm-min - 1);
