@@ -48,11 +48,11 @@ Generator.prototype.promptConfig = function promptConfig() {
       type: 'list',
       name: 'cssPreprocessor',
       message: 'What would you like to use to ' + 'write styles'.blue + '?',
-      choices: ['Sass', 'Less'],
+      choices: ['Bootstrap 4 (Sass)', 'Bootstrap 3 (Less)'],
       filter: function(val) {
         var filterMap = {
-          'Sass': 'sass',
-          'Less': 'less'
+          'Bootstrap 4 (Sass)': 'sass',
+          'Bootstrap 3 (Less)': 'less'
         };
 
         return filterMap[val];
