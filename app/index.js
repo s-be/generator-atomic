@@ -62,13 +62,13 @@ Generator.prototype.promptConfig = function promptConfig() {
       type: 'confirm',
       name: 'galen',
       message: 'Would you like to use Galen for Layout-Tests?',
-      default: true
+      default: false
     },
     {
       type: 'confirm',
       name: 'karma',
       message: 'Would you like to include Karma / Jasmine for JS Unit-Tests?',
-      default: true
+      default: false
     },
     {
       type: 'confirm',
