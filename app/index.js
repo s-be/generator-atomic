@@ -238,7 +238,6 @@ Generator.prototype.tests = function tests() {
 Generator.prototype.sourceFiles = function sourceFiles() {
   this.template('0_basics/_default.pug', 'app/0_basics/_default.pug');
   this.template('0_basics/controller.js', 'app/0_basics/controller.js');
-  this.template('0_basics/ie9.' + this.cssPreprocessorExtension, 'app/0_basics/ie9.' + this.cssPreprocessorExtension);
   this.template('0_basics/main.' + this.cssPreprocessorExtension, 'app/0_basics/main.' + this.cssPreprocessorExtension);
   this.template('0_basics/nojs.' + this.cssPreprocessorExtension, 'app/0_basics/nojs.' + this.cssPreprocessorExtension);
   this.template('0_basics/variables.' + this.cssPreprocessorExtension, 'app/0_basics/variables.' + this.cssPreprocessorExtension);
